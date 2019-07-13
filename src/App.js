@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+
 import { WebClient } from "@slack/client";
+
 import ProgressBar from "./Components/ProgressBar";
 import logo from "./logo-cyf.png";
 import Button from "./Components/Button";
