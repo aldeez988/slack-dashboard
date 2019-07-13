@@ -7,7 +7,7 @@ class Button extends Component {
         <button
           style={{
             width: 200,
-            backgroundColor: "lightgray",
+            // backgroundColor: "lightgray",
             height: 50,
             fontSize: 20
           }}
