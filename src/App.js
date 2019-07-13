@@ -5,10 +5,12 @@ import ProgressBar from "./Components/ProgressBar";
 import logo from "./logo-cyf.png";
 import Button from "./Components/Button";
 import Barchart from "./Components/Barchart";
+import Login from "./Components/Login";
 function App() {
   return (
     <div className="container-fluid">
-      <div className="d-flex  align-items-center justify-content-center justify-content-lg-around ">
+      <Login />
+      {/* <div className="d-flex  align-items-center justify-content-center justify-content-lg-around ">
         <Button title="Performance" />
         <div className="d-flex flex-column align-items-center">
           <img src={logo} style={{ width: 300, marginBottom: 10 }} />
@@ -17,7 +19,7 @@ function App() {
           <Barchart />
         </div>
         <Button title="Set a target" />
-      </div>
+      </div>*/}
     </div>
   );
 }
