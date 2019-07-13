@@ -10,16 +10,6 @@ function App() {
   return (
     <div className="container-fluid">
       <Login />
-      {/* <div className="d-flex  align-items-center justify-content-center justify-content-lg-around ">
-        <Button title="Performance" />
-        <div className="d-flex flex-column align-items-center">
-          <img src={logo} style={{ width: 300, marginBottom: 10 }} />
-          <h1>Today</h1>
-          <ProgressBar />
-          <Barchart />
-        </div>
-        <Button title="Set a target" />
-      </div>*/}
     </div>
   );
 }
