@@ -22,6 +22,7 @@ class DropDownButton extends Component {
             onChange={this.handleChange}
             style={{ height: 40, width: "60%" }}
           >
+            <option>{"Select Class"}</option>
             {this.props.dataToDispaly.map(option => (
               <option>{option}</option>
             ))}

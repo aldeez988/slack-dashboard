@@ -40,7 +40,8 @@ class SetTargetPage extends Component {
             <br />
             <br />
 
-            <h1>Number of</h1>
+            <h1>Number of Students</h1>
+            <h1>{this.state.students.length}</h1>
             <br />
             <h4>Weekly threads</h4>
             <br />
