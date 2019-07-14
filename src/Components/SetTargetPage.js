@@ -44,7 +44,7 @@ class SetTargetPage extends Component {
             <br />
             <h4>Weekly threads</h4>
             <br />
-            <h4>Weekly class</h4>
+            <h4>Weekly calls</h4>
           </div>
         </div>
       </div>
