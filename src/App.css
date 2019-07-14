@@ -1,0 +1,10 @@
+.mr-1 {
+  margin-right: ($spacer * 0.25) !important;
+}
+.ml-1 {
+  margin-right: ($spacer * 0.25) !important;
+}
+
+.mt {
+  margin-top: 10% !important;
+}

@@ -4,32 +4,36 @@ import Login from "./Components/Login";
 import { WebClient } from "@slack/client";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
-import SetTargetPage from "./Components/SetTargetPage";
 
 class App extends Component {
   state = { userExist: false };
 
   confirmUser = user => {
-    this.setState({
-      userExist: Users.find(
-        userData =>
-          userData.email === user.email && userData.password === user.password
-      )
-        ? true
-        : false
-    });
-    console.log("ok", this.state.userExist);
+    const { email, password } = user;
+    this.setState(
+      prevState => {
+        return {
+          userExist: Users.find(
+            userData =>
+              userData.email === email && userData.password === password
+          )
+            ? !prevState.userExist
+            : prevState.userExist
+        };
+      },
+      () => {
+        console.log("ok", this.state.userExist);
+      }
+    );
   };
   render() {
     return (
       <div>
         {this.state.userExist && <ProgressPage />}
-        <Login confirmUser={this.confirmUser} />
-        {/* <SetTargetPage /> */}
+        {!this.state.userExist && <Login confirmUser={this.confirmUser} />}
       </div>
     );
   }
-
 }
 
 export default App;
