@@ -20,7 +20,6 @@ class Login extends Component {
               onChange={e => this.setState({ email: e.target.value })}
               type="email"
               class="form-control "
-              id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
             />
@@ -30,7 +29,6 @@ class Login extends Component {
               onChange={e => this.setState({ password: e.target.value })}
               type="password"
               class="form-control col-md-11"
-              id="exampleInputPassword1"
               placeholder="Password"
             />
           </div>
