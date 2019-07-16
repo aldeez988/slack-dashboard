@@ -77,6 +77,15 @@ class SetTargetPage extends Component {
               </div>
             </div>
           </div>
+          <div class="form-group ">
+            <button
+              onClick={this.handleClick}
+              type="submit"
+              class="btn btn-success"
+            >
+              Set Target{" "}
+            </button>
+          </div>
         </div>
       </div>
     );
