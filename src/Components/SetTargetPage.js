@@ -19,12 +19,11 @@ class SetTargetPage extends Component {
   render() {
     console.log("data", ClassData);
     return (
-      <div className="d-flex flex-column align-items-center justify-content-center">
-        <img src={logo} style={{ width: 300, marginBottom: 10 }} />
+      <div className="d-flex flex-column align-items-center justify-content-center mt-5">
         <h1 calssNames="col-sm-10" style={{}}>
           Set a Target For{" "}
         </h1>
-        <div class="container">
+        <div class="container  mt-5">
           <div className="row justify-content-between">
             <div className="col-sm-10 col-lg-4 mb-2">
               <DropDownButton

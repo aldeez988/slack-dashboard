@@ -4,6 +4,7 @@ import Login from "./Components/Login";
 import { WebClient } from "@slack/client";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
+import Nav from "./Components/Nav/index";
 
 class App extends Component {
   state = { userExist: false };
@@ -29,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Nav />
         {this.state.userExist && <ProgressPage />}
         {!this.state.userExist && <Login confirmUser={this.confirmUser} />}
       </div>

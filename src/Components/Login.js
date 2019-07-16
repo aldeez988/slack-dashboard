@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "../logo-cyf.png";
 
 class Login extends Component {
   state = { email: "", password: "" };
@@ -12,8 +11,6 @@ class Login extends Component {
   render() {
     return (
       <div class="container-fluid d-flex flex-column align-items-center justify-content-center ">
-        <img src={logo} style={{ width: 300, marginBottom: 10 }} />
-
         <form className="container-fluid d-flex justify-content-center align-items-center mt">
           <div class="form-group mr-1">
             <input
