@@ -5,6 +5,7 @@ import { WebClient } from "@slack/client";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
 import Nav from "./Components/Nav/index";
+import swal from "sweetalert";
 
 class App extends Component {
   state = { userExist: false };
@@ -23,7 +24,9 @@ class App extends Component {
         };
       },
       () => {
-        console.log("ok", this.state.userExist);
+        if (!this.state.userExist) {
+          swal("Oops!", "Please check your username and password!", "error");
+        }
       }
     );
   };
