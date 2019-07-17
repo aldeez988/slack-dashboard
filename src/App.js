@@ -5,34 +5,36 @@ import { WebClient } from "@slack/client";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
 import Nav from "./Components/Nav/index";
+import StudentPage from "./Components/StudentPage";
 
 class App extends Component {
-  state = { userExist: false };
+  // state = { userExist: false };
 
-  confirmUser = user => {
-    const { email, password } = user;
-    this.setState(
-      prevState => {
-        return {
-          userExist: Users.find(
-            userData =>
-              userData.email === email && userData.password === password
-          )
-            ? !prevState.userExist
-            : prevState.userExist
-        };
-      },
-      () => {
-        console.log("ok", this.state.userExist);
-      }
-    );
-  };
+  // confirmUser = user => {
+  //   const { email, password } = user;
+  //   this.setState(
+  //     prevState => {
+  //       return {
+  //         userExist: Users.find(
+  //           userData =>
+  //             userData.email === email && userData.password === password
+  //         )
+  //           ? !prevState.userExist
+  //           : prevState.userExist
+  //       };
+  //     },
+  //     () => {
+  //       console.log("ok", this.state.userExist);
+  //     }
+  //   );
+  // };
   render() {
     return (
       <div>
-        <Nav />
+        {<StudentPage />}
+        {/* <Nav />
         {this.state.userExist && <ProgressPage />}
-        {!this.state.userExist && <Login confirmUser={this.confirmUser} />}
+        {!this.state.userExist && <Login confirmUser={this.confirmUser} />} */}
       </div>
     );
   }

@@ -12,32 +12,34 @@ class Login extends Component {
     return (
       <div class="container-fluid d-flex flex-column align-items-center justify-content-center ">
         <form className="container-fluid d-flex justify-content-center align-items-center mt">
-          <div class="form-group mr-1">
-            <input
-              onChange={e => this.setState({ email: e.target.value })}
-              type="email"
-              class="form-control "
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-          </div>
-          <div class="form-group mr-1">
-            <input
-              onChange={e => this.setState({ password: e.target.value })}
-              type="password"
-              class="form-control col-md-11"
-              placeholder="Password"
-            />
-          </div>
-          <div class="form-group ">
-            <button
-              onClick={this.handleClick}
-              type="submit"
-              class="btn btn-success"
-              style={{ width: 100 }}
-            >
-              Login
-            </button>
+          <div className="container">
+            <div class="col-12 col-lg-3 form-group mr-1">
+              <input
+                onChange={e => this.setState({ email: e.target.value })}
+                type="email"
+                class="form-control "
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="col-12 col-lg-3 form-group mr-1">
+              <input
+                onChange={e => this.setState({ password: e.target.value })}
+                type="password"
+                class="form-control col-md-11"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-group ">
+              <button
+                onClick={this.handleClick}
+                type="submit"
+                class="btn btn-success"
+                style={{ width: 100 }}
+              >
+                Login
+              </button>
+            </div>
           </div>
         </form>
       </div>
