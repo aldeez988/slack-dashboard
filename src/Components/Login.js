@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { getStudentMessages } from "../Components/actions/getStudentMessages";
 class Login extends Component {
   state = { email: "", password: "" };
   handleClick = e => {
@@ -7,6 +7,7 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state);
     this.props.confirmUser({ email, password });
+    getStudentMessages({ name: email.split("@")[0] });
   };
   render() {
     return (
