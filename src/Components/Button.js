@@ -8,11 +8,11 @@ class Button extends Component {
   };
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <button
           onClick={this.handleCilck}
           style={{
-            width: 200,
+            maxWidth: 200,
             // backgroundColor: "lightgray",
             height: 50,
             fontSize: 20
