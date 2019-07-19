@@ -14,20 +14,29 @@ class ProgressPage extends Component {
       };
     });
   };
+
   render() {
     if (!this.state.showSetTarget) {
       return (
-        <div className="d-flex  align-items-center justify-content-center justify-content-lg-around ">
-          <Button title="Performance" />
-          <div className="d-flex flex-column align-items-center">
-            <h1>This Week</h1>
-            <ProgressBar />
+        <div className="container">
+          <div
+            // style={{ border: "2px solid green" }}
+            className="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
+          >
+            <Button className=" order-md-1" title="Performance " />
+            <Button
+              className="order-md-3"
+              title="Set a target"
+              handleSetTargetPage={this.handleSetTargetPage}
+            />
+            <div className=" order-md-2 d-flex flex-column align-items-center">
+              <h1>This Week</h1>
+              <ProgressBar />
+            </div>
+          </div>
+          <div class="">
             <Barchart />
           </div>
-          <Button
-            title="Set a target"
-            handleSetTargetPage={this.handleSetTargetPage}
-          />
         </div>
       );
     } else if (this.state.showSetTarget) {
