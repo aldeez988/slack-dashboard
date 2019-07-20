@@ -6,7 +6,7 @@ class ProgressBar extends Component {
     const percentage = Math.floor(100 * Math.random());
 
     return (
-      <div style={{ width: 300, marginBottom: 20 }}>
+      <div style={{ maxWidth: 300, marginBottom: 20 }}>
         <CircularProgressbar
           value={percentage}
           text={`${percentage}%`}
