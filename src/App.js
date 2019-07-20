@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import Login from "./Components/Login";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
+import { BrowserRouter as Router } from "react-router-dom";
 import Nav from "./Components/Nav/index";
 import { login } from "./Components/actions/login";
 import swal from "sweetalert";
+import Routes from "./Routes";
 
 class App extends Component {
   state = { userExist: false, userData: {} };
@@ -25,11 +26,16 @@ class App extends Component {
   };
   render() {
     return (
-      <div>
-        <Nav />
+      <Router>
+        <div>
+          {/* <Nav />
         {this.state.userExist && <ProgressPage />}
-        {!this.state.userExist && <Login confirmUser={this.confirmUser} />}
-      </div>
+        {!this.state.userExist && <Login confirmUser={this.confirmUser} />} */}
+          <Nav />
+          <div className="container main" />
+          <Routes />
+        </div>
+      </Router>
     );
   }
 }
