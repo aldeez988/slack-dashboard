@@ -1,34 +1,27 @@
 import React, { Component } from "react";
 import "./App.css";
 import Login from "./Components/Login";
-import { WebClient } from "@slack/client";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
 import Nav from "./Components/Nav/index";
+import { login } from "./Components/actions/login";
 import swal from "sweetalert";
 
 class App extends Component {
-  state = { userExist: false };
+  state = { userExist: false, userData: {} };
 
-  confirmUser = user => {
-    const { email, password } = user;
-    this.setState(
-      prevState => {
+  confirmUser = async user => {
+    try {
+      const response = await login(user);
+      console.log("login response ", response.data);
+      this.setState(prevState => {
         return {
-          userExist: Users.find(
-            userData =>
-              userData.email === email && userData.password === password
-          )
-            ? !prevState.userExist
-            : prevState.userExist
+          userExist: response ? !prevState.userExist : prevState.userExist
         };
-      },
-      () => {
-        if (!this.state.userExist) {
-          swal("Oops!", "Please check your username and password!", "error");
-        }
-      }
-    );
+      });
+    } catch (error) {
+      swal("Oops!", "Please check your username and password!", "error");
+    }
   };
   render() {
     return (
