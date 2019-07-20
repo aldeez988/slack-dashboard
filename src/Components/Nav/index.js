@@ -1,19 +1,26 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Profile from "./profile.svg";
-import logo from "../../logo-cyf.png";
-
+// import ProfileDropDown from "./profileDropDown";
+// import { logout, loggedIn } from "../../Auth";
+import logo_CYF_square from "./logo-CYF-square.png";
 import "./index.css";
 
 export default class Navbar extends React.Component {
   onLogOut = () => {
+    // logout();
     window.location.reload(true);
   };
   render() {
     return (
       <div className="navbar-div">
         <nav className="navbar navbar-expand-lg navbar-light container">
-          <img src={logo} style={{ width: 300, marginBottom: 10 }} />
+          <a className="navbar-brand" href="/">
+            <img src={logo_CYF_square} alt="logo" width="80" height="50" />
+          </a>
+          {/* <Link className="nav-link nav-btn" to="/">
+            Home
+          </Link> */}
+          <span className="sr-only">(current)</span>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,72 +34,40 @@ export default class Navbar extends React.Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                {/* <Link className="nav-link nav-btn" to="/">
-                  Home
-                </Link> */}
-                <span className="sr-only">(current)</span>
-              </li>
-              <li className="nav-item">
-                {/* <Link className="nav-link nav-btn" to="/login">
-                  Login
-                </Link> */}
-              </li>
-              <li className="nav-item">
-                <span className="sr-only">(current)</span>
-              </li>
+              {
+                <li className="nav-item">
+                  <Link className="nav-link nav-btn" to="/register">
+                    Sign up
+                  </Link>
+                </li>
+              }
+              {
+                <li className="nav-item">
+                  <Link className="nav-link nav-btn" to="/">
+                    Login
+                  </Link>
+                </li>
+              }
               <li className="nav-item desktop-display-none" />
-              <Fragment>
-                <li className="nav-item desktop-display-none">
-                  {/* <Link className="nav-link nav-btn" to="/Resources">
-                    Help
-                  </Link> */}
-                </li>
-                <hr className="m-1 w-25" />
-                <li className="nav-item desktop-display-none">
-                  <span
-                    className="nav-link logout-btn"
-                    onClick={this.onLogOut}
-                    onKeyDown={this.onLogOut}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    Log Out
-                  </span>
-                </li>
-              </Fragment>
+              {
+                <Fragment>
+                  <hr className="m-1 w-25" />
+                  <li className="nav-item desktop-display-none">
+                    <span
+                      className="nav-link logout-btn"
+                      onClick={this.onLogOut}
+                      onKeyDown={this.onLogOut}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      Log Out
+                    </span>
+                  </li>
+                </Fragment>
+              }
             </ul>
-
-            <div className="dropdown media-display-none">
-              <img
-                src={Profile}
-                alt="profile"
-                className="dropdown-toggle profile-icon"
-                data-toggle="dropdown"
-              />
-              <div className="dropdown-menu">
-                <span className="arrow-up-div">
-                  <span className="arrow-up" />
-                </span>
-                <div className="dropdown-menu-items">
-                  {/* <Link className="dropdown-item nav-btn" to="/dashboard">
-                    Your Profile
-                  </Link> */}
-
-                  <hr className="m-1" />
-                  <span
-                    className="logout-btn dropdown-item"
-                    onClick={this.onLogOut}
-                    onKeyDown={this.onLogOut}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    Log Out
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
+          {/* {<ProfileDropDown />} */}
         </nav>
       </div>
     );
