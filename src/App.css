@@ -9,6 +9,31 @@
   margin-top: 10% !important;
 }
 
+
+.performance-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.barchart-performance-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 811px) {
+  .dropdown-container {
+    flex-direction: column;
+  }
+
+
 .question {
   display: flex;
   justify-content: center;
