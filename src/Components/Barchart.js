@@ -13,6 +13,7 @@ import data from "../Data/BarchartData.json";
 class Barchart extends Component {
   render() {
     return (
+
       <ResponsiveContainer width="100%" aspect={2}>
         <BarChart
           // width={800}
@@ -34,6 +35,7 @@ class Barchart extends Component {
           <Bar dataKey="calls" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
+
     );
   }
 }

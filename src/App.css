@@ -8,3 +8,9 @@
 .mt {
   margin-top: 10% !important;
 }
+
+.question {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
