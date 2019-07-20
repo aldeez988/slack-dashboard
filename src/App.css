@@ -8,7 +8,7 @@
 .mt {
   margin-top: 10% !important;
 }
-/* for performance component */
+
 
 .performance-container {
   width: 100%;
@@ -32,4 +32,10 @@
   .dropdown-container {
     flex-direction: column;
   }
+
+
+.question {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

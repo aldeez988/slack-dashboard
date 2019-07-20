@@ -7,7 +7,7 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state);
     this.props.confirmUser({ email, password });
-    getStudentMessages({ name: email.split("@")[0] });
+    // getStudentMessages({ name: email.split("@")[0] });
   };
   render() {
     return (
