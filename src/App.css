@@ -39,3 +39,16 @@
   justify-content: center;
   width: 100%;
 }
+
+/* new cards */
+.cards-container {
+  margin: 0 auto;
+}
+
+.outer {
+  margin: 0 auto;
+  width: 100%;
+}
+.inner {
+  margin: 0 auto;
+}
