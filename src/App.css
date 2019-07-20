@@ -9,11 +9,37 @@
   margin-top: 10% !important;
 }
 
+
+.performance-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.barchart-performance-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 811px) {
+  .dropdown-container {
+    flex-direction: column;
+  }
+
+
 .question {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 
 /* register */
 .register-container {
@@ -27,4 +53,16 @@
 .register form {
   border-top: 1px solid rgb(189, 186, 186);
   padding-top: 20px;
+  }
+/* new cards */
+.cards-container {
+  margin: 0 auto;
+}
+
+.outer {
+  margin: 0 auto;
+  width: 100%;
+}
+.inner {
+  margin: 0 auto;
 }
