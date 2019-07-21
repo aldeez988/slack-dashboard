@@ -9,20 +9,26 @@ class StudentPage extends Component {
   render() {
     return (
       <div className="d-flex flex-column align-items-around justify-content-center">
-        <div className="d-flex align-items-center justify-content-center justify-content-between col-md-12 ">
+        <div className="d-flex justify-content-center">
+          <h1 style={{ width: "50%" }} className="mt-5 mb-5">
+            This Week Performance
+          </h1>
+        </div>
+        <div className="d-flex  justify-content-between ">
           <div className="col-4 align-items-center">
             <StudentLabel />
           </div>
           <div className="d-flex col-4 flex-column align-items-center">
-            <h3 className="mt-5 mb-5">This Week Performance</h3>
             <ProgressBar />
           </div>
           <div className="col-4 mt-5">
             <TopStudents />
           </div>
         </div>
-        <div className="mt-5 question">
-          <Barchart />
+        <div className="mt-5 barchart-container">
+          <div style={{ width: "50%" }}>
+            <Barchart />
+          </div>
         </div>
       </div>
     );
