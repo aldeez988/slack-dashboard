@@ -16,6 +16,7 @@ class Register extends Component {
       userType: "",
       password: "",
       cyfClass: "",
+      passwordConfirmation: "",
       isStudent: false
     };
   }
@@ -26,6 +27,7 @@ class Register extends Component {
   }
   onChange = e => {
     const { name, value } = e.target;
+    console.log();
     this.setState(
       () => {
         return {
@@ -33,10 +35,16 @@ class Register extends Component {
         };
       },
       () => {
-        if (this.state.userType === "Student")
-          this.state(prevState => {
+        console.log(this.state.userType);
+        if (this.state.userType === "student") {
+          this.setState(prevState => {
             return { isStudent: !prevState.isStudent };
           });
+        } else if (this.state.userType === "mentor") {
+          this.setState(prevState => {
+            return { isStudent: !prevState.isStudent };
+          });
+        }
       }
     );
   };
@@ -52,7 +60,8 @@ class Register extends Component {
       gender,
       userType,
       cyfClass,
-      password
+      password,
+      passwordConfirmation
     } = this.state;
     const userData = {
       firstName,
@@ -65,9 +74,14 @@ class Register extends Component {
       cyfClass,
       password
     };
+    if (password !== passwordConfirmation) {
+      swal("Oops!", "Password must match confirmation!", "error");
+      return;
+    }
     try {
-      const token = await addUser(userData);
+      const response = await addUser(userData);
       // setToken(token.data.token);
+      console.log(response);
       this.props.history.replace("/");
     } catch (err) {
       if (err.response) {
@@ -92,7 +106,8 @@ class Register extends Component {
       userType,
       cyfClass,
       isStudent,
-      password
+      password,
+      passwordConfirmation
     } = this.state;
     const { err, msg } = this.props;
     return (
@@ -194,7 +209,7 @@ class Register extends Component {
             </div>
             <div className="form-group ">
               <label htmlFor="firstName" className="lead">
-                Gender
+                Gender*
               </label>
               <select
                 className="form-control form-control-lg"
@@ -276,11 +291,11 @@ class Register extends Component {
               </label>
               <input
                 type="password"
-                name="password"
-                id="password"
+                name="passwordConfirmation"
+                id="passwordConfirmation"
                 className="form-control form-control-lg"
                 placeholder="Password"
-                value={password}
+                value={passwordConfirmation}
                 onChange={this.onChange}
                 required
               />
