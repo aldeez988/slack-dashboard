@@ -8,9 +8,9 @@ import { ResponsiveContainer } from "recharts";
 class StudentPage extends Component {
   render() {
     return (
-      <div className="d-flex flex-column align-items-around justify-content-center">
+      <div className="main-container d-flex flex-column align-items-around justify-content-center">
         <div className="d-flex justify-content-center">
-          <h1 style={{ width: "50%" }} className="mt-5 mb-5">
+          <h1 style={{ width: "50%" }} className="this-week-contanier mt-5 mb-5">
             This Week Performance
           </h1>
         </div>

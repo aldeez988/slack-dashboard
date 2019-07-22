@@ -68,7 +68,17 @@
 
 /* StudentLabel */
 .example2 {
-  border: 1px solid;
+  /* border: 1px solid #D13830; */
   padding: 30px;
-  box-shadow: 5px 10px 20px red inset;
+  box-shadow: inset 0px 0px 10px 20px #b2e7fe;
+  background-color: #eefaff;
+}
+
+.main-container {
+  box-shadow: inset 0px 0px 10px 20px #5e5355;
+  background-color: #ffffff;
+}
+.this-week-contanier {
+  box-shadow: inset 0px 0px 10px 20px #ffcccc;
+  background-color: #fff9f9;
 }
