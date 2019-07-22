@@ -72,3 +72,9 @@
   padding: 30px;
   box-shadow: 5px 10px 20px red inset;
 }
+.progress-container {
+  width: 100%;
+  background-color: #cceeff;
+  border: 7px solid;
+  box-shadow: 5px 10px 20px #0099e6 inset;
+}

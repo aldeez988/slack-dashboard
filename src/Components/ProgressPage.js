@@ -18,7 +18,7 @@ class ProgressPage extends Component {
   render() {
     if (!this.state.showSetTarget) {
       return (
-        <div className="container">
+        <div className="progress-container">
           <div
             // style={{ border: "2px solid green" }}
             className="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center"
@@ -30,7 +30,7 @@ class ProgressPage extends Component {
               handleSetTargetPage={this.handleSetTargetPage}
             />
             <div className=" order-md-2 d-flex flex-column align-items-center">
-              <h1>This Week</h1>
+              <h1>This Week Performance</h1>
               <ProgressBar />
             </div>
           </div>
