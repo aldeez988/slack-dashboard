@@ -5,20 +5,30 @@ import swal from "sweetalert";
 import "./login.css";
 
 class Login extends Component {
-  state = { email: "", password: "", isLoading: false };
+  state = { email: "", password: "", isLoading: false, userData: {} };
 
   confirmUser = async user => {
     try {
       const response = await login(user);
-      console.log("login response ", response.data);
+      console.log("login response ", response.data.admin);
       this.setState(prevState => {
         return {
-          isLoading: !prevState.isLoading
+          isLoading: !prevState.isLoading,
+          userData: response.data
         };
       });
-      this.props.history.replace("/sudentpage");
+
+      if (response.data.admin) {
+        this.props.history.push("/admin", { ...this.state.userData });
+      } else if (response.data.userType === "Mentor") {
+        this.props.history.push("/mentor", { ...this.state.userData });
+      } else {
+        this.props.history.push("/PerformancePage", { ...this.state.userData });
+      }
     } catch (error) {
       swal("Oops!", "Please check your username and password!", "error");
+      console.log("login response ", error);
+
       this.setState(prevState => {
         return {
           isLoading: !prevState.isLoading

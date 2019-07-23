@@ -1,0 +1,7 @@
+.admin-tab-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  padding: 10px;
+}

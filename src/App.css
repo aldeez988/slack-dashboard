@@ -72,3 +72,24 @@
   padding: 30px;
   box-shadow: 5px 10px 20px red inset;
 }
+
+.header-container {
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+  position: relative;
+  font-size: 36px;
+  line-height: 40px;
+  padding: 15px 15px 15px 15%;
+  color: black;
+  box-shadow: inset 0 0 0 1px rgba(53, 86, 129, 0.4),
+    inset 0 0 5px rgba(53, 86, 129, 0.5), inset -285px 0 35px white;
+  border-radius: 0 10px 0 10px;
+  text-align: center;
+  /* background: #fff url(../logo-cyf.png) no-repeat center left; */
+}
+
+/* ProgressPage */
+.set-target-performance-container {
+  display: flex;
+  justify-content: space-around;
+}

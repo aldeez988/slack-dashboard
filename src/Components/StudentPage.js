@@ -10,9 +10,7 @@ class StudentPage extends Component {
     return (
       <div className="d-flex flex-column align-items-around justify-content-center">
         <div className="d-flex justify-content-center">
-          <h1 style={{ width: "50%" }} className="mt-5 mb-5">
-            This Week Performance
-          </h1>
+          <h1 className="mt-5 mb-5">This Week Performance</h1>
         </div>
         <div className="d-flex  justify-content-between ">
           <div className="col-4 align-items-center">

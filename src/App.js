@@ -4,7 +4,6 @@ import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
 import { BrowserRouter as Router } from "react-router-dom";
 import Nav from "./Components/Nav/index";
-import swal from "sweetalert";
 import Routes from "./Routes";
 
 class App extends Component {

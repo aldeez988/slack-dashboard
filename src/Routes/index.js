@@ -6,15 +6,20 @@ import Register from "../Screens/Register";
 import SetTargetPage from "../Components/SetTargetPage";
 import Login from "../Screens/Login";
 import StudentPage from "../Components/StudentPage";
+import AdminPage from "../Components/Admin/AdminPage";
+import ProgressPage from "../Components/ProgressPage";
+import PerformancePage from "../Components/Performance";
 
 export default () => (
   <Switch>
     <Route exact path="/" component={Login} />
     <Route exact path="/register" component={Register} />
     <Route exact path="/sudentpage" component={StudentPage} />
-    {/* <Private exact path="/category/:category?" component={Tutorials} /> */}
     <Route exact path="/stetarget" component={SetTargetPage} />
-    {/* <Route exact path="/profile" component={Profile} /> */}
+    <Route exact path="/admin" component={AdminPage} />
+    <Route exact path="/admin" component={AdminPage} />
+    <Route exact path="/mentor" component={ProgressPage} />
+    <Route exact path="/performancepage" component={PerformancePage} />
 
     {/* <Route component={NotFound} /> */}
   </Switch>

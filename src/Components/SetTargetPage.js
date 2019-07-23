@@ -7,7 +7,7 @@ const weeks = ["week1", "week2", "week3", "week4", "week5", "week6", "week7"];
 class SetTargetPage extends Component {
   state = {
     students: [],
-    cyfClasses: ClassData.map(classData => classData.className)
+    cyfClasses: this.props.location.state
   };
   getStudents = className => {
     this.setState({
@@ -17,7 +17,8 @@ class SetTargetPage extends Component {
     console.log("students", this.state.students);
   };
   render() {
-    console.log("data", ClassData);
+    console.log("From set target page", this.props.location);
+
     return (
       <div className="d-flex flex-column align-items-center justify-content-center mt-5">
         <h1 calssNames="col-sm-10" style={{}}>

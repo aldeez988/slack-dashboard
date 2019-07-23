@@ -36,14 +36,10 @@ class Register extends Component {
       },
       () => {
         console.log(this.state.userType);
-        if (this.state.userType === "student") {
-          this.setState(prevState => {
-            return { isStudent: !prevState.isStudent };
-          });
-        } else if (this.state.userType === "mentor") {
-          this.setState(prevState => {
-            return { isStudent: !prevState.isStudent };
-          });
+        if (this.state.userType === "Student") {
+          this.setState({ isStudent: true });
+        } else if (this.state.userType === "Mentor") {
+          this.setState({ isStudent: false });
         }
       }
     );
@@ -81,15 +77,12 @@ class Register extends Component {
     try {
       const response = await addUser(userData);
       // setToken(token.data.token);
-      console.log(response);
+      console.log("deez", response.status);
       this.props.history.replace("/");
     } catch (err) {
-      if (err.response) {
-        return swal("Cancelled", err.response.data.msg, "error");
-      }
       return swal(
         "Cancelled",
-        "Somethings went wrong, please try again later.",
+        "Somethings went wrong, please try again later, please make sure you are added to the workspace.",
         "error"
       );
     }
@@ -186,10 +179,10 @@ class Register extends Component {
                 <option value="" disabled>
                   Select here
                 </option>
-                <option value="Male">London</option>
-                <option value="Female">Manchester</option>
-                <option value="Other">Glasgow</option>
-                <option value="Other">Rome</option>
+                <option>London</option>
+                <option>Manchester</option>
+                <option>Glasgow</option>
+                <option>Rome</option>
               </select>
             </div>
             <div className="form-group">
@@ -222,10 +215,10 @@ class Register extends Component {
                 <option value="" disabled>
                   Select here
                 </option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-                <option value="PreferNotToSay">Prefer not to say</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+                <option>Prefer not to say</option>
               </select>
             </div>
             <div className="form-group ">
@@ -240,11 +233,9 @@ class Register extends Component {
                 onChange={this.onChange}
                 required
               >
-                <option value="" disabled>
-                  Select here
-                </option>
-                <option value="student">Student</option>
-                <option value="mentor">Mentor</option>
+                <option disabled>Select here</option>
+                <option>Student</option>
+                <option>Mentor</option>
               </select>
             </div>
             {isStudent && (
@@ -263,10 +254,10 @@ class Register extends Component {
                   <option value="" disabled>
                     Select here
                   </option>
-                  <option value="student">Rome-class1</option>
-                  <option value="student">Manchester-class2</option>
-                  <option value="student">Glasgow-class3</option>
-                  <option value="mentor">London-class5</option>
+                  <option>Rome-class1</option>
+                  <option>Manchester-class2</option>
+                  <option>Glasgow-class3</option>
+                  <option>London-class5</option>
                 </select>
               </div>
             )}
