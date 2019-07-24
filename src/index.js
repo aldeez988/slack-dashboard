@@ -5,7 +5,6 @@ import App from "./App";
 import StudentPage from "./Components/StudentPage";
 import * as serviceWorker from "./serviceWorker";
 import ProgressPage from "./Components/ProgressPage";
-import AdminPage from "./Components/Admin/AdminPage";
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change

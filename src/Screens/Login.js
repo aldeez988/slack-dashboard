@@ -23,7 +23,7 @@ class Login extends Component {
       } else if (response.data.userType === "Mentor") {
         this.props.history.push("/mentor", { ...this.state.userData });
       } else {
-        this.props.history.push("/PerformancePage", { ...this.state.userData });
+        this.props.history.push("/sudentpage", { ...this.state.userData });
       }
     } catch (error) {
       swal("Oops!", "Please check your username and password!", "error");

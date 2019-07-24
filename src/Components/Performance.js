@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import logo from "../logo-cyf.png";
-import DropDownButton from "./DropDownButton";
 import ClassData from "../Data/ClassData.json";
 import Barchart from "./Barchart";
-
-const weeks = ["week1", "week2", "week3", "week4", "week5", "week6", "week7"];
 class PerformancePage extends Component {
   state = {
     className: "",
     studentsName: "",
     students: [],
-    cyfClasses: this.props.location.state
+    cyfClasses: this.props.location.state ? this.props.location.state : []
   };
   getStudents = className => {
     this.setState({

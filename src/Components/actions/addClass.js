@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from "sweetalert";
 
 export const addClass = body => {
   try {
@@ -7,7 +8,7 @@ export const addClass = body => {
       body
     );
   } catch (err) {
-    console.log(err);
+    swal("Oops!", "Something went wrong please check your network!", "error");
   }
 };
 
@@ -18,6 +19,6 @@ export const getAllClasses = options => {
       options
     );
   } catch (err) {
-    console.log(err);
+    swal("Oops!", "Something went wrong please check your network!", "error");
   }
 };

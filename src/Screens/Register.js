@@ -17,6 +17,7 @@ class Register extends Component {
       password: "",
       cyfClass: "",
       passwordConfirmation: "",
+      gender: "",
       isStudent: false
     };
   }
@@ -233,7 +234,9 @@ class Register extends Component {
                 onChange={this.onChange}
                 required
               >
-                <option disabled>Select here</option>
+                <option value="" disabled>
+                  Select here
+                </option>
                 <option>Student</option>
                 <option>Mentor</option>
               </select>
@@ -251,9 +254,7 @@ class Register extends Component {
                   onChange={this.onChange}
                   required
                 >
-                  <option value="" disabled>
-                    Select here
-                  </option>
+                  <option disabled>Select here</option>
                   <option>Rome-class1</option>
                   <option>Manchester-class2</option>
                   <option>Glasgow-class3</option>

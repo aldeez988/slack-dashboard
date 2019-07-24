@@ -1,23 +1,21 @@
 import axios from "axios";
 import swal from "sweetalert";
 
-export const getUserProfiles = async options => {
+export const addTarget = async body => {
   try {
-    return await axios.get(
-      "https://slack-dashboard-backend.glitch.me/userProfiles",
-      {
-        params: options
-      }
+    return await axios.post(
+      "https://slack-dashboard-backend.glitch.me/targets",
+      body
     );
   } catch (error) {
     swal("Oops!", "Something went wrong please check your network!", "error");
   }
 };
 
-export const getStudentsNumber = async options => {
+export const getTargets = async options => {
   try {
     return await axios.get(
-      "https://slack-dashboard-backend.glitch.me/numberOfStudents",
+      "https://slack-dashboard-backend.glitch.me/targets",
       {
         params: options
       }

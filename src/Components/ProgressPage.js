@@ -43,7 +43,7 @@ class ProgressPage extends Component {
           >
             <div
               style={{
-                border: "2px solid green",
+                // border: "2px solid green",
                 width: "80%"
               }}
               className="set-target-performance-container"

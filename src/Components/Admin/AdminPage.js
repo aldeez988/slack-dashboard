@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import NavTabItem from "./NavTabItem";
 import AddClass from "./AddClass";
+import swal from "sweetalert";
+
 import UsersJoinRequest from "./UsersJoinRequest";
 import { getUserProfiles } from "../actions/userProfiles";
 import "./admin.css";
@@ -22,12 +24,16 @@ class AdminPage extends Component {
   };
 
   handleShowAddWeekPage = async () => {
-    const response = await getUserProfiles();
+    try {
+      const response = await getUserProfiles();
 
-    this.setState({ usersProfiles: response.data });
-    console.log("users profiles", response.data);
+      this.setState({ usersProfiles: response.data });
+      console.log("users profiles", response.data);
 
-    this.setState({ showAddClass: false, showAddWeek: true });
+      this.setState({ showAddClass: false, showAddWeek: true });
+    } catch (err) {
+      swal("Oops!", "Something went wrong!", "error");
+    }
   };
 
   render() {

@@ -17,7 +17,6 @@ export default () => (
     <Route exact path="/sudentpage" component={StudentPage} />
     <Route exact path="/stetarget" component={SetTargetPage} />
     <Route exact path="/admin" component={AdminPage} />
-    <Route exact path="/admin" component={AdminPage} />
     <Route exact path="/mentor" component={ProgressPage} />
     <Route exact path="/performancepage" component={PerformancePage} />
 
