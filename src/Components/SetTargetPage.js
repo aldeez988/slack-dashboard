@@ -12,7 +12,9 @@ class SetTargetPage extends Component {
     targetName: "",
     className: "",
     startingDate: "",
-    finishingDate: ""
+    finishingDate: "",
+    targetCalls: "",
+    targetThreads: ""
   };
   getStudents = className => {
     this.setState({
@@ -58,11 +60,29 @@ class SetTargetPage extends Component {
   };
 
   targetSubmission = async () => {
-    const { className, targetName, startingDate, finishingDate } = this.state;
-    const body = { className, targetName, startingDate, finishingDate };
+    const {
+      className,
+      targetName,
+      startingDate,
+      finishingDate,
+      targetCalls,
+      targetThreads
+    } = this.state;
+    const body = {
+      className,
+      targetName,
+      startingDate,
+      finishingDate,
+      targetCalls,
+      targetThreads
+    };
     try {
       const response = await addTarget(body);
-      swal("Set Target", "Successfully added!", "success");
+      if (response.status === 200) {
+        swal("Set Target", "Successfully added!", "success");
+      } else {
+        swal("Oops!", "Something went wrong!", "error");
+      }
     } catch (err) {
       swal("Oops!", "Something went wrong!", "error");
     }
@@ -70,7 +90,14 @@ class SetTargetPage extends Component {
 
   render() {
     console.log("From set target page", this.props.location);
-    const { className, targetName, startingDate, finishingDate } = this.state;
+    const {
+      className,
+      targetName,
+      startingDate,
+      finishingDate,
+      targetCalls,
+      targetThreads
+    } = this.state;
     return (
       <div className="d-flex flex-column align-items-center justify-content-center mt-5">
         <div className="header-container ">
@@ -165,26 +192,32 @@ class SetTargetPage extends Component {
           <h1>{this.state.numberOfStudents}</h1>
           <br />
           <div calssNames="d-flex flex-column align-items-center justify-content-center">
-            <h4>Weekly threads</h4>
+            <h4>Target threads</h4>
             <div class="form-group row">
               <div class="col-12">
                 <input
                   class="form-control"
                   type="number"
-                  id="example-number-input"
+                  name="targetThreads"
+                  id="targetThreads"
+                  value={targetThreads}
+                  onChange={this.onChange}
                 />
               </div>
             </div>
           </div>
           <br />
           <div calssNames="d-flex flex-column align-items-center justify-content-center">
-            <h4>Weekly calls</h4>
+            <h4>Target calls</h4>
             <div class="form-group row">
               <div class="col-12">
                 <input
                   class="form-control"
                   type="number"
-                  id="example-number-input"
+                  name="targetCalls"
+                  id="targetCalls"
+                  onChange={this.onChange}
+                  value={targetCalls}
                 />
               </div>
             </div>
