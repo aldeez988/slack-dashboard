@@ -33,7 +33,7 @@ class ProgressPage extends Component {
   render() {
     if (!this.state.showSetTarget) {
       return (
-        <div className="container">
+        <div className=" container">
           <div className="header-container">
             <h1>This Week Performance</h1>
           </div>
