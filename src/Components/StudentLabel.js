@@ -7,9 +7,10 @@ class StudentLabel extends Component {
         <div className="d-flex flex-column justify-content-center">
           <h3 className=" mt-3">This week Top Student:</h3>
           <h3 className=" mt-3">
-            Messages target for this week{" "}
+            {`Messages target for ${this.props.targetName}`}
             <i class="far fa-comments" style={{ fontSize: "30px" }} />:
           </h3>
+          <h3 className=" mt-3">{this.props.numberOfMessages}</h3>
           <h3 className=" mt-3">
             Calls target for this week{" "}
             <i class="fa fa-phone" style={{ fontSize: "30px" }} />:
