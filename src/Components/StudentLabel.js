@@ -3,7 +3,7 @@ import logo_CYF_square from "../Components/Nav/logo-CYF-square.png";
 class StudentLabel extends Component {
   render() {
     return (
-      <div className="mt-5 example2">
+      <div className="mt-5 label">
         <div className="d-flex flex-column justify-content-center">
           <h3 className=" mt-3">This week Top Student:</h3>
           <h3 className=" mt-3">

@@ -30,8 +30,8 @@ class Barchart extends Component {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="messages" fill="#8884d8" />
-          <Bar dataKey="calls" fill="#82ca9d" />
+          <Bar dataKey="messages" fill="#D13830" />
+          <Bar dataKey="calls" fill="#3F3F3F" />
         </BarChart>
       </ResponsiveContainer>
     );

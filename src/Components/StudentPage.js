@@ -84,9 +84,9 @@ class StudentPage extends Component {
     console.log("from inside the student page", numberOfMessages);
 
     return (
-      <div className="d-flex flex-column align-items-around justify-content-center">
-        <div className="d-flex flex-column  align-items-center justify-content-center  mb-2">
-          <h1 className="mt-5 mb-5">This Week Performance</h1>
+      <div className="studen-page d-flex flex-column align-items-around justify-content-center">
+        <div className="header-container d-flex justify-content-center">
+          <h1 className="">This Week Performance</h1>
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
               <label htmlFor="className" className="lead">

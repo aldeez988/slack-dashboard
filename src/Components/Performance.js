@@ -82,7 +82,7 @@ class PerformancePage extends Component {
         </div>
 
         <div className="barchart-performance-container  flex-lg-row flex-sm-column">
-          <div className="performance-container mt-5 col-md-6">
+          <div className="performance-container-numberOf mt-5 col-md-6">
             <h1 className=" mb-2 ">Number Of</h1>
             <h5 className=" mt-5"> Weekly Threads</h5>
 
