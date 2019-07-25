@@ -132,7 +132,7 @@ class SetTargetPage extends Component {
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group">
               <label htmlFor="targetName" className="lead">
-                Target Starting Date*
+                Target Name*
               </label>
               <input
                 type="text"

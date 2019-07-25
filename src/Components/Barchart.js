@@ -11,7 +11,16 @@ import {
 } from "recharts";
 import data from "../Data/BarchartData.json";
 class Barchart extends Component {
+  yAxisValue = () => {
+    return this.props.barchartData
+      ? this.props.barchartData
+      : [
+          { name: "calls", calls: 0, am: 2400 },
+          { name: "messages", calls: 0, am: 2400 }
+        ];
+  };
   render() {
+    const data = this.yAxisValue();
     return (
       <ResponsiveContainer width="100%" aspect={2}>
         <BarChart
@@ -27,7 +36,7 @@ class Barchart extends Component {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis type="number" domain={[0, "dataMax"]} />
           <Tooltip />
           <Legend />
           <Bar dataKey="messages" fill="#D13830" />

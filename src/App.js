@@ -12,12 +12,12 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="studen-page">
+        <div>
           {/* <Nav />
         {this.state.userExist && <ProgressPage />}
         {!this.state.userExist && <Login confirmUser={this.confirmUser} />} */}
           <Nav />
-          <div className="container main" />
+          <div className="container" />
           <Routes />
         </div>
       </Router>

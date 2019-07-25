@@ -5,6 +5,6 @@ export const performancePercentage = (
   targetCalls
 ) => {
   return (
-    (numberOfMessages + numberOfCalls) / 100 / (targetMessages + targetCalls)
+    ((numberOfMessages + numberOfCalls) * 100) / (targetMessages + targetCalls)
   );
 };

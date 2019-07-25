@@ -3,7 +3,9 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 class ProgressBar extends Component {
   render() {
-    const percentage = Math.floor(100 * Math.random());
+    const percentage = this.props.performancePercentage
+      ? Math.floor(this.props.performancePercentage)
+      : 0;
 
     return (
       <div style={{ maxWidth: 300, marginBottom: 20 }}>

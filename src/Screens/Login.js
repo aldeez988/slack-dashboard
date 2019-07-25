@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getStudentMessages } from "../Components/actions/getStudentMessages";
 import { login } from "../Components/actions/login";
+import { getAllClasses } from "../Components/actions/addClass";
 import swal from "sweetalert";
 import "./login.css";
 

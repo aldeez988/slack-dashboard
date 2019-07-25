@@ -5,7 +5,7 @@ class StudentLabel extends Component {
     return (
       <div className="mt-5 label">
         <div className="d-flex flex-column justify-content-center">
-          <h3 className=" mt-3">This week Top Student:</h3>
+          {/* <h3 className=" mt-3">This week Top Student:</h3> */}
           <h3 className=" mt-3">
             {`Messages target `}
             <i class="far fa-comments" style={{ fontSize: "30px" }} />:

@@ -1,44 +1,14 @@
 [
   {
-    "name": "Week 1",
+    "name": "Calls",
     "calls": 40,
     "messages": 20,
     "amt": 2400
   },
   {
-    "name": "week 2",
+    "name": "Messages",
     "calls": 30,
     "messages": 18,
     "amt": 2210
-  },
-  {
-    "name": "week 3",
-    "calls": 20,
-    "messages": 80,
-    "amt": 2290
-  },
-  {
-    "name": "Week 4",
-    "calls": 90,
-    "messages": 44,
-    "amt": 2000
-  },
-  {
-    "name": "Week 5",
-    "calls": 90,
-    "messages": 80,
-    "amt": 2181
-  },
-  {
-    "name": "Week 6",
-    "calls": 23,
-    "messages": 38,
-    "amt": 2500
-  },
-  {
-    "name": "Week 7",
-    "calls": 34,
-    "messages": 40,
-    "amt": 2100
   }
 ]

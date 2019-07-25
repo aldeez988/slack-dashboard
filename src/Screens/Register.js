@@ -3,11 +3,13 @@ import axios from "axios";
 import { addUser } from "../Components/actions/addUser";
 // import { setToken, loggedIn } from "../Auth/index";
 import swal from "sweetalert";
+import { getAllClasses } from "../Components/actions/addClass";
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      classes: [],
       firstName: "",
       lastName: "",
       email: "",
@@ -18,8 +20,18 @@ class Register extends Component {
       cyfClass: "",
       passwordConfirmation: "",
       gender: "",
-      isStudent: false
+      isStudent: false,
+      classId: ""
     };
+  }
+  async componentWillMount() {
+    try {
+      const response = await getAllClasses();
+      this.setState({ classes: response.data });
+      console.log("from registeratio", response);
+    } catch (err) {
+      swal("Oops!", "Something went wrong!", "error");
+    }
   }
   UNSAFE_componentWillMount() {
     // if (loggedIn()) {
@@ -42,6 +54,13 @@ class Register extends Component {
         } else if (this.state.userType === "Mentor") {
           this.setState({ isStudent: false });
         }
+        if (name === "cyfClass") {
+          this.setState({
+            classId: this.state.classes.find(
+              classdata => classdata.className === value
+            )._id
+          });
+        }
       }
     );
   };
@@ -58,7 +77,8 @@ class Register extends Component {
       userType,
       cyfClass,
       password,
-      passwordConfirmation
+      passwordConfirmation,
+      classId
     } = this.state;
     const userData = {
       firstName,
@@ -69,7 +89,8 @@ class Register extends Component {
       gender,
       userType,
       cyfClass,
-      password
+      password,
+      classId
     };
     if (password !== passwordConfirmation) {
       swal("Oops!", "Password must match confirmation!", "error");
@@ -101,7 +122,9 @@ class Register extends Component {
       cyfClass,
       isStudent,
       password,
-      passwordConfirmation
+      passwordConfirmation,
+      classes,
+      classId
     } = this.state;
     const { err, msg } = this.props;
     return (
@@ -255,10 +278,9 @@ class Register extends Component {
                   required
                 >
                   <option disabled>Select here</option>
-                  <option>Rome-class1</option>
-                  <option>Manchester-class2</option>
-                  <option>Glasgow-class3</option>
-                  <option>London-class5</option>
+                  {classes.map(classdata => (
+                    <option>{classdata.className}</option>
+                  ))}
                 </select>
               </div>
             )}

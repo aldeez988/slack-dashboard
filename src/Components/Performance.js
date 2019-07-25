@@ -1,30 +1,93 @@
 import React, { Component } from "react";
 import ClassData from "../Data/ClassData.json";
 import Barchart from "./Barchart";
+import swal from "sweetalert";
+import { getTargetsForClass } from "../Components/actions/targets";
+import {
+  getAllStudent,
+  getAllStudents
+} from "../Components/actions/getAllStudents";
+import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
+
 class PerformancePage extends Component {
   state = {
     className: "",
+    selectedClass: {},
     studentsName: "",
-    students: [],
-    cyfClasses: this.props.location.state ? this.props.location.state : []
-  };
-  getStudents = className => {
-    this.setState({
-      students: ClassData.find(classdata => classdata.className === className)
-        .students
-    });
-    console.log("students", this.state.students);
+    studentsSlackId: [],
+    cyfClasses: this.props.location.state ? this.props.location.state : [],
+    targets: [],
+    targetName: ""
   };
 
   onChange = e => {
     const { name, value } = e.target;
     console.log();
-    this.setState({
-      [name]: value
-    });
+    this.setState(
+      () => {
+        return {
+          [name]: value,
+
+          selectedClass:
+            name === "className"
+              ? this.state.cyfClasses.find(
+                  classData => classData.className === value
+                )
+              : {}
+        };
+      },
+      async () => {
+        // const id = this.state.cyfClasses.find(
+        //   classData => classData.className === value
+        // ).id;
+        if (name === "className") {
+          try {
+            console.log("hi from performance page 2");
+
+            const targetResponse = await getTargetsForClass({
+              id: this.state.selectedClass._id
+            });
+            const getStudentsResponse = await getAllStudents({
+              id: this.state.selectedClass._id
+            });
+            const slackIds = getStudentsResponse.data.map(
+              student => student.slackId
+            );
+            console.log("all salck id's", slackIds);
+            this.setState({
+              targets: targetResponse.data,
+              students: getStudentsResponse.data,
+              studentsSlackId: slackIds
+            });
+          } catch (err) {
+            swal("Oops!", "Something went wrong!", "error");
+          }
+        }
+        if (name === "targetName") {
+          try {
+            const studentsSlackId = this.state.studentsSlackId;
+            const selectedTarget = this.state.targets.find(
+              target => target.targetName === value
+            );
+            let startingDate =
+              new Date(selectedTarget.startingDate).getTime() / 1000;
+            let finishingDate =
+              new Date(selectedTarget.finishingDate).getTime() / 1000;
+            const response = await allCallsAndMessages({
+              startingDate,
+              finishingDate,
+              studentsSlackId
+            });
+          } catch (err) {
+            swal("Oops!", "Something went wrong!", "error");
+          }
+        }
+      }
+    );
   };
   render() {
-    const { className, studentsName } = this.state;
+    console.log("hi from performance page 1 ", this.state);
+    const { className, targetName } = this.state;
     console.log("data", ClassData);
     return (
       <div className="performance-container">
@@ -36,7 +99,7 @@ class PerformancePage extends Component {
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
               <label htmlFor="className" className="lead">
-                Classes{" "}
+                Select Class{" "}
               </label>
 
               <select
@@ -59,22 +122,22 @@ class PerformancePage extends Component {
           <div className="col-sm-10  col-lg-4 mb-2">
             <div className="form-group">
               <label htmlFor="students" className="lead">
-                Students{" "}
+                Select Target{" "}
               </label>
 
               <select
                 className="form-control form-control-lg"
-                name="studentsName"
-                id="studentsName"
-                value={studentsName}
+                name="targetName"
+                id="targetName"
+                value={targetName}
                 onChange={this.onChange}
                 required
               >
                 <option value="" disabled>
                   Select here
                 </option>
-                {this.state.cyfClasses.map(data => (
-                  <option>London</option>
+                {this.state.targets.map(target => (
+                  <option>{target.targetName}</option>
                 ))}
               </select>
             </div>

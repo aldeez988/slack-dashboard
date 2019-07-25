@@ -24,3 +24,16 @@ export const getTargets = async options => {
     swal("Oops!", "Something went wrong please check your network!", "error");
   }
 };
+
+export const getTargetsForClass = async options => {
+  try {
+    return await axios.get(
+      "https://slack-dashboard-backend.glitch.me/targetsForClass",
+      {
+        params: options
+      }
+    );
+  } catch (error) {
+    swal("Oops!", "Something went wrong please check your network!", "error");
+  }
+};

@@ -9,6 +9,7 @@ import moment from "moment";
 import { ResponsiveContainer } from "recharts";
 import { getTargets } from "./actions/targets";
 import { getUserMessageNumber } from "./actions/slack";
+import { performancePercentage } from "./helpers/performancePercentage";
 class StudentPage extends Component {
   state = {
     targetName: "",
@@ -31,9 +32,6 @@ class StudentPage extends Component {
   }
 
   onChange = e => {
-    //converting timestamp to date
-    // const value = "1563216810.003200";
-    // var dateString = moment.unix(value).format("DD/MM/YYYY");
     const { value } = e.target;
     this.setState(
       () => {
@@ -56,6 +54,8 @@ class StudentPage extends Component {
         console.log("from deez", startingDate, finishingDate);
 
         try {
+          const targetCalls = this.state.selectedTargetData.targetCalls;
+          const targetThreads = this.state.selectedTargetData.targetThreads;
           const response = await getUserMessageNumber({
             slackId,
             startingDate,
@@ -68,9 +68,23 @@ class StudentPage extends Component {
 
           this.setState({
             numberOfMessages: messageCounter,
-            numberOfCalls: callsCounter
+            numberOfCalls: callsCounter,
+            performancePercentage: performancePercentage(
+              messageCounter,
+              callsCounter,
+              targetCalls,
+              targetThreads
+            )
           });
-          console.log("response form the slack messages");
+          console.log(
+            "response form the slack messages",
+            performancePercentage(
+              messageCounter,
+              callsCounter,
+              targetCalls,
+              targetThreads
+            )
+          );
         } catch (err) {
           swal("Oops!", "Something went wrong!", "error");
         }
@@ -79,15 +93,18 @@ class StudentPage extends Component {
   };
   render() {
     const { targetName, numberOfMessages, numberOfCalls } = this.state;
+    const barchartData = [
+      { name: "Calls", calls: numberOfCalls, amt: 2400 },
+      { name: "Messages", messages: numberOfMessages, amt: 222 }
+    ];
     console.log("from inside the student page", this.props.location.state);
     console.log("from inside the student page", numberOfMessages);
 
     return (
-      <div className="studen-page d-flex flex-column align-items-around justify-content-center">
+      <div className="student-page-container ">
         <div className="header-container d-flex justify-content-center">
           <h1 className="">Your Performance</h1>
         </div>
-
         <div className="col-sm-10 col-lg-4 mb-4">
           <div className="form-group ">
             <label htmlFor="className" className="lead">
@@ -111,9 +128,13 @@ class StudentPage extends Component {
             </select>
           </div>
         </div>
-
-        <div className="d-flex  justify-content-between ">
-          <div className="col-4 align-items-center">
+        <div className="d-flex col-4  align-items-center">
+          <ProgressBar
+            performancePercentage={this.state.performancePercentage}
+          />
+        </div>
+        <div className="barchart-sudentlable-container ">
+          <div className="student-lable-container">
             <StudentLabel
               targetCalls={this.state.selectedTargetData.targetCalls}
               targetThreads={this.state.selectedTargetData.targetThreads}
@@ -122,17 +143,14 @@ class StudentPage extends Component {
               numberOfCalls={numberOfCalls}
             />
           </div>
-          <div className="d-flex col-4 flex-column align-items-center">
-            <ProgressBar />
+          <div className="mt-5 barchart-container">
+            <div style={{ width: "100%" }}>
+              <Barchart barchartData={barchartData} />
+            </div>
           </div>
-          <div className="col-4 mt-5">
+          {/* <div className="col-4 mt-5">
             <TopStudents />
-          </div>
-        </div>
-        <div className="mt-5 barchart-container">
-          <div style={{ width: "50%" }}>
-            <Barchart />
-          </div>
+          </div> */}
         </div>
       </div>
     );
