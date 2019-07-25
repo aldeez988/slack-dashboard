@@ -39,7 +39,7 @@ class StudentPage extends Component {
       () => {
         return {
           targetName: value,
-          selectedTargetData: this.state.targetNames.filter(
+          selectedTargetData: this.state.targetNames.find(
             target => target.targetName === value
           )
         };
@@ -49,10 +49,9 @@ class StudentPage extends Component {
         const slackId = this.props.location.state.slackId;
 
         let startingDate =
-          new Date(this.state.selectedTargetData[0].startingDate).getTime() /
-          1000;
+          new Date(this.state.selectedTargetData.startingDate).getTime() / 1000;
         let finishingDate =
-          new Date(this.state.selectedTargetData[0].finishingDate).getTime() /
+          new Date(this.state.selectedTargetData.finishingDate).getTime() /
           1000;
         console.log("from deez", startingDate, finishingDate);
 
@@ -86,35 +85,38 @@ class StudentPage extends Component {
     return (
       <div className="studen-page d-flex flex-column align-items-around justify-content-center">
         <div className="header-container d-flex justify-content-center">
-          <h1 className="">This Week Performance</h1>
-          <div className="col-sm-10 col-lg-4 mb-2">
-            <div className="form-group ">
-              <label htmlFor="className" className="lead">
-                Select Target to See Result{" "}
-              </label>
+          <h1 className="">Your Performance</h1>
+        </div>
 
-              <select
-                className="form-control form-control-lg"
-                name="targetName"
-                id="className"
-                value={targetName}
-                onChange={this.onChange}
-                required
-              >
-                <option value="" disabled>
-                  Select here
-                </option>
-                {this.state.targetNames.map(data => (
-                  <option>{data.targetName}</option>
-                ))}
-              </select>
-            </div>
+        <div className="col-sm-10 col-lg-4 mb-4">
+          <div className="form-group ">
+            <label htmlFor="className" className="lead">
+              Select Target to See Result{" "}
+            </label>
+
+            <select
+              className="form-control form-control-lg"
+              name="targetName"
+              id="className"
+              value={targetName}
+              onChange={this.onChange}
+              required
+            >
+              <option value="" disabled>
+                Select here
+              </option>
+              {this.state.targetNames.map(data => (
+                <option>{data.targetName}</option>
+              ))}
+            </select>
           </div>
         </div>
 
         <div className="d-flex  justify-content-between ">
           <div className="col-4 align-items-center">
             <StudentLabel
+              targetCalls={this.state.selectedTargetData.targetCalls}
+              targetThreads={this.state.selectedTargetData.targetThreads}
               numberOfMessages={numberOfMessages}
               targetName={this.state.targetName}
               numberOfCalls={numberOfCalls}

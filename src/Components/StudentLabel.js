@@ -7,36 +7,42 @@ class StudentLabel extends Component {
         <div className="d-flex flex-column justify-content-center">
           <h3 className=" mt-3">This week Top Student:</h3>
           <h3 className=" mt-3">
-            {`Messages target for ${this.props.targetName}`}
+            {`Messages target `}
+            <i class="far fa-comments" style={{ fontSize: "30px" }} />:
+          </h3>
+          <h3 className=" mt-3">{this.props.targetThreads}</h3>
+          <h3 className=" mt-3">
+            {`Your messages`}
             <i class="far fa-comments" style={{ fontSize: "30px" }} />:
           </h3>
           <h3 className=" mt-3">{this.props.numberOfMessages}</h3>
           <h3 className=" mt-3">
-            Calls target for this week{" "}
+            {`Calls target `}{" "}
+            <i class="fa   fa-phone" style={{ fontSize: "30px" }} />:
+          </h3>
+          <h3 className=" mt-3">{this.props.targetCalls}</h3>
+          <h3 className=" mt-3">
+            {`Your calls`}
             <i class="fa fa-phone" style={{ fontSize: "30px" }} />:
           </h3>
+          <h3 className=" mt-3">{this.props.numberOfCalls}</h3>
           <div className="d-flex flex-column justify-content-start">
-            <div>
+            {/* <div>
               <h3 className=" mt-3">Your Stars</h3>
               <i
                 class="fa fa-star"
                 style={{ color: "gold", fontSize: "40px" }}
               />
-            </div>
+            </div> */}
           </div>
-          <div>
+          {/* <div>
             <h3 className=" mt-3">Your Medals:</h3>
             <i
               class="fas fa-award"
               style={{ color: "gold", fontSize: "40px" }}
             />
-            {/* <div class="" style={{ width: "50px" }}>
-              <img
-                src={logo_CYF_square}
-                style={{ color: "gold", width: "100%" }}
-              />{" "}
-            </div> */}
-          </div>
+           
+          </div> */}
         </div>
       </div>
     );
