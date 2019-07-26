@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import ClassData from "../Data/ClassData.json";
-import Barchart from "./Barchart";
 import swal from "sweetalert";
+import Table from "./Mentors/Table";
+import ProgressBar from "../Components/ProgressBar";
 import { getTargetsForClass } from "../Components/actions/targets";
 import {
   getAllStudent,
   getAllStudents
 } from "../Components/actions/getAllStudents";
 import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
-
+import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
+import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
 class PerformancePage extends Component {
   state = {
     className: "",
@@ -17,7 +18,9 @@ class PerformancePage extends Component {
     studentsSlackId: [],
     cyfClasses: this.props.location.state ? this.props.location.state : [],
     targets: [],
-    targetName: ""
+    targetName: "",
+    tableData: [],
+    selectedTargetData: ""
   };
 
   onChange = e => {
@@ -50,10 +53,17 @@ class PerformancePage extends Component {
             const getStudentsResponse = await getAllStudents({
               id: this.state.selectedClass._id
             });
-            const slackIds = getStudentsResponse.data.map(
-              student => student.slackId
-            );
-            console.log("all salck id's", slackIds);
+            this.setState({ studentsName: getStudentsResponse.data });
+            //Getting id only for students in the selected class to only get their messages
+            const slackIds = getStudentsResponse.data
+              .filter(
+                student =>
+                  student.classId ===
+                  this.state.cyfClasses.find(
+                    classData => classData.className === value
+                  )._id
+              )
+              .map(student => student.slackId);
             this.setState({
               targets: targetResponse.data,
               students: getStudentsResponse.data,
@@ -64,31 +74,49 @@ class PerformancePage extends Component {
           }
         }
         if (name === "targetName") {
-          try {
-            const studentsSlackId = this.state.studentsSlackId;
-            const selectedTarget = this.state.targets.find(
-              target => target.targetName === value
-            );
-            let startingDate =
-              new Date(selectedTarget.startingDate).getTime() / 1000;
-            let finishingDate =
-              new Date(selectedTarget.finishingDate).getTime() / 1000;
-            const response = await allCallsAndMessages({
-              startingDate,
-              finishingDate,
-              studentsSlackId
+          const studentsSlackId = this.state.studentsSlackId;
+          const selectedTarget = this.state.targets.find(
+            target => target.targetName === value
+          );
+          let startingDate =
+            new Date(selectedTarget.startingDate).getTime() / 1000;
+          let finishingDate =
+            new Date(selectedTarget.finishingDate).getTime() / 1000;
+
+          allCallsAndMessages({
+            startingDate,
+            finishingDate,
+            studentsSlackId
+          })
+            .then(response => {
+              console.log("n******* and Calls", response);
+              const finalNumberOFMessagesAndCalls = getAllNumberOfMessagesAndCalls(
+                studentsSlackId,
+                response.data.messages
+              );
+
+              console.log("students Names", this.state.studentsName);
+              this.setState({
+                tableData: mergingStudentsDataForTable(
+                  finalNumberOFMessagesAndCalls,
+                  this.state.studentsName
+                ),
+                selectedTargetData: this.state.targets.find(
+                  target => target.targetName === value
+                )
+              });
+            })
+            .catch(err => {
+              console.log(err);
+              swal("Oops!", "Something went wrong!", "error");
             });
-          } catch (err) {
-            swal("Oops!", "Something went wrong!", "error");
-          }
         }
       }
     );
   };
   render() {
-    console.log("hi from performance page 1 ", this.state);
-    const { className, targetName } = this.state;
-    console.log("data", ClassData);
+    const { className, targetName, selectedTargetData, tableData } = this.state;
+    console.log("this is the target data", this.state.targets);
     return (
       <div className="performance-container">
         <br />
@@ -144,19 +172,21 @@ class PerformancePage extends Component {
           </div>
         </div>
 
-        <div className="barchart-performance-container  flex-lg-row flex-sm-column">
-          <div className="performance-container-numberOf mt-5 col-md-6">
-            <h1 className=" mb-2 ">Number Of</h1>
-            <h5 className=" mt-5"> Weekly Threads</h5>
-
-            <h5 className="mt-5 ">Weekly Calls</h5>
+        <div className="barchart-performance-container  flex-lg-row flex-sm-column ">
+          <div className="performance-container-numberOf mt-5 col-md-6 result-container">
+            <h2 className=" mt-5"> Target Threads</h2>
+            <h3>{selectedTargetData.targetThreads}</h3>
+            <h2 className="mt-5 ">Target Calls</h2>
+            <h3>{selectedTargetData.targetCalls}</h3>
           </div>
           <div className=" mt-5 col-md-6">
-            <h1 className="ml-5  mb-2 text-center">Over View</h1>
-
-            <Barchart />
+            <ProgressBar />
           </div>
         </div>
+        <Table
+          data={tableData}
+          target={selectedTargetData ? selectedTargetData : {}}
+        />
       </div>
     );
   }

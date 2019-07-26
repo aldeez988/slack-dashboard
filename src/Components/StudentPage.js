@@ -5,7 +5,6 @@ import StudentLabel from "./StudentLabel";
 import Barchart from "./Barchart";
 import TopStudents from "./TopStudents";
 import swal from "sweetalert";
-import moment from "moment";
 import { ResponsiveContainer } from "recharts";
 import { getTargets } from "./actions/targets";
 import { getUserMessageNumber } from "./actions/slack";

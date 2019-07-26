@@ -36,9 +36,10 @@ body {
   justify-content: space-around;
 }
 .barchart-performance-container {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: row;
+  border: 2px solid black;
 }
 @media screen and (max-width: 811px) {
   .dropdown-container {
@@ -132,4 +133,10 @@ body {
   display: flex;
   justify-content: space-between;
   width: 70%;
+}
+
+/* General */
+.result-container {
+  border-radius: 50px;
+  padding: 20px;
 }

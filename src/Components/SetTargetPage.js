@@ -139,7 +139,7 @@ class SetTargetPage extends Component {
                 name="targetName"
                 id="targetName"
                 className="form-control form-control-lg"
-                placeholder="Classes Starting Date"
+                placeholder="Classe Target Name"
                 value={targetName}
                 onChange={this.onChange}
                 required
