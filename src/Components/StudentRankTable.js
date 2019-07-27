@@ -15,7 +15,7 @@ class StudentRankingTable extends Component {
         style={{
           backgroundColor: "white",
           marginTop: "20px",
-          width: "450px",
+          width: "100%",
           overflow: "scroll",
           height: "420px"
         }}

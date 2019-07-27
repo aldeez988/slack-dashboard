@@ -165,28 +165,23 @@ class StudentPage extends Component {
             </select>
           </div>
         </div>
-        <div className="d-flex col-4  align-items-center">
+        
+        <div className="label barchart-sudentlable-container mb-5">
+          <StudentLabel
+            targetCalls={this.state.selectedTargetData.targetCalls}
+            targetThreads={this.state.selectedTargetData.targetThreads}
+            numberOfMessages={numberOfMessages}
+            targetName={this.state.targetName}
+            numberOfCalls={numberOfCalls}
+          />
+          <hr className="hr"/>
           <ProgressBar
+            className="d-flex col-4  justify-content-center mb-5"
             performancePercentage={this.state.performancePercentage}
           />
+          
         </div>
-        <div className="barchart-sudentlable-container ">
-          <div className="student-lable-container">
-            <StudentLabel
-              targetCalls={this.state.selectedTargetData.targetCalls}
-              targetThreads={this.state.selectedTargetData.targetThreads}
-              numberOfMessages={numberOfMessages}
-              targetName={this.state.targetName}
-              numberOfCalls={numberOfCalls}
-            />
-          </div>
-          <div className="mt-5 barchart-container">
-            <div style={{ width: "100%" }} />
-          </div>
-          <div className="col-4 mt-5">
-            <TopStudents rankedProfiles={rankedProfiles} />
-          </div>
-        </div>
+        <TopStudents rankedProfiles={rankedProfiles} />
       </div>
     );
   }
