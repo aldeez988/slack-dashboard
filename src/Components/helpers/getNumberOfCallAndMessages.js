@@ -47,3 +47,15 @@ export const getAllNumberOfMessagesAndCalls = (studentsSlackId, messages) => {
   });
   return userData;
 };
+
+export const studentsRank = usersMessagesAncCallsNumber => {
+  const totalOfAllUsersCallsAndMessages = usersMessagesAncCallsNumber.map(
+    data => {
+      const totalOfCallAndMessages = data.callsCounter + data.messageCounter;
+      return [totalOfCallAndMessages, data.userSlackId];
+    }
+  );
+  return totalOfAllUsersCallsAndMessages.sort(function(a, b) {
+    return a[1] - b[1];
+  });
+};

@@ -9,6 +9,13 @@ import { ResponsiveContainer } from "recharts";
 import { getTargets } from "./actions/targets";
 import { getUserMessageNumber } from "./actions/slack";
 import { performancePercentage } from "./helpers/performancePercentage";
+import {
+  studentsRank,
+  getAllNumberOfMessagesAndCalls
+} from "./helpers/getNumberOfCallAndMessages";
+import { allCallsAndMessages } from "./actions/getStudentMessages";
+import { getAllStudents } from "../Components/actions/getAllStudents";
+
 class StudentPage extends Component {
   state = {
     targetName: "",
@@ -16,7 +23,9 @@ class StudentPage extends Component {
     targetNames: [],
     selectedTargetData: {},
     numberOfMessages: "",
-    numberOfCalls: ""
+    numberOfCalls: "",
+    rankedStudentsCallsAndMessages: [],
+    currentUserCallsAndMessageNumber: []
   };
 
   componentWillMount() {
@@ -55,15 +64,37 @@ class StudentPage extends Component {
         try {
           const targetCalls = this.state.selectedTargetData.targetCalls;
           const targetThreads = this.state.selectedTargetData.targetThreads;
-          const response = await getUserMessageNumber({
-            slackId,
+          const classId = this.props.location.state.classId;
+
+          const allStudentProfiles = await getAllStudents({ id: classId });
+          console.log("xxxxxxx", allStudentProfiles.data);
+          const messagesAndCalls = await allCallsAndMessages({
             startingDate,
             finishingDate
           });
-          const {
-            messageCounter,
-            callsCounter
-          } = response.data.numberOfMessagesAndCalls;
+          console.log("BBBB", messagesAndCalls.data.messages);
+
+          const slackIds = allStudentProfiles.data
+            .filter(student => student.classId === classId)
+            .map(student => student.slackId);
+          const allNumberOfMessagesAndCalls = getAllNumberOfMessagesAndCalls(
+            slackIds,
+            messagesAndCalls.data.messages
+          );
+          console.log("BBjjjjjjBB", allNumberOfMessagesAndCalls);
+
+          ////sTopped herer
+          this.setState({
+            currentUserCallsAndMessageNumber: allNumberOfMessagesAndCalls
+          });
+          // allStudentProfiles;
+          this.setState({
+            rankedStudentsCallsAndMessages: studentsRank(
+              allNumberOfMessagesAndCalls
+            )
+          });
+
+          const { messageCounter, callsCounter } = {};
 
           this.setState({
             numberOfMessages: messageCounter,
@@ -97,7 +128,6 @@ class StudentPage extends Component {
       { name: "Messages", messages: numberOfMessages, amt: 222 }
     ];
     console.log("from inside the student page", this.props.location.state);
-    console.log("from inside the student page", numberOfMessages);
 
     return (
       <div className="student-page-container ">
@@ -147,9 +177,13 @@ class StudentPage extends Component {
               <Barchart barchartData={barchartData} />
             </div>
           </div>
-          {/* <div className="col-4 mt-5">
-            <TopStudents />
-          </div> */}
+          <div className="col-4 mt-5">
+            <TopStudents
+              rankedStudentsCallsAndMessages={
+                this.state.rankedStudentsCallsAndMessages
+              }
+            />
+          </div>
         </div>
       </div>
     );
