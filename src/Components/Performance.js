@@ -3,6 +3,7 @@ import swal from "sweetalert";
 import Table from "./Mentors/Table";
 import ProgressBar from "../Components/ProgressBar";
 import { getTargetsForClass } from "../Components/actions/targets";
+import { getStudentsSlackIds } from "../Components/helpers/getSudentsSlackIds";
 import {
   getAllStudent,
   getAllStudents
@@ -10,18 +11,24 @@ import {
 import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
 import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
 import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
+import { getAveragePerformancePercentage } from "../Components/helpers/averagePerformancePercentage";
 class PerformancePage extends Component {
   state = {
     className: "",
     selectedClass: {},
-    studentsName: "",
+    studentsProfiles: [],
     studentsSlackId: [],
-    cyfClasses: this.props.location.state ? this.props.location.state : [],
+    cyfClasses: [],
+    // cyfClasses: this.props.location.state ? this.props.location.state : [],
     targets: [],
     targetName: "",
     tableData: [],
-    selectedTargetData: ""
+    selectedTargetData: "",
+    averagePerformancePercentage: 0
   };
+  componentWillMount() {
+    this.setState({ cyfClasses: this.props.cyfClasses });
+  }
 
   onChange = e => {
     const { name, value } = e.target;
@@ -53,7 +60,11 @@ class PerformancePage extends Component {
             const getStudentsResponse = await getAllStudents({
               id: this.state.selectedClass._id
             });
-            this.setState({ studentsName: getStudentsResponse.data });
+            const studentsSlackIds = getStudentsSlackIds(
+              getStudentsResponse.data,
+              this.state.selectedClass._id
+            );
+
             //Getting id only for students in the selected class to only get their messages
 
             // needs refactoring
@@ -68,8 +79,8 @@ class PerformancePage extends Component {
               .map(student => student.slackId);
             this.setState({
               targets: targetResponse.data,
-              students: getStudentsResponse.data,
-              studentsSlackId: slackIds
+              studentsProfiles: getStudentsResponse.data,
+              studentsSlackId: studentsSlackIds
             });
           } catch (err) {
             swal("Oops!", "Something went wrong!", "error");
@@ -84,7 +95,7 @@ class PerformancePage extends Component {
             new Date(selectedTarget.startingDate).getTime() / 1000;
           let finishingDate =
             new Date(selectedTarget.finishingDate).getTime() / 1000;
-
+          this.setState({ selectedTargetData: selectedTarget });
           allCallsAndMessages({
             startingDate,
             finishingDate,
@@ -96,15 +107,22 @@ class PerformancePage extends Component {
                 studentsSlackId,
                 response.data.messages
               );
+              const totalTarget =
+                this.state.selectedTargetData.targetThreads +
+                this.state.selectedTargetData.targetCalls;
 
+              this.setState({
+                averagePerformancePercentage: getAveragePerformancePercentage(
+                  finalNumberOFMessagesAndCalls,
+                  totalTarget,
+                  this.state.studentsProfiles.length
+                )
+              });
               console.log("students Names", this.state.studentsName);
               this.setState({
                 tableData: mergingStudentsDataForTable(
                   finalNumberOFMessagesAndCalls,
-                  this.state.studentsName
-                ),
-                selectedTargetData: this.state.targets.find(
-                  target => target.targetName === value
+                  this.state.studentsProfiles
                 )
               });
             })
@@ -117,7 +135,13 @@ class PerformancePage extends Component {
     );
   };
   render() {
-    const { className, targetName, selectedTargetData, tableData } = this.state;
+    const {
+      className,
+      targetName,
+      selectedTargetData,
+      tableData,
+      averagePerformancePercentage
+    } = this.state;
     console.log("this is the target data", this.state.targets);
     return (
       <div className="performance-container">
@@ -182,7 +206,13 @@ class PerformancePage extends Component {
             <h3>{selectedTargetData.targetCalls}</h3>
           </div>
           <div className=" mt-5 col-md-6">
-            <ProgressBar />
+            <ProgressBar
+              performancePercentage={
+                averagePerformancePercentage
+                  ? averagePerformancePercentage
+                  : averagePerformancePercentage
+              }
+            />
           </div>
         </div>
         <Table

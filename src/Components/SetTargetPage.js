@@ -7,7 +7,7 @@ import { getStudentsNumber } from "../Components/actions/userProfiles";
 class SetTargetPage extends Component {
   state = {
     students: [],
-    cyfClasses: this.props.location.state,
+    cyfClasses: this.props.cyfClasses ? this.props.cyfClasses : [],
     numberOfStudents: 0,
     targetName: "",
     className: "",
@@ -100,11 +100,6 @@ class SetTargetPage extends Component {
     } = this.state;
     return (
       <div className="d-flex flex-column align-items-center justify-content-center mt-5">
-        <div className="header-container ">
-          <h1 calssNames="col-sm-10" style={{}}>
-            Set a Target For class{" "}
-          </h1>
-        </div>
         <div className="set-target-dropdown-container">
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
