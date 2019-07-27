@@ -81,11 +81,9 @@ class StudentPage extends Component {
             messagesAndCalls.data.messages
           );
 
-          ////sTopped herer
           this.setState({
             currentUserCallsAndMessageNumber: allNumberOfMessagesAndCalls
           });
-          // allStudentProfiles;
           this.setState(
             () => {
               return {
@@ -136,12 +134,6 @@ class StudentPage extends Component {
     const rankedProfiles = this.state.mergedStudentsResultForTable
       ? this.state.mergedStudentsResultForTable
       : [];
-    // const barchartData = [
-    //   { name: "Calls", calls: numberOfCalls, amt: 2400 },
-    //   { name: "Messages", messages: numberOfMessages, amt: 222 }
-    // ];
-
-    console.log("dododododood merged data for table", rankedProfiles);
 
     console.log("from inside the student page", this.props.location.state);
 
@@ -189,9 +181,7 @@ class StudentPage extends Component {
             />
           </div>
           <div className="mt-5 barchart-container">
-            <div style={{ width: "100%" }}>
-              {/* <Barchart barchartData={barchartData} /> */}
-            </div>
+            <div style={{ width: "100%" }} />
           </div>
           <div className="col-4 mt-5">
             <TopStudents rankedProfiles={rankedProfiles} />
