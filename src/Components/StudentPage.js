@@ -11,11 +11,12 @@ import { getUserMessageNumber } from "./actions/slack";
 import { performancePercentage } from "./helpers/performancePercentage";
 import {
   studentsRank,
-  getAllNumberOfMessagesAndCalls
+  getAllNumberOfMessagesAndCalls,
+  getCurrentUserNumberOfCallsAndMessages
 } from "./helpers/getNumberOfCallAndMessages";
 import { allCallsAndMessages } from "./actions/getStudentMessages";
 import { getAllStudents } from "../Components/actions/getAllStudents";
-
+import { mergingStudentsDataWithTotalPerformance } from "./helpers/mergingStudentDataForTable";
 class StudentPage extends Component {
   state = {
     targetName: "",
@@ -25,7 +26,8 @@ class StudentPage extends Component {
     numberOfMessages: "",
     numberOfCalls: "",
     rankedStudentsCallsAndMessages: [],
-    currentUserCallsAndMessageNumber: []
+    currentUserCallsAndMessageNumber: [],
+    mergedStudentsResultForTable: []
   };
 
   componentWillMount() {
@@ -59,7 +61,6 @@ class StudentPage extends Component {
         let finishingDate =
           new Date(this.state.selectedTargetData.finishingDate).getTime() /
           1000;
-        console.log("from deez", startingDate, finishingDate);
 
         try {
           const targetCalls = this.state.selectedTargetData.targetCalls;
@@ -67,12 +68,10 @@ class StudentPage extends Component {
           const classId = this.props.location.state.classId;
 
           const allStudentProfiles = await getAllStudents({ id: classId });
-          console.log("xxxxxxx", allStudentProfiles.data);
           const messagesAndCalls = await allCallsAndMessages({
             startingDate,
             finishingDate
           });
-          console.log("BBBB", messagesAndCalls.data.messages);
 
           const slackIds = allStudentProfiles.data
             .filter(student => student.classId === classId)
@@ -81,21 +80,36 @@ class StudentPage extends Component {
             slackIds,
             messagesAndCalls.data.messages
           );
-          console.log("BBjjjjjjBB", allNumberOfMessagesAndCalls);
 
           ////sTopped herer
           this.setState({
             currentUserCallsAndMessageNumber: allNumberOfMessagesAndCalls
           });
           // allStudentProfiles;
-          this.setState({
-            rankedStudentsCallsAndMessages: studentsRank(
-              allNumberOfMessagesAndCalls
-            )
-          });
-
-          const { messageCounter, callsCounter } = {};
-
+          this.setState(
+            () => {
+              return {
+                rankedStudentsCallsAndMessages: studentsRank(
+                  allNumberOfMessagesAndCalls
+                )
+              };
+            },
+            () => {
+              const mergedResult = mergingStudentsDataWithTotalPerformance(
+                this.state.rankedStudentsCallsAndMessages,
+                allStudentProfiles.data
+              );
+              this.setState({ mergedStudentsResultForTable: mergedResult });
+            }
+          );
+          const currentUserNumberOFMessagesAndCalls = getCurrentUserNumberOfCallsAndMessages(
+            this.props.location.state.slackId,
+            allNumberOfMessagesAndCalls
+          );
+          const {
+            messageCounter,
+            callsCounter
+          } = currentUserNumberOFMessagesAndCalls;
           this.setState({
             numberOfMessages: messageCounter,
             numberOfCalls: callsCounter,
@@ -106,15 +120,6 @@ class StudentPage extends Component {
               targetThreads
             )
           });
-          console.log(
-            "response form the slack messages",
-            performancePercentage(
-              messageCounter,
-              callsCounter,
-              targetCalls,
-              targetThreads
-            )
-          );
         } catch (err) {
           swal("Oops!", "Something went wrong!", "error");
         }
@@ -122,11 +127,22 @@ class StudentPage extends Component {
     );
   };
   render() {
-    const { targetName, numberOfMessages, numberOfCalls } = this.state;
-    const barchartData = [
-      { name: "Calls", calls: numberOfCalls, amt: 2400 },
-      { name: "Messages", messages: numberOfMessages, amt: 222 }
-    ];
+    const {
+      targetName,
+      numberOfMessages,
+      numberOfCalls,
+      rankedStudentsCallsAndMessages
+    } = this.state;
+    const rankedProfiles = this.state.mergedStudentsResultForTable
+      ? this.state.mergedStudentsResultForTable
+      : [];
+    // const barchartData = [
+    //   { name: "Calls", calls: numberOfCalls, amt: 2400 },
+    //   { name: "Messages", messages: numberOfMessages, amt: 222 }
+    // ];
+
+    console.log("dododododood merged data for table", rankedProfiles);
+
     console.log("from inside the student page", this.props.location.state);
 
     return (
@@ -174,15 +190,11 @@ class StudentPage extends Component {
           </div>
           <div className="mt-5 barchart-container">
             <div style={{ width: "100%" }}>
-              <Barchart barchartData={barchartData} />
+              {/* <Barchart barchartData={barchartData} /> */}
             </div>
           </div>
           <div className="col-4 mt-5">
-            <TopStudents
-              rankedStudentsCallsAndMessages={
-                this.state.rankedStudentsCallsAndMessages
-              }
-            />
+            <TopStudents rankedProfiles={rankedProfiles} />
           </div>
         </div>
       </div>

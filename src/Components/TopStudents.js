@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-
+import StudentRankingTable from "../Components/StudentRankTable";
 class TopStudents extends Component {
   render() {
     return (
-      <div className="label">
+      <div className="label" style={{ overflowX: "scroll" }}>
         <h3 className="">
-          Top 3 Students this week{" "}
-          <i class="fa fa-trophy" style={{ fontSize: "30px", color: "gold" }} />
-          :
+          Your class performance :
+          <StudentRankingTable data={this.props.rankedProfiles} />
         </h3>
       </div>
     );

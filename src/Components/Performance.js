@@ -55,6 +55,8 @@ class PerformancePage extends Component {
             });
             this.setState({ studentsName: getStudentsResponse.data });
             //Getting id only for students in the selected class to only get their messages
+
+            // needs refactoring
             const slackIds = getStudentsResponse.data
               .filter(
                 student =>

@@ -48,6 +48,7 @@ export const getAllNumberOfMessagesAndCalls = (studentsSlackId, messages) => {
   return userData;
 };
 
+//Getting student rank by sorting their total number of calls and messages
 export const studentsRank = usersMessagesAncCallsNumber => {
   const totalOfAllUsersCallsAndMessages = usersMessagesAncCallsNumber.map(
     data => {
@@ -56,6 +57,10 @@ export const studentsRank = usersMessagesAncCallsNumber => {
     }
   );
   return totalOfAllUsersCallsAndMessages.sort(function(a, b) {
-    return a[1] - b[1];
+    return b[0] - a[0];
   });
+};
+
+export const getCurrentUserNumberOfCallsAndMessages = (slackId, results) => {
+  return results.find(result => result.userSlackId === slackId);
 };

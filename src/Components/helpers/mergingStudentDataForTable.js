@@ -10,3 +10,24 @@ export const mergingStudentsDataForTable = (slackStatistics, usersProfiles) => {
   });
   return slackStatistics;
 };
+
+export const mergingStudentsDataWithTotalPerformance = (
+  studentsPerformance,
+  usersProfiles
+) => {
+  let mergedUserData = [];
+  studentsPerformance.forEach(statistic => {
+    usersProfiles.forEach(profile => {
+      if (profile.slackId === statistic[1]) {
+        profile.totalPoints = statistic[0];
+        const data = {
+          firstName: profile.firstName,
+          lastName: profile.lastName,
+          totalPoints: statistic[0]
+        };
+        mergedUserData.push(data);
+      }
+    });
+  });
+  return mergedUserData;
+};

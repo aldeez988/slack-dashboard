@@ -5,7 +5,6 @@ class StudentLabel extends Component {
     return (
       <div className="mt-5 label">
         <div className="d-flex flex-column justify-content-center">
-          {/* <h3 className=" mt-3">This week Top Student:</h3> */}
           <h3 className=" mt-3">
             {`Messages target `}
             <i class="far fa-comments" style={{ fontSize: "30px" }} />:
@@ -27,21 +26,22 @@ class StudentLabel extends Component {
           </h3>
           <h3 className=" mt-3">{this.props.numberOfCalls}</h3>
           <div className="d-flex flex-column justify-content-start">
-            <div>
+            {/* <div>
               <h3 className=" mt-3">Your Stars</h3>
               <i
                 class="fa fa-star"
                 style={{ color: "gold", fontSize: "40px" }}
               />
-            </div>
+            </div> */}
           </div>
-          <div>
+          {/* <div>
             <h3 className=" mt-3">Your Medals:</h3>
             <i
               class="fas fa-award"
               style={{ color: "gold", fontSize: "40px" }}
             />
-          </div>
+           
+          </div> */}
         </div>
       </div>
     );
