@@ -198,14 +198,14 @@ class PerformancePage extends Component {
           </div>
         </div>
 
-        <div className="barchart-performance-container  flex-lg-row flex-sm-column ">
+        <div className="label barchart-sudentlable-container mb-5">
           <div className="performance-container-numberOf mt-5 col-md-6 result-container">
             <h2 className=" mt-5"> Target Threads</h2>
             <h3>{selectedTargetData.targetThreads}</h3>
             <h2 className="mt-5 ">Target Calls</h2>
             <h3>{selectedTargetData.targetCalls}</h3>
           </div>
-          <div className=" mt-5 col-md-6">
+          <hr className="hr" />
             <ProgressBar
               performancePercentage={
                 averagePerformancePercentage
@@ -213,12 +213,15 @@ class PerformancePage extends Component {
                   : averagePerformancePercentage
               }
             />
-          </div>
+          
         </div>
+    
         <Table
+          className="lable"
           data={tableData}
           target={selectedTargetData ? selectedTargetData : {}}
         />
+        
       </div>
     );
   }
