@@ -3,7 +3,7 @@ import ClassData from "../Data/ClassData.json";
 import { addTarget } from "../Components/actions/targets";
 import swal from "sweetalert";
 import { getStudentsNumber } from "../Components/actions/userProfiles";
-
+import { getPublicChannels } from "./actions/getChannels";
 class SetTargetPage extends Component {
   state = {
     students: [],
@@ -14,8 +14,16 @@ class SetTargetPage extends Component {
     startingDate: "",
     finishingDate: "",
     targetCalls: "",
-    targetThreads: ""
+    targetThreads: "",
+    publicChannels: [],
+    selectedChannel: "",
+    selectedChannelId: ""
   };
+  componentWillMount() {
+    getPublicChannels().then(res => {
+      this.setState({ publicChannels: res.data });
+    });
+  }
   getStudents = className => {
     this.setState({
       students: ClassData.find(classdata => classdata.className === className)
@@ -55,6 +63,12 @@ class SetTargetPage extends Component {
         if (name === "className") {
           await this.getNumberOfStudentsInAClass(value);
         }
+        if (name === "selectedChannel") {
+          const channelId = this.state.publicChannels.find(
+            channel => (channel.name = value)
+          ).id;
+          this.setState({ selectedChannelId: channelId });
+        }
       }
     );
   };
@@ -66,7 +80,8 @@ class SetTargetPage extends Component {
       startingDate,
       finishingDate,
       targetCalls,
-      targetThreads
+      targetThreads,
+      selectedChannelId
     } = this.state;
     const body = {
       className,
@@ -74,7 +89,8 @@ class SetTargetPage extends Component {
       startingDate,
       finishingDate,
       targetCalls,
-      targetThreads
+      targetThreads,
+      selectedChannelId
     };
     try {
       const response = await addTarget(body);
@@ -96,7 +112,8 @@ class SetTargetPage extends Component {
       startingDate,
       finishingDate,
       targetCalls,
-      targetThreads
+      targetThreads,
+      selectedChannel
     } = this.state;
     return (
       <div className="d-flex flex-column align-items-center justify-content-center mt-5">
@@ -176,6 +193,29 @@ class SetTargetPage extends Component {
                 required
               />
             </div>
+          </div>
+        </div>
+        <div className="col-sm-10 col-lg-4 mb-2">
+          <div className="form-group ">
+            <label htmlFor="selectedChannel" className="lead">
+              Select Channel*{" "}
+            </label>
+
+            <select
+              className="form-control form-control-lg"
+              name="selectedChannel"
+              id="selectedChannel"
+              value={selectedChannel}
+              onChange={this.onChange}
+              required
+            >
+              <option value="" disabled>
+                Select here
+              </option>
+              {this.state.publicChannels.map(channel => (
+                <option>{channel.name}</option>
+              ))}
+            </select>
           </div>
         </div>
         <div className="d-flex flex-column align-items-center justify-content-center">

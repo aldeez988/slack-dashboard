@@ -1,7 +1,7 @@
 import ReactTable from "react-table";
 import matchSorter from "match-sorter";
 import "react-table/react-table.css";
-
+import "./Table.css";
 import { Tips } from "./Utils";
 
 import React, { Component } from "react";
@@ -48,7 +48,8 @@ class Table extends Component {
               columns: [
                 {
                   Header: "Number Of Calls",
-                  accessor: "callsCounter"
+                  accessor: "callsCounter",
+                  className: "center"
                 },
                 {
                   Header: "Hit Calls Target",

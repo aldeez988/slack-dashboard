@@ -4,10 +4,7 @@ import Table from "./Mentors/Table";
 import ProgressBar from "../Components/ProgressBar";
 import { getTargetsForClass } from "../Components/actions/targets";
 import { getStudentsSlackIds } from "../Components/helpers/getSudentsSlackIds";
-import {
-  getAllStudent,
-  getAllStudents
-} from "../Components/actions/getAllStudents";
+import { getAllStudents } from "../Components/actions/getAllStudents";
 import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
 import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
 import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
@@ -18,7 +15,7 @@ class PerformancePage extends Component {
     selectedClass: {},
     studentsProfiles: [],
     studentsSlackId: [],
-    cyfClasses: [],
+    cyfClasses: this.props.cyfClasses,
     // cyfClasses: this.props.location.state ? this.props.location.state : [],
     targets: [],
     targetName: "",
@@ -26,8 +23,8 @@ class PerformancePage extends Component {
     selectedTargetData: "",
     averagePerformancePercentage: 0
   };
-  componentWillMount() {
-    this.setState({ cyfClasses: this.props.cyfClasses });
+  componentWillReceiveProps(nextProps) {
+    this.setState({ cyfClasses: nextProps.cyfClasses });
   }
 
   onChange = e => {
@@ -155,7 +152,6 @@ class PerformancePage extends Component {
               <label htmlFor="className" className="lead">
                 Select Class{" "}
               </label>
-
               <select
                 className="form-control form-control-lg"
                 name="className"

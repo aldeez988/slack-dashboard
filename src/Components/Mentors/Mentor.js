@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SetTargetPage from "../SetTargetPage";
 import PerformancePage from "../Performance";
+import SudentsCommunication from "./SudentsCommunication";
 import { getAllClasses } from "../actions/addClass";
 import swal from "sweetalert";
 
@@ -9,13 +10,20 @@ class Mentor extends Component {
     active: "active",
     showPerformance: true,
     showSetTarget: false,
+    showStudentsCommunication: false,
     // adminData: this.props.location.state,
     // usersProfiles: {}
     cyfClasses: []
   };
   async componentWillMount() {
-    const cyfClasses = await getAllClasses();
-    this.setState({ cyfClasses: cyfClasses.data });
+    getAllClasses()
+      .then(res => {
+        this.setState({ cyfClasses: res.data });
+      })
+      .catch(err => {
+        console.log(err);
+        swal("Oops!", "Something went wrong!", "error");
+      });
   }
   toggleClass = () => {
     this.setState(prevState => {
@@ -23,19 +31,32 @@ class Mentor extends Component {
     });
   };
   handleShowSetTarget = () => {
-    this.setState({ showSetTarget: true, showPerformance: false });
+    this.setState({
+      showSetTarget: true,
+      showPerformance: false,
+      showStudentsCommunication: false
+    });
   };
 
   handleShowPerformance = async () => {
     this.setState({ showSetTarget: false, showPerformance: true });
-    try {
-    } catch (err) {
-      swal("Oops!", "Something went wrong!", "error");
-    }
+  };
+
+  handleShowStudentsCommunication = () => {
+    this.setState({
+      showStudentsCommunication: true,
+      showSetTarget: false,
+      showPerformance: false
+    });
   };
 
   render() {
-    const { cyfClasses, showSetTarget, showPerformance } = this.state;
+    const {
+      cyfClasses,
+      showSetTarget,
+      showPerformance,
+      showStudentsCommunication
+    } = this.state;
     return (
       <div className="mentor-tab-container">
         <ul className="nav nav-tabs">
@@ -56,12 +77,27 @@ class Mentor extends Component {
               Set Target{" "}
             </a>
           </li>
+          <li class="nav-item" onClick={this.handleShowStudentsCommunication}>
+            <a
+              class={`nav-link ${
+                showStudentsCommunication ? this.state.active : ""
+              }`}
+              href="#"
+            >
+              Students Communication{" "}
+            </a>
+          </li>
         </ul>
         <br />
         <br />
         {console.log("the deatial from the admin page", this.props.location)}
-        {showPerformance && <PerformancePage cyfClasses={cyfClasses} />}
+        {showPerformance && (
+          <PerformancePage cyfClasses={this.state.cyfClasses} />
+        )}
         {showSetTarget && <SetTargetPage cyfClasses={cyfClasses} />}
+        {/* {showStudentsCommunication && (
+          <SudentsCommunication cyfClasses={cyfClasses ? cyfClasses : []} />
+        )} */}
       </div>
     );
   }

@@ -1,14 +1,2192 @@
-[
-  {
-    "name": "Calls",
-    "calls": 40,
-    "messages": 20,
-    "amt": 2400
-  },
-  {
-    "name": "Messages",
-    "calls": 30,
-    "messages": 18,
-    "amt": 2210
-  }
-]
+{
+  "ok": true,
+  "latest": "1544227200",
+  "oldest": "1543708800",
+  "messages": [
+    {
+      "type": "message",
+      "text": "Thanks for discussions. Please find attached last updated version of algorithm for MOVING GAME. <@UEEJZBXFB>, <@UEHSJ81EK> <@UEETSKQSC> <@UEFGZV9JB> <@UEDCLCVK5>",
+      "files": [
+        {
+          "id": "FENK9UVC3",
+          "created": 1544225422,
+          "timestamp": 1544225422,
+          "name": "MOVING GAME_V5.doc",
+          "title": "MOVING GAME_V5.doc",
+          "mimetype": "application/msword",
+          "filetype": "doc",
+          "pretty_type": "Word Document",
+          "user": "UEFCH9DKN",
+          "editable": false,
+          "size": 41984,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENK9UVC3/moving_game_v5.doc",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENK9UVC3/download/moving_game_v5.doc",
+          "permalink": "https://codeyourfuture.slack.com/files/UEFCH9DKN/FENK9UVC3/moving_game_v5.doc",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENK9UVC3-d33492bba3",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFCH9DKN",
+      "display_as_bot": false,
+      "ts": "1544225423.396600",
+      "thread_ts": "1543771805.046900",
+      "parent_user_id": "UEFCH9DKN"
+    },
+    {
+      "type": "message",
+      "text": "<@UEEJZBXFB>, <@UEHSJ81EK> <@UEETSKQSC> <@UEFGZV9JB> <@UEDCLCVK5>",
+      "files": [
+        {
+          "id": "FENMN422E",
+          "created": 1544222973,
+          "timestamp": 1544222973,
+          "name": "MOVING GAME_V4.doc",
+          "title": "MOVING GAME_V4.doc",
+          "mimetype": "application/msword",
+          "filetype": "doc",
+          "pretty_type": "Word Document",
+          "user": "UEFCH9DKN",
+          "editable": false,
+          "size": 40960,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENMN422E/moving_game_v4.doc",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENMN422E/download/moving_game_v4.doc",
+          "permalink": "https://codeyourfuture.slack.com/files/UEFCH9DKN/FENMN422E/moving_game_v4.doc",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENMN422E-e005298312",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFCH9DKN",
+      "display_as_bot": false,
+      "ts": "1544222974.393700",
+      "thread_ts": "1543771805.046900",
+      "parent_user_id": "UEFCH9DKN"
+    },
+    {
+      "client_msg_id": "8923e08a-a0e9-4bd2-97fd-6b5e7e6ce2c5",
+      "type": "message",
+      "text": "<!subteam^SEGJETGGG|@ldn5> If you haven't done it already, we have until 23.16 to give a thumps up to German's message which he posted at 11.17am.  We are missing 4 people.",
+      "user": "UEBFKQPAL",
+      "ts": "1544221685.392700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544221685.392700",
+      "reply_count": 3,
+      "reply_users_count": 3,
+      "latest_reply": "1544280401.399600",
+      "reply_users": ["U2H8PGN05", "UEBFKQPAL", "UEH43L137"],
+      "replies": [
+        {
+          "user": "U2H8PGN05",
+          "ts": "1544278538.398600"
+        },
+        {
+          "user": "UEBFKQPAL",
+          "ts": "1544279479.398800"
+        },
+        {
+          "user": "UEH43L137",
+          "ts": "1544280401.399600"
+        }
+      ],
+      "subscribed": false,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEDCLCVK5"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "bd6c458e-8fde-45d5-9a58-25a502ca67a7",
+      "type": "message",
+      "text": "This may be relevant <https://askubuntu.com/a/827213/12816> If you can’t solve it, ask me on Sunday at the end.",
+      "user": "UC6J7RJQZ",
+      "ts": "1544220550.389500",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "UC6J7RJQZ",
+        "ts": "1544372279.000000"
+      },
+      "thread_ts": "1544218082.381000",
+      "parent_user_id": "UEDCLCVK5"
+    },
+    {
+      "client_msg_id": "7f033daf-b828-4d4c-b94f-f803e0ba518b",
+      "type": "message",
+      "text": "ascii art",
+      "user": "UC6J7RJQZ",
+      "ts": "1544220473.389300",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544218527.385000",
+      "parent_user_id": "UEDCLCVK5"
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/RENHR4XHR|call>.",
+      "user": "UEETSKQSC",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "RENHR4XHR",
+        "name": "@Ahmet",
+        "created_by": "UEETSKQSC",
+        "date_start": "1544220208",
+        "date_end": "1544225211",
+        "participants": [],
+        "participant_history": [
+          "UEETSKQSC",
+          "UEFCH9DKN",
+          "UEEJZBXFB",
+          "UEHSJ81EK",
+          "UEEQ5EDHA"
+        ],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": false,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/RENHR4XHR",
+      "ts": "1544220208.388900"
+    },
+    {
+      "client_msg_id": "77ec311c-74cd-4cdf-a971-88adc6221922",
+      "type": "message",
+      "text": "I think this is dash lined drawing",
+      "user": "UEEJZBXFB",
+      "ts": "1544219250.388100",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "b3e531f0-7ff8-47e6-857d-f260c9999826",
+      "type": "message",
+      "text": "Thanks behnaz helped me",
+      "user": "UEFUB1H6J",
+      "ts": "1544218690.385600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544212870.372700",
+      "parent_user_id": "UEFUB1H6J"
+    },
+    {
+      "client_msg_id": "9c3aa14b-c7f5-4e60-9201-1980ec2a0c92",
+      "type": "message",
+      "text": "<!subteam^SEGJETGGG|@ldn5> does anyone know what is the name for this kind of pictures=&gt; Home\n            /\\\n           /  \\\n          /    \\\n         /      \\\n         --------\n        |        |\n        |        |\n        |        |\n        ====",
+      "user": "UEDCLCVK5",
+      "ts": "1544218527.385000",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544218527.385000",
+      "reply_count": 2,
+      "reply_users_count": 2,
+      "latest_reply": "1544286621.402200",
+      "reply_users": ["UC6J7RJQZ", "UEDCLCVK5"],
+      "replies": [
+        {
+          "user": "UC6J7RJQZ",
+          "ts": "1544220473.389300"
+        },
+        {
+          "user": "UEDCLCVK5",
+          "ts": "1544286621.402200"
+        }
+      ],
+      "subscribed": false
+    },
+    {
+      "client_msg_id": "980797aa-05c1-42e8-8c66-bc3738999ee5",
+      "type": "message",
+      "text": "list of apps on left side, if it is that i can help you",
+      "user": "UECDV8AHZ",
+      "ts": "1544218376.384300",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "e7aef48f-66f1-4dc9-8963-fe4ebf236e4d",
+      "type": "message",
+      "text": "i mean activities column",
+      "user": "UECDV8AHZ",
+      "ts": "1544218336.383700",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "3b47b3f2-537c-4be4-9651-5465839e8cd8",
+      "type": "message",
+      "text": "do you mean left side dock?",
+      "user": "UECDV8AHZ",
+      "ts": "1544218313.383400",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "5149ff2d-ae25-4ab4-a34c-44d706b3c967",
+      "type": "message",
+      "text": "<!subteam^SEGJETGGG|@ldn5> does anyone know how we can make Linux scrollbar bigger?",
+      "user": "UEDCLCVK5",
+      "ts": "1544218082.381000",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544218082.381000",
+      "reply_count": 1,
+      "reply_users_count": 1,
+      "latest_reply": "1544220550.389500",
+      "reply_users": ["UC6J7RJQZ"],
+      "replies": [
+        {
+          "user": "UC6J7RJQZ",
+          "ts": "1544220550.389500"
+        }
+      ],
+      "subscribed": false
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/RENF6ABPV|call>.",
+      "user": "U98J7PU7Q",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "RENF6ABPV",
+        "name": "codeacademy-javaScript",
+        "created_by": "U98J7PU7Q",
+        "date_start": "1544213955",
+        "date_end": "1544222323",
+        "participants": [],
+        "participant_history": [
+          "U98J7PU7Q",
+          "U9J98T6Q2",
+          "UEF5EPZHD",
+          "UEETSKQSC",
+          "UEGN411FZ",
+          "UECCVF1J7",
+          "UEC4P80AX",
+          "UD63LJSCD",
+          "UEG408198",
+          "UEEQ5EDHA",
+          "UD6VBP684",
+          "UEEJZBXFB",
+          "UEDCLCVK5",
+          "UECE3RWR3"
+        ],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ", "DEKMD5VEZ", "DELG43R71", "DENQ3MJTX"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": true,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/RENF6ABPV",
+      "ts": "1544213955.377000"
+    },
+    {
+      "client_msg_id": "8dadb004-7874-4c2a-a3c2-418bddc10aaa",
+      "type": "message",
+      "text": "<@UECDV8AHZ> <@UEF9Z2HKQ> <@UECE3RWR3> <@UEEQ5EDHA> <@UEBPVJQHF> guys here is the link from the google drive this the plan we discussed earlier that <@UEF9Z2HKQ> suggested, <@UEBPVJQHF> please have a look and let us know what you think..\n<https://docs.google.com/document/d/1I0UOPpkRAwnL4ZxBssYmBJQvMuhcGHEEkxQiOUkLkMA/edit>",
+      "user": "U9J98T6Q2",
+      "ts": "1544213333.376500",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "U9J98T6Q2",
+        "ts": "1544214022.000000"
+      },
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2"
+    },
+    {
+      "client_msg_id": "487ddb97-7c2b-4d48-bea8-c37e0c9a21a2",
+      "type": "message",
+      "text": "turnLeft(60);\nmoveForward(200);",
+      "user": "U98J7PU7Q",
+      "ts": "1544213163.376000",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544212870.372700",
+      "parent_user_id": "UEFUB1H6J"
+    },
+    {
+      "client_msg_id": "519bdee3-8097-419e-a62c-046fb0bb1d80",
+      "type": "message",
+      "text": "you do not need repeat",
+      "user": "U98J7PU7Q",
+      "ts": "1544213135.375700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544212870.372700",
+      "parent_user_id": "UEFUB1H6J"
+    },
+    {
+      "client_msg_id": "62c20c75-fc6d-4209-8044-9a6f2ea2ce07",
+      "type": "message",
+      "text": "if it is lesson 7",
+      "user": "U98J7PU7Q",
+      "ts": "1544213125.375400",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544212870.372700",
+      "parent_user_id": "UEFUB1H6J"
+    },
+    {
+      "client_msg_id": "62407e15-4b8a-494a-8939-c684c23abd13",
+      "type": "message",
+      "text": "which lesson is this?",
+      "user": "UEGN411FZ",
+      "ts": "1544213003.374200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544212870.372700",
+      "parent_user_id": "UEFUB1H6J"
+    },
+    {
+      "client_msg_id": "01c8533c-00da-46c8-87bc-79c07b1e37a4",
+      "type": "message",
+      "text": "Alright pass me message see you",
+      "user": "UECDV8AHZ",
+      "ts": "1544212956.373800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "06bbc69f-258a-4576-ae67-965ee031f01d",
+      "type": "message",
+      "text": "The code us also similar",
+      "user": "UEFUB1H6J",
+      "ts": "1544212889.373500",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "20522117-5a14-4e81-925a-b561b76f38bc",
+      "type": "message",
+      "text": "The animation works fine",
+      "user": "UEFUB1H6J",
+      "ts": "1544212883.373200",
+      "team": "T2H71EFLK"
+    },
+    {
+      "type": "message",
+      "text": "",
+      "files": [
+        {
+          "id": "FEMRFRV4G",
+          "created": 1544212861,
+          "timestamp": 1544212861,
+          "name": "IMG_20181207_200355.jpg",
+          "title": "IMG_20181207_200355.jpg",
+          "mimetype": "image/jpeg",
+          "filetype": "jpg",
+          "pretty_type": "JPEG",
+          "user": "UEFUB1H6J",
+          "editable": false,
+          "size": 2594025,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FEMRFRV4G/img_20181207_200355.jpg",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FEMRFRV4G/download/img_20181207_200355.jpg",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_64.jpg",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_80.jpg",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_360.jpg",
+          "thumb_360_w": 175,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_480.jpg",
+          "thumb_480_w": 233,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_160.jpg",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_720.jpg",
+          "thumb_720_w": 350,
+          "thumb_720_h": 720,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_800.jpg",
+          "thumb_800_w": 800,
+          "thumb_800_h": 1646,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_960.jpg",
+          "thumb_960_w": 467,
+          "thumb_960_h": 960,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FEMRFRV4G-4dbf0f4a3e/img_20181207_200355_1024.jpg",
+          "thumb_1024_w": 498,
+          "thumb_1024_h": 1024,
+          "image_exif_rotation": 1,
+          "original_w": 4032,
+          "original_h": 1960,
+          "permalink": "https://codeyourfuture.slack.com/files/UEFUB1H6J/FEMRFRV4G/img_20181207_200355.jpg",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FEMRFRV4G-6f17ca9f3c",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFUB1H6J",
+      "display_as_bot": false,
+      "ts": "1544212870.372700",
+      "client_msg_id": "44c1f8d8-64c4-4ca2-be37-9f97404279f3",
+      "thread_ts": "1544212870.372700",
+      "reply_count": 5,
+      "reply_users_count": 3,
+      "latest_reply": "1544218690.385600",
+      "reply_users": ["UEGN411FZ", "U98J7PU7Q", "UEFUB1H6J"],
+      "replies": [
+        {
+          "user": "UEGN411FZ",
+          "ts": "1544213003.374200"
+        },
+        {
+          "user": "U98J7PU7Q",
+          "ts": "1544213125.375400"
+        },
+        {
+          "user": "U98J7PU7Q",
+          "ts": "1544213135.375700"
+        },
+        {
+          "user": "U98J7PU7Q",
+          "ts": "1544213163.376000"
+        },
+        {
+          "user": "UEFUB1H6J",
+          "ts": "1544218690.385600"
+        }
+      ],
+      "subscribed": false
+    },
+    {
+      "client_msg_id": "dfd09954-df12-4d14-9ad0-0757f13513a5",
+      "type": "message",
+      "text": "Stuck on this dont know why",
+      "user": "UEFUB1H6J",
+      "ts": "1544212868.372600",
+      "team": "T2H71EFLK"
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REQ00KM2S|call>.",
+      "user": "UA32CDWRH",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REQ00KM2S",
+        "name": "Ladies of CYF",
+        "created_by": "UA32CDWRH",
+        "date_start": "1544212645",
+        "date_end": "1544214857",
+        "participants": [],
+        "participant_history": [
+          "UA32CDWRH",
+          "UEFUB1H6J",
+          "UEBFKQPAL",
+          "UEGN411FZ",
+          "UECE3RWR3",
+          "UEETSKQSC",
+          "UEEQ5EDHA"
+        ],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ", "DEM5BN2VA"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": true,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REQ00KM2S",
+      "ts": "1544212645.371500"
+    },
+    {
+      "client_msg_id": "a40d5534-2157-4de6-8e28-e24ed0db6b7e",
+      "type": "message",
+      "text": "<@UECDV8AHZ> can you show us how to use google share doc please",
+      "user": "U9J98T6Q2",
+      "ts": "1544212429.370800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "7b17c0bc-eb7a-466b-bf32-1bd0c4cffa94",
+      "type": "message",
+      "text": "Ermi [7:52 PM]\nyes i am happy with your plan, if ahmed aware about google doc he can share us the algorithm privately",
+      "user": "U9J98T6Q2",
+      "ts": "1544212378.370600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "92286aa1-7c3b-4bc0-8c01-67bd9bcc3bee",
+      "type": "message",
+      "text": "<@UECDV8AHZ> please, let us know if you have something to add",
+      "user": "UECE3RWR3",
+      "ts": "1544212342.370400",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "f89cc1d7-61ae-4769-b1af-843565400268",
+      "type": "message",
+      "text": "yes i am happy with your plan, if ahmed aware about google doc he can share us the algorithm privately",
+      "user": "UECDV8AHZ",
+      "ts": "1544212286.370300",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "b0210352-7de4-4bf8-b148-40868ad8d35d",
+      "type": "message",
+      "text": "if he can upload or send us may be better",
+      "user": "UECDV8AHZ",
+      "ts": "1544211514.369100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "d7f1f94c-c95c-4f59-bf9d-52bd8de83e4d",
+      "type": "message",
+      "text": "me too:grinning:",
+      "user": "UEEQ5EDHA",
+      "ts": "1544210874.367800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REMUFSBCH|call>.",
+      "user": "UECE3RWR3",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REMUFSBCH",
+        "name": "Group 2",
+        "created_by": "UECE3RWR3",
+        "date_start": "1544210867",
+        "date_end": "1544213013",
+        "participants": [],
+        "participant_history": [
+          "UECE3RWR3",
+          "U9J98T6Q2",
+          "UEEQ5EDHA",
+          "UECDV8AHZ",
+          "UEF9Z2HKQ"
+        ],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": [
+          "CEDK6JPKQ",
+          "DEM5BN2VA",
+          "DENBVLJF6",
+          "DENDTSMS7",
+          "DENGUGTFU"
+        ],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": true,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REMUFSBCH",
+      "ts": "1544210867.367600"
+    },
+    {
+      "client_msg_id": "1f5f2cc2-6450-4fcf-99ec-552644b161a0",
+      "type": "message",
+      "text": "am waiting",
+      "user": "UECDV8AHZ",
+      "ts": "1544210846.367100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "cf294be6-c0fb-44c9-8502-f77ea93f6a55",
+      "type": "message",
+      "text": "I am here ready for the call <@UECE3RWR3>",
+      "user": "U9J98T6Q2",
+      "ts": "1544210829.366900",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "U9J98T6Q2",
+        "ts": "1544210853.000000"
+      },
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "6229e91d-52ae-4852-b82a-ab54c15671f4",
+      "type": "message",
+      "text": "<@UECDV8AHZ> <@U9J98T6Q2> <@UEBPVJQHF> <@UEF9Z2HKQ> <@UEF9Z2HKQ> Hey ! me and <@UEEQ5EDHA> are available now",
+      "user": "UECE3RWR3",
+      "ts": "1544210767.366600",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "UECE3RWR3",
+        "ts": "1544210801.000000"
+      },
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "type": "message",
+      "text": "Well this is strange. Im on a laptop. Why does it think its a phone?",
+      "files": [
+        {
+          "id": "FENBMLP1A",
+          "created": 1544210427,
+          "timestamp": 1544210427,
+          "name": "20181207_192132.jpg",
+          "title": "20181207_192132.jpg",
+          "mimetype": "image/jpeg",
+          "filetype": "jpg",
+          "pretty_type": "JPEG",
+          "user": "UEFUB1H6J",
+          "editable": false,
+          "size": 1980835,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENBMLP1A/20181207_192132.jpg",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENBMLP1A/download/20181207_192132.jpg",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_64.jpg",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_80.jpg",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_360.jpg",
+          "thumb_360_w": 360,
+          "thumb_360_h": 175,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_480.jpg",
+          "thumb_480_w": 480,
+          "thumb_480_h": 233,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_160.jpg",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_720.jpg",
+          "thumb_720_w": 720,
+          "thumb_720_h": 350,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_800.jpg",
+          "thumb_800_w": 800,
+          "thumb_800_h": 389,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_960.jpg",
+          "thumb_960_w": 960,
+          "thumb_960_h": 467,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FENBMLP1A-df39234d52/20181207_192132_1024.jpg",
+          "thumb_1024_w": 1024,
+          "thumb_1024_h": 498,
+          "image_exif_rotation": 1,
+          "original_w": 4032,
+          "original_h": 1960,
+          "permalink": "https://codeyourfuture.slack.com/files/UEFUB1H6J/FENBMLP1A/20181207_192132.jpg",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENBMLP1A-b5c62e525e",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFUB1H6J",
+      "display_as_bot": false,
+      "ts": "1544210434.366200",
+      "edited": {
+        "user": "UEFUB1H6J",
+        "ts": "1544210450.000000"
+      },
+      "client_msg_id": "24bb87d9-c47a-46c6-852f-ca3d9dcf7325"
+    },
+    {
+      "client_msg_id": "408fdfbd-de19-41a7-9e6e-83ac270e4df8",
+      "type": "message",
+      "text": "hi guys have you started the group call yet?",
+      "user": "UEEQ5EDHA",
+      "ts": "1544209752.365200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2"
+    },
+    {
+      "client_msg_id": "3352ca6d-f8a3-4c3e-b0e6-9b2390789fbe",
+      "type": "message",
+      "text": "no worries",
+      "user": "U98J7PU7Q",
+      "ts": "1544209624.365000",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "6dcb6185-9b7a-4d31-800b-6f87aebc60b0",
+      "type": "message",
+      "text": "<@U98J7PU7Q>",
+      "user": "UEFUB1H6J",
+      "ts": "1544209604.364800",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "b2819c03-0422-4f0f-aae3-a887b257c096",
+      "type": "message",
+      "text": "thank you!!",
+      "user": "UEFUB1H6J",
+      "ts": "1544209598.364600",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "2bacc688-9712-4e5d-b024-55838283ed23",
+      "type": "message",
+      "text": "completely diff to what i had",
+      "user": "UEFUB1H6J",
+      "ts": "1544209592.364400",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "cef3eef4-ec6b-4b25-b145-314b42d1576b",
+      "type": "message",
+      "text": "Really stuck on lesson 2 the maze slide 8 if anyone can help",
+      "user": "UEFUB1H6J",
+      "ts": "1544208507.363400",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "5786587a-089d-46ae-aa72-00d415de6ecc",
+      "type": "message",
+      "text": "Opsss sorry missed this thread Group one had 2 discussions we wee having trouble getting online same time but finally managed 2 discussions Mohbeen uploaded her algorithm we discussed it and will be uploading final shortly ....",
+      "user": "UEG1ZB82J",
+      "ts": "1544207494.362700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544015969.194200",
+      "parent_user_id": "U2H8PGN05"
+    },
+    {
+      "client_msg_id": "2dd6cebd-3ffb-4b34-ada5-b54eab74ae95",
+      "type": "message",
+      "text": "Hi <@UEETSKQSC>, Thanks for feedback. Have you read page3 (Line between line 16 to line 21) in the my algorithm?",
+      "user": "UEFCH9DKN",
+      "ts": "1544206049.361900",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544203123.359700",
+      "parent_user_id": "UEETSKQSC"
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REMS1BA0H|call>.",
+      "user": "UEBFKQPAL",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REMS1BA0H",
+        "name": "group1",
+        "created_by": "UEBFKQPAL",
+        "date_start": "1544205796",
+        "date_end": "1544206534",
+        "participants": [],
+        "participant_history": ["UEBFKQPAL", "UEG1ZB82J"],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ", "DEMS2BYUR"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": false,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REMS1BA0H",
+      "ts": "1544205796.361500"
+    },
+    {
+      "client_msg_id": "291974dd-276f-414c-a4fe-41bd9a79c9fb",
+      "type": "message",
+      "text": "hii <@UECDV8AHZ> <@UEF9Z2HKQ> <@UECE3RWR3> <@UEEQ5EDHA> <@UEBPVJQHF> can we meet around 7 to work on the homework ?!",
+      "user": "U9J98T6Q2",
+      "ts": "1544203471.360200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEEQ5EDHA", "UEF9Z2HKQ", "UECE3RWR3", "UECDV8AHZ"],
+          "count": 4
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "text": "",
+      "files": [
+        {
+          "id": "FEPQWNBLN",
+          "created": 1544203180,
+          "timestamp": 1544203180,
+          "name": "IMG_2639.JPG",
+          "title": "IMG_2639.JPG",
+          "mimetype": "image/jpeg",
+          "filetype": "jpg",
+          "pretty_type": "JPEG",
+          "user": "UEETSKQSC",
+          "editable": false,
+          "size": 872503,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FEPQWNBLN/img_2639.jpg",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FEPQWNBLN/download/img_2639.jpg",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_64.jpg",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_80.jpg",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_360.jpg",
+          "thumb_360_w": 270,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_480.jpg",
+          "thumb_480_w": 360,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_160.jpg",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_720.jpg",
+          "thumb_720_w": 540,
+          "thumb_720_h": 720,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_800.jpg",
+          "thumb_800_w": 800,
+          "thumb_800_h": 1067,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_960.jpg",
+          "thumb_960_w": 720,
+          "thumb_960_h": 960,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FEPQWNBLN-87bc244e55/img_2639_1024.jpg",
+          "thumb_1024_w": 768,
+          "thumb_1024_h": 1024,
+          "image_exif_rotation": 1,
+          "original_w": 3024,
+          "original_h": 4032,
+          "permalink": "https://codeyourfuture.slack.com/files/UEETSKQSC/FEPQWNBLN/img_2639.jpg",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FEPQWNBLN-0ef69cf2b4",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEETSKQSC",
+      "display_as_bot": false,
+      "ts": "1544203187.359900"
+    },
+    {
+      "client_msg_id": "db494677-d590-45ad-9441-9fa9d99ac0f0",
+      "type": "message",
+      "text": "<@UEFCH9DKN> <@UEEJZBXFB> <@UEHSJ81EK> <@UEFGZV9JB> <@UEDCLCVK5>, I have tested Ahmet's algorithm as we discussed yesterday, there is a bug as the 7th number is not always included in the sort, see the image of the numbers I tried to sort.",
+      "user": "UEETSKQSC",
+      "ts": "1544203123.359700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544203123.359700",
+      "reply_count": 1,
+      "reply_users_count": 1,
+      "latest_reply": "1544206049.361900",
+      "reply_users": ["UEFCH9DKN"],
+      "replies": [
+        {
+          "user": "UEFCH9DKN",
+          "ts": "1544206049.361900"
+        }
+      ],
+      "subscribed": false,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEEJZBXFB"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "e69f1917-36fa-4587-a396-d6bbfbe5420c",
+      "type": "message",
+      "text": "Thanks everyone I found it, I saw a link so I though if I click on it it will take me there and ask me if I want to download it.... lol\nthanks again",
+      "user": "U9J98T6Q2",
+      "ts": "1544202697.356600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEF5EPZHD", "UEG1ZB82J"],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "client_msg_id": "3bb20c04-cb96-4997-8196-be41e152455f",
+      "type": "message",
+      "text": "Hey <@U9J98T6Q2> there is no desktop app for elevate. but you can access it on your mobile from app store or google play.",
+      "user": "UEF5EPZHD",
+      "ts": "1544202586.356400",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U9J98T6Q2"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "b6bb2614-3ff1-460c-8148-c9219d0ef256",
+      "type": "message",
+      "text": "<https://play.google.com/store/apps/details?id=com.wonder>",
+      "user": "UECDV8AHZ",
+      "ts": "1544202574.356200",
+      "team": "T2H71EFLK",
+      "attachments": [
+        {
+          "title": "Elevate - Brain Training Games - Apps on Google Play",
+          "title_link": "https://play.google.com/store/apps/details?id=com.wonder",
+          "text": "** Selected by Google as Editors’ Choice and downloaded more than 15 million times worldwide. ** Elevate is a brain training program designed to improve attention, speaking skills, processing speed, memory, math skills, and more. Each person is provided with his or her own personalized training program that adjusts over time to maximize results. The more you train with Elevate, the more you’ll improve critical cognitive skills that are designed to boost productivity, earning power, and self-confidence. Users who train at least 3 times per week have reported dramatic gains and increased confidence. Elevate offers a 14-day free trial as well as a free version. To access the free version, tap the X in the upper left-hand corner after you sign up for an account. FEATURES * 35+ brain games for critical cognitive skills like focus, memory, processing, math, precision, and comprehension * Detailed performance tracking * Personalized daily workouts that include the skills you need most * Adaptive difficulty progression to ensure your experience is challenging * Workout calendar to help you track your streaks and stay motivated * And more! IN THE NEWS CNET “Elevate comes out ahead” in the battle of the brain training apps. Wall Street Journal Compared with other brain games, “I prefer Elevate the most.” Washington Post Elevate is a “cognitive pick-me-up” with games that are “good for mental breaks throughout the workday.” RESEARCH BEHIND ELEVATE Elevate's brain games are designed in collaboration with experts in education and are based on proven educational techniques. Elevate’s brain training algorithms draw from cognitive research in attention and memory studies to develop a personalized training program for each user.",
+          "fallback": "Elevate - Brain Training Games - Apps on Google Play",
+          "image_url": "https://lh3.googleusercontent.com/ABZKWf798PaqMkiTC9iSxirnWtERJQhZoohokeTdWq8yRhMQrQxumqPhKIcMp3fqxg2a",
+          "from_url": "https://play.google.com/store/apps/details?id=com.wonder",
+          "image_width": 512,
+          "image_height": 250,
+          "image_bytes": 60258,
+          "service_icon": "http://www.gstatic.com/android/market_images/web/favicon_v2.ico",
+          "service_name": "play.google.com",
+          "id": 1,
+          "original_url": "https://play.google.com/store/apps/details?id=com.wonder"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U9J98T6Q2", "UC6J7RJQZ"],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "client_msg_id": "2171e6e4-aa3d-4878-b9f5-30cffec03956",
+      "type": "message",
+      "text": "<@U9J98T6Q2> if you have iphone download the app from store",
+      "user": "UEF9Z2HKQ",
+      "ts": "1544202569.356000",
+      "team": "T2H71EFLK",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U9J98T6Q2", "UEFUB1H6J", "UC6J7RJQZ"],
+          "count": 3
+        }
+      ]
+    },
+    {
+      "client_msg_id": "4f091034-d387-4271-a67f-5b0656a2a026",
+      "type": "message",
+      "text": "<@U9J98T6Q2> You can find it by searching on Google play store or equivalent for iphone , this link works fine <https://www.elevateapp.com/> :smile:",
+      "user": "UECE3RWR3",
+      "ts": "1544202549.355500",
+      "team": "T2H71EFLK",
+      "attachments": [
+        {
+          "service_name": "Elevate",
+          "title": "Elevate - Your Personal Brain Trainer",
+          "title_link": "https://www.elevateapp.com/",
+          "text": "Elevate is an award-winning brain training tool designed to build communication and analytical skills.",
+          "fallback": "Elevate: Elevate - Your Personal Brain Trainer",
+          "thumb_url": "https://www.elevateapp.com/assets/images/global/social-banner.png",
+          "from_url": "https://www.elevateapp.com/",
+          "thumb_width": 1000,
+          "thumb_height": 560,
+          "service_icon": "https://www.elevateapp.com/assets/images/favicon/apple-touch-icon-57x57.png",
+          "id": 1,
+          "original_url": "https://www.elevateapp.com/"
+        }
+      ],
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U9J98T6Q2"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "5a87fb9e-d8b5-4d6c-bd81-732fcf3c4306",
+      "type": "message",
+      "text": "<@U9J98T6Q2> its an application you should downloaded from the play store in your mobile",
+      "user": "UEEQ5EDHA",
+      "ts": "1544202512.354600",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "UEEQ5EDHA",
+        "ts": "1544202539.000000"
+      },
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U9J98T6Q2", "UC6J7RJQZ"],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "text": "",
+      "files": [
+        {
+          "id": "FENCQJFDY",
+          "created": 1544202420,
+          "timestamp": 1544202420,
+          "name": "Image from iOS.jpg",
+          "title": "Image from iOS",
+          "mimetype": "image/jpeg",
+          "filetype": "jpg",
+          "pretty_type": "JPEG",
+          "user": "U9J98T6Q2",
+          "editable": false,
+          "size": 504215,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENCQJFDY/image_from_ios.jpg",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENCQJFDY/download/image_from_ios.jpg",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_64.jpg",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_80.jpg",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_360.jpg",
+          "thumb_360_w": 360,
+          "thumb_360_h": 270,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_480.jpg",
+          "thumb_480_w": 480,
+          "thumb_480_h": 360,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_160.jpg",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_720.jpg",
+          "thumb_720_w": 720,
+          "thumb_720_h": 540,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_800.jpg",
+          "thumb_800_w": 800,
+          "thumb_800_h": 600,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_960.jpg",
+          "thumb_960_w": 960,
+          "thumb_960_h": 720,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FENCQJFDY-53daaf1b50/image_from_ios_1024.jpg",
+          "thumb_1024_w": 1024,
+          "thumb_1024_h": 768,
+          "image_exif_rotation": 1,
+          "original_w": 3264,
+          "original_h": 2448,
+          "permalink": "https://codeyourfuture.slack.com/files/U9J98T6Q2/FENCQJFDY/image_from_ios.jpg",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENCQJFDY-1cbb14be51",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "U9J98T6Q2",
+      "display_as_bot": false,
+      "upload_reply_to": "AE3692AB-C946-4D7C-A311-8E5D3226F770",
+      "ts": "1544202428.353000",
+      "thread_ts": "1544202397.352600",
+      "parent_user_id": "U9J98T6Q2"
+    },
+    {
+      "type": "message",
+      "text": "Hi <!subteam^SEGJETGGG|@ldn5> I am still having issues downloading the elevateapp I can’t open the link either on my phone or my laptop please see photos attached, any suggestions ",
+      "files": [
+        {
+          "id": "FENJK9D1T",
+          "created": 1544202397,
+          "timestamp": 1544202397,
+          "name": "Image from iOS.png",
+          "title": "Image from iOS",
+          "mimetype": "image/png",
+          "filetype": "png",
+          "pretty_type": "PNG",
+          "user": "U9J98T6Q2",
+          "editable": false,
+          "size": 54703,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENJK9D1T/image_from_ios.png",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENJK9D1T/download/image_from_ios.png",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_64.png",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_80.png",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_360.png",
+          "thumb_360_w": 202,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_480.png",
+          "thumb_480_w": 270,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_160.png",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_720.png",
+          "thumb_720_w": 405,
+          "thumb_720_h": 720,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_800.png",
+          "thumb_800_w": 450,
+          "thumb_800_h": 800,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_960.png",
+          "thumb_960_w": 540,
+          "thumb_960_h": 960,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FENJK9D1T-5acc7bc9f0/image_from_ios_1024.png",
+          "thumb_1024_w": 576,
+          "thumb_1024_h": 1024,
+          "image_exif_rotation": 1,
+          "original_w": 750,
+          "original_h": 1334,
+          "permalink": "https://codeyourfuture.slack.com/files/U9J98T6Q2/FENJK9D1T/image_from_ios.png",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENJK9D1T-b279d94ebe",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "U9J98T6Q2",
+      "display_as_bot": false,
+      "upload_reply_to": "8A840284-CD77-45B9-ACE7-FDA22DA4E376",
+      "ts": "1544202397.352600",
+      "thread_ts": "1544202397.352600",
+      "reply_count": 6,
+      "reply_users_count": 4,
+      "latest_reply": "1544213333.376500",
+      "reply_users": ["U9J98T6Q2", "UECE3RWR3", "UEF5EPZHD", "UEEQ5EDHA"],
+      "replies": [
+        {
+          "user": "U9J98T6Q2",
+          "ts": "1544202428.353000"
+        },
+        {
+          "user": "UECE3RWR3",
+          "ts": "1544202549.355500"
+        },
+        {
+          "user": "UEF5EPZHD",
+          "ts": "1544202586.356400"
+        },
+        {
+          "user": "U9J98T6Q2",
+          "ts": "1544202697.356600"
+        },
+        {
+          "user": "UEEQ5EDHA",
+          "ts": "1544209752.365200"
+        },
+        {
+          "user": "U9J98T6Q2",
+          "ts": "1544213333.376500"
+        }
+      ],
+      "subscribed": false
+    },
+    {
+      "client_msg_id": "ca963f07-bf47-4264-95b1-8a842e958e4a",
+      "type": "message",
+      "text": "Hi everyone <@UECDV8AHZ> <@UEF9Z2HKQ> <@UECE3RWR3> <@UEEQ5EDHA> <@UEBPVJQHF> I am working curse 3 till you guys want to meet up if anyone can join before 8 as I wont be able to stay long",
+      "user": "U9J98T6Q2",
+      "ts": "1544195122.349600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "2ae5ff36-81ba-4d58-ac93-7571166ad711",
+      "type": "message",
+      "text": "Compare a&gt;b \nIf( yes, dont move)\nElse (move)",
+      "user": "UEFUB1H6J",
+      "ts": "1544192508.349100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE"
+    },
+    {
+      "client_msg_id": "CC642979-491F-4EA5-99B4-628E5A2AC25E",
+      "type": "message",
+      "text": "Hey, I won’t be able to join the call, but I can add my ideas to the thread ",
+      "user": "UEERW83QD",
+      "ts": "1544183740.346800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE"
+    },
+    {
+      "client_msg_id": "85e04a59-9744-4300-b3df-864afd5b2bd4",
+      "type": "message",
+      "text": "<!subteam^SEGJETGGG|@ldn5> Small *group test of the week*. How long does it take for you as a group to see and thumbs up this message? We need 26 thumbs up from all the students. You win if you make it in less than 12h. Help each other.",
+      "user": "U2H8PGN05",
+      "ts": "1544181437.342600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544181437.342600",
+      "reply_count": 2,
+      "reply_users_count": 1,
+      "latest_reply": "1544307185.412100",
+      "reply_users": ["U2H8PGN05"],
+      "replies": [
+        {
+          "user": "U2H8PGN05",
+          "ts": "1544307159.411900"
+        },
+        {
+          "user": "U2H8PGN05",
+          "ts": "1544307185.412100"
+        }
+      ],
+      "subscribed": false,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": [
+            "UEEQ5EDHA",
+            "UECDV8AHZ",
+            "UEG408198",
+            "UEF9Z2HKQ",
+            "UEF5EPZHD",
+            "UEDKSS813",
+            "UEC4P80AX",
+            "UEELMGWAF",
+            "UEERW83QD",
+            "U98J7PU7Q",
+            "UEFUB1H6J",
+            "UEBPVJQHF",
+            "UEE7N5QPP",
+            "UEEJZBXFB",
+            "UECE3RWR3",
+            "U9J98T6Q2",
+            "UEFCH9DKN",
+            "UEDCLCVK5",
+            "UECCVF1J7",
+            "UEBFKQPAL",
+            "UEETSKQSC",
+            "UEFGZV9JB",
+            "UEH43L137",
+            "UEGN411FZ",
+            "UEG1ZB82J",
+            "UEHSJ81EK",
+            "UEGTTV0EL"
+          ],
+          "count": 27
+        }
+      ]
+    },
+    {
+      "client_msg_id": "5097F92B-44CF-4ADF-B135-1E7F8E45395D",
+      "type": "message",
+      "text": "<@UEFUB1H6J> <@UEETSKQSC> <@UEELMGWAF> <@UEBFKQPAL> <@UEEQ5EDHA> <@UEGN411FZ> <@UECE3RWR3> <@UEG1ZB82J> <@UEERW83QD>  Hi ladies, I will start a call around 8:00 pm so that we can have a chat, question, etc. Feel free to join",
+      "user": "UA32CDWRH",
+      "ts": "1544176608.339600",
+      "team": "T2H71EFLK",
+      "edited": {
+        "user": "UA32CDWRH",
+        "ts": "1544176628.000000"
+      },
+      "reactions": [
+        {
+          "name": "+1",
+          "users": [
+            "UEFUB1H6J",
+            "UEBFKQPAL",
+            "UECE3RWR3",
+            "UEEQ5EDHA",
+            "U8D7901TM",
+            "U4BDW369K",
+            "UEGN411FZ"
+          ],
+          "count": 7
+        }
+      ]
+    },
+    {
+      "client_msg_id": "b1c1d31c-0af2-415f-9b49-9232fe8892ed",
+      "type": "message",
+      "text": "Thank you <@U8D7901TM> :pray:",
+      "user": "UEFUB1H6J",
+      "ts": "1544176037.336500",
+      "team": "T2H71EFLK"
+    },
+    {
+      "client_msg_id": "f08d3543-320a-41cc-81fe-b7e7ca80d7b6",
+      "type": "message",
+      "text": "<@UEFUB1H6J> complete syllabus can be found here: <https://codeyourfuture.github.io/syllabus-master/>\n\nWe won't follow the structure of the syllabus - i.e. it starts with HTML and CSS, but you will be starting with JS instead.\n\nTo see what will be covered in each week, go to the schedule and in column C you can see the title of the class and the link to a relevant part of the syllabus.",
+      "user": "U8D7901TM",
+      "ts": "1544175761.336100",
+      "team": "T2H71EFLK",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEGN411FZ"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "E551BC99-AE0E-4999-BD8D-C7A03549A472",
+      "type": "message",
+      "text": "<@UEG1ZB82J> thank you. Will look forward to your call at 6pm",
+      "user": "UEBFKQPAL",
+      "ts": "1544174576.334100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEG1ZB82J"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "69ef48a3-fe36-4c63-90b7-b2307e38e456",
+      "type": "message",
+      "text": "<@UECDV8AHZ> <@UEBPVJQHF> <@UECE3RWR3> Hi guys, I will join you tonight at 8pm",
+      "user": "UEF9Z2HKQ",
+      "ts": "1544174150.333100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "7fc591a6-f29e-4725-b0e4-eb55117ff7e2",
+      "type": "message",
+      "text": "Me mohbeen and Samantha had a call yesterday I am free @ 6 pm I can update you and Ismail ",
+      "user": "UEG1ZB82J",
+      "ts": "1544172530.332700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE"
+    },
+    {
+      "client_msg_id": "6e0a459c-d9ee-4e55-907e-66e9829df470",
+      "type": "message",
+      "text": "<@UEERW83QD> <@UEH41Q6UE> <@UEFUB1H6J> <@UEG1ZB82J> Hello group1, are we all free today anytime from 6pm? If not today, we can wake up early tomorrow to have a call. What do you think?",
+      "user": "UEBFKQPAL",
+      "ts": "1544171090.332500",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE"
+    },
+    {
+      "client_msg_id": "514be6d9-0d3c-452b-aa06-804c76f4cda4",
+      "type": "message",
+      "text": "<@U8D7901TM> hey, could you send me a link of where I can find what material we will be covering over the course. One of the intervewers mentioned it to me that its a github thing but i have no idea. Thank you!",
+      "user": "UEFUB1H6J",
+      "ts": "1544167713.332200",
+      "team": "T2H71EFLK",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "1e4967d1-3a4d-4b84-81ec-3f2c5132ffd2",
+      "type": "message",
+      "text": "<!subteam^SEGJETGGG|@ldn5> have you noticed that the due date is tomorrow by 23h.. you better run guys to make it on time :wink:",
+      "user": "UEELMGWAF",
+      "ts": "1544142260.327000",
+      "team": "T2H71EFLK",
+      "reactions": [
+        {
+          "name": "astonished",
+          "users": ["UEC4P80AX", "UEG1ZB82J", "U8D7901TM"],
+          "count": 3
+        }
+      ]
+    },
+    {
+      "client_msg_id": "e75c1d4e-1d05-44b3-bb95-aa69965e36d2",
+      "type": "message",
+      "text": ":+1:",
+      "user": "UEFCH9DKN",
+      "ts": "1544140503.326300",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543759902.001600",
+      "parent_user_id": "UC6J7RJQZ"
+    },
+    {
+      "client_msg_id": "3576e2a3-b5c7-43b6-a409-9ddc1355413d",
+      "type": "message",
+      "text": "<@UEEQ5EDHA> <@UEFCH9DKN> I’ve  replied to the whole channel so that everyone gets the info: yes. you may.",
+      "user": "UC6J7RJQZ",
+      "ts": "1544140337.326100",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543759902.001600",
+      "parent_user_id": "UC6J7RJQZ",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEEQ5EDHA"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "049e337f-a974-4b73-987d-57e9d277e2d5",
+      "type": "message",
+      "text": "@channel A couple of groups have asked tonight if, in moving people game, it’s legal to do a comparison involving the value in the waiting room.  We’ll say yes - such comparisons are permitted.  I’ve updated the written rules to explicitly allow this.",
+      "user": "UC6J7RJQZ",
+      "ts": "1544140290.325900",
+      "team": "T2H71EFLK",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": [
+            "UEBPVJQHF",
+            "UEFCH9DKN",
+            "UEFUB1H6J",
+            "UEG1ZB82J",
+            "U98J7PU7Q"
+          ],
+          "count": 5
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REMKC59D1|call>.",
+      "user": "UEBPVJQHF",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REMKC59D1",
+        "name": "",
+        "created_by": "UEBPVJQHF",
+        "date_start": "1544139687",
+        "date_end": "1544139902",
+        "participants": [],
+        "participant_history": ["UEBPVJQHF"],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": false,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REMKC59D1",
+      "ts": "1544139687.321700"
+    },
+    {
+      "client_msg_id": "0a9fca48-2c13-4e9b-be38-7c388f0d7a63",
+      "type": "message",
+      "text": "Hi <@UC6J7RJQZ>, As a Group 4, We also need to know answer of same question. (<@UEEJZBXFB>, <@UEHSJ81EK> <@UEETSKQSC> <@UEFGZV9JB> <@UEFCH9DKN>)",
+      "user": "UEFCH9DKN",
+      "ts": "1544137934.321500",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543759902.001600",
+      "parent_user_id": "UC6J7RJQZ"
+    },
+    {
+      "client_msg_id": "e15ad714-2e27-4753-8fe8-716d0c59ebec",
+      "type": "message",
+      "text": "Hi <@UC6J7RJQZ> can we compare with waiting room value?  ",
+      "user": "UEEQ5EDHA",
+      "ts": "1544136908.321300",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543759902.001600",
+      "parent_user_id": "UC6J7RJQZ"
+    },
+    {
+      "type": "message",
+      "text": "HELLO Students! here a go!  x-mass party will be held on the last class of this year, all you are cordially invited!!",
+      "files": [
+        {
+          "id": "FELUYN1A4",
+          "created": 1544136322,
+          "timestamp": 1544136322,
+          "name": "xmass.jpg.png",
+          "title": "xmass.jpg.png",
+          "mimetype": "image/png",
+          "filetype": "png",
+          "pretty_type": "PNG",
+          "user": "UECDV8AHZ",
+          "editable": false,
+          "size": 316576,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FELUYN1A4/xmass.jpg.png",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FELUYN1A4/download/xmass.jpg.png",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FELUYN1A4-9d90ac2e3b/xmass.jpg_64.png",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FELUYN1A4-9d90ac2e3b/xmass.jpg_80.png",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FELUYN1A4-9d90ac2e3b/xmass.jpg_360.png",
+          "thumb_360_w": 359,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FELUYN1A4-9d90ac2e3b/xmass.jpg_480.png",
+          "thumb_480_w": 479,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FELUYN1A4-9d90ac2e3b/xmass.jpg_160.png",
+          "image_exif_rotation": 1,
+          "original_w": 492,
+          "original_h": 493,
+          "permalink": "https://codeyourfuture.slack.com/files/UECDV8AHZ/FELUYN1A4/xmass.jpg.png",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FELUYN1A4-5a487c77fd",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UECDV8AHZ",
+      "display_as_bot": false,
+      "ts": "1544136324.320100",
+      "reactions": [
+        {
+          "name": "star-struck",
+          "users": ["UEC4P80AX"],
+          "count": 1
+        },
+        {
+          "name": "heart",
+          "users": ["UEELMGWAF"],
+          "count": 1
+        },
+        {
+          "name": "+1",
+          "users": ["UEF5EPZHD", "UEG408198", "U98J7PU7Q"],
+          "count": 3
+        }
+      ]
+    },
+    {
+      "client_msg_id": "2c971443-beec-4e78-b1a1-3cb94823e7e3",
+      "type": "message",
+      "text": "Back again! Although it works on Chrome and allows me to progress the terminal tends to just give me ERR error messages despite the tutorial telling me that I'd done what it wanted correctly. Not sure if this is a bug or something I'm doing wrong.",
+      "user": "UEC4P80AX",
+      "ts": "1544134025.319200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544132877.315500",
+      "parent_user_id": "UEC4P80AX",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "text": "<https://docs.google.com/document/d/16Fa69TXHG2N4I7Oh9G0IbYvQshiA6c-OaaxGnK2QfAc/edit?usp=sharing>",
+      "files": [
+        {
+          "id": "F9ME85ZK3",
+          "created": 1520781269,
+          "timestamp": 1520781269,
+          "name": "Moving People Game",
+          "title": "Moving People Game",
+          "mimetype": "application/vnd.google-apps.document",
+          "filetype": "gdoc",
+          "pretty_type": "GSuite Document",
+          "user": "U2H8PGN05",
+          "editable": false,
+          "size": 1989,
+          "mode": "external",
+          "is_external": true,
+          "external_type": "gdrive",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://docs.google.com/document/d/16Fa69TXHG2N4I7Oh9G0IbYvQshiA6c-OaaxGnK2QfAc/edit",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_64.png",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_80.png",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_360.png",
+          "thumb_360_w": 279,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_480.png",
+          "thumb_480_w": 371,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_160.png",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_720.png",
+          "thumb_720_w": 557,
+          "thumb_720_h": 720,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_800.png",
+          "thumb_800_w": 800,
+          "thumb_800_h": 1034,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_960.png",
+          "thumb_960_w": 743,
+          "thumb_960_h": 960,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-F9ME85ZK3-9be8ffcc4d/moving_people_game_1024.png",
+          "thumb_1024_w": 792,
+          "thumb_1024_h": 1024,
+          "image_exif_rotation": 1,
+          "original_w": 800,
+          "original_h": 1034,
+          "permalink": "https://codeyourfuture.slack.com/files/U2H8PGN05/F9ME85ZK3/moving_people_game",
+          "is_starred": false,
+          "external_id": "16Fa69TXHG2N4I7Oh9G0IbYvQshiA6c-OaaxGnK2QfAc",
+          "external_url": "https://docs.google.com/document/d/16Fa69TXHG2N4I7Oh9G0IbYvQshiA6c-OaaxGnK2QfAc/edit",
+          "has_rich_preview": true
+        }
+      ],
+      "upload": false,
+      "user": "UEFCH9DKN",
+      "display_as_bot": false,
+      "x_files": ["F9ME85ZK3"],
+      "ts": "1544133562.317900",
+      "client_msg_id": "adcf9de6-7411-470c-9120-bcee4feb9470",
+      "thread_ts": "1543771805.046900",
+      "parent_user_id": "UEFCH9DKN"
+    },
+    {
+      "client_msg_id": "e4cbb565-309d-4fd4-a775-1ab863b620ce",
+      "type": "message",
+      "text": "Good to know. Didn't get there yet.",
+      "user": "UECCVF1J7",
+      "ts": "1544133331.317200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544132877.315500",
+      "parent_user_id": "UEC4P80AX",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "6b1a7950-5475-4dc6-b95f-6b6a55b77b35",
+      "type": "message",
+      "text": "Hi <!subteam^SEGJETGGG|@ldn5> will be working on JavaScript tomorrow from 8pm. feel free to join me.",
+      "user": "U98J7PU7Q",
+      "ts": "1544133257.316700",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543861587.036800",
+      "parent_user_id": "UEG408198",
+      "reactions": [
+        {
+          "name": "heavy_check_mark",
+          "users": ["UEC4P80AX"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "client_msg_id": "08e68987-67a4-4803-914d-aee1734590ae",
+      "type": "message",
+      "text": "Found a workaround! It wasn't allowing me to continue in Firefox but  appears to work in Chrome.",
+      "user": "UEC4P80AX",
+      "ts": "1544133141.315900",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544132877.315500",
+      "parent_user_id": "UEC4P80AX",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "text": "Hey guys! Has anyone had a problem with the CodeAcademy Javascript section 'Transpilation With Babel'? It provides you with a terminal to install babel-cli but the install fails. I've attached the error message to this post. As the terminal is an emulation I'm guessing this is a problem on CA's side but it may be a problem with my Linux distro. Let me know if it worked for you.",
+      "files": [
+        {
+          "id": "FEMEUGF0C",
+          "created": 1544132875,
+          "timestamp": 1544132875,
+          "name": "Screenshot from 2018-12-06 21.46.07.png",
+          "title": "Screenshot from 2018-12-06 21.46.07.png",
+          "mimetype": "image/png",
+          "filetype": "png",
+          "pretty_type": "PNG",
+          "user": "UEC4P80AX",
+          "editable": false,
+          "size": 16738,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FEMEUGF0C/screenshot_from_2018-12-06_21.46.07.png",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FEMEUGF0C/download/screenshot_from_2018-12-06_21.46.07.png",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FEMEUGF0C-255f5179b1/screenshot_from_2018-12-06_21.46.07_64.png",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FEMEUGF0C-255f5179b1/screenshot_from_2018-12-06_21.46.07_80.png",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FEMEUGF0C-255f5179b1/screenshot_from_2018-12-06_21.46.07_360.png",
+          "thumb_360_w": 360,
+          "thumb_360_h": 223,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FEMEUGF0C-255f5179b1/screenshot_from_2018-12-06_21.46.07_160.png",
+          "image_exif_rotation": 1,
+          "original_w": 370,
+          "original_h": 229,
+          "permalink": "https://codeyourfuture.slack.com/files/UEC4P80AX/FEMEUGF0C/screenshot_from_2018-12-06_21.46.07.png",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FEMEUGF0C-c821f5da8e",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEC4P80AX",
+      "display_as_bot": false,
+      "ts": "1544132877.315500",
+      "edited": {
+        "user": "UEC4P80AX",
+        "ts": "1544132951.000000"
+      },
+      "thread_ts": "1544132877.315500",
+      "reply_count": 3,
+      "reply_users_count": 2,
+      "latest_reply": "1544134025.319200",
+      "reply_users": ["UEC4P80AX", "UECCVF1J7"],
+      "replies": [
+        {
+          "user": "UEC4P80AX",
+          "ts": "1544133141.315900"
+        },
+        {
+          "user": "UECCVF1J7",
+          "ts": "1544133331.317200"
+        },
+        {
+          "user": "UEC4P80AX",
+          "ts": "1544134025.319200"
+        }
+      ],
+      "subscribed": false
+    },
+    {
+      "client_msg_id": "24de31b8-486b-486d-ab51-91834d0083b0",
+      "type": "message",
+      "text": " <@UECE3RWR3> <@UECDV8AHZ> ok tomorrow i will join you guys around 8pm. That might work yeah. You will take us through the reasoning. Tonight i will be working on my code from 11pm just in case anyone wants to join",
+      "user": "UEBPVJQHF",
+      "ts": "1544131979.313000",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "785d114b-d774-42be-8989-24b63376fb5f",
+      "type": "message",
+      "text": "<@UECE3RWR3>  I can join with you tomarrow that time for javascript",
+      "user": "UEEQ5EDHA",
+      "ts": "1544131901.312300",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "548fc392-d977-454b-a1e1-40414cd832b3",
+      "type": "message",
+      "text": "Heyy there, joan should be with us i think. We can make it tomorrow at any convenient time. ",
+      "user": "UECDV8AHZ",
+      "ts": "1544131615.311800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEEQ5EDHA", "UEBPVJQHF"],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "client_msg_id": "9da29891-e5ce-476f-b443-eb26106480cb",
+      "type": "message",
+      "text": "Tomorrow I'll be available from 16:00 to 22:00",
+      "user": "UECE3RWR3",
+      "ts": "1544131469.311600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ"
+    },
+    {
+      "client_msg_id": "359a9463-9a09-4f18-aee1-db4c1334e4ee",
+      "type": "message",
+      "text": "<@UEBPVJQHF> I was working on Javascript and had some ideas about how to solve it, using conditionals and loops. We have to work on that.",
+      "user": "UECE3RWR3",
+      "ts": "1544131381.311400",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543771874.051700",
+      "parent_user_id": "UECDV8AHZ",
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["UEBPVJQHF"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "text": "",
+      "files": [
+        {
+          "id": "FEM1BPGBT",
+          "created": 1544131321,
+          "timestamp": 1544131321,
+          "name": "algorithm for moving people game - Alisina.docx",
+          "title": "algorithm for moving people game - Alisina.docx",
+          "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "filetype": "docx",
+          "pretty_type": "Word Document",
+          "user": "UEEJZBXFB",
+          "editable": false,
+          "size": 14240,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FEM1BPGBT/algorithm_for_moving_people_game_-_alisina.docx",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FEM1BPGBT/download/algorithm_for_moving_people_game_-_alisina.docx",
+          "permalink": "https://codeyourfuture.slack.com/files/UEEJZBXFB/FEM1BPGBT/algorithm_for_moving_people_game_-_alisina.docx",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FEM1BPGBT-4aff0f4273",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEEJZBXFB",
+      "display_as_bot": false,
+      "ts": "1544131323.311000",
+      "thread_ts": "1543771805.046900",
+      "parent_user_id": "UEFCH9DKN"
+    },
+    {
+      "type": "message",
+      "text": "<@UEEJZBXFB>, <@UEHSJ81EK> <@UEETSKQSC> <@UEFGZV9JB> <@UEDCLCVK5>.",
+      "files": [
+        {
+          "id": "FEMJR0N8J",
+          "created": 1544130530,
+          "timestamp": 1544130530,
+          "name": "MOVING GAME_V3.doc",
+          "title": "MOVING GAME_V3.doc",
+          "mimetype": "application/msword",
+          "filetype": "doc",
+          "pretty_type": "Word Document",
+          "user": "UEFCH9DKN",
+          "editable": false,
+          "size": 40960,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FEMJR0N8J/moving_game_v3.doc",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FEMJR0N8J/download/moving_game_v3.doc",
+          "permalink": "https://codeyourfuture.slack.com/files/UEFCH9DKN/FEMJR0N8J/moving_game_v3.doc",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FEMJR0N8J-28a32b896b",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFCH9DKN",
+      "display_as_bot": false,
+      "ts": "1544130531.310600",
+      "thread_ts": "1543771805.046900",
+      "parent_user_id": "UEFCH9DKN"
+    },
+    {
+      "client_msg_id": "7fcdb1c2-dff7-4614-ba17-58e0e361d6c3",
+      "type": "message",
+      "text": "please delete your call to clean the channel. Thanks",
+      "user": "U2H8PGN05",
+      "ts": "1544129690.310300",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544129292.309200",
+      "parent_user_id": "UECCVF1J7"
+    },
+    {
+      "client_msg_id": "884078a7-f6f3-4c35-ae19-b1ee75bfadac",
+      "type": "message",
+      "text": "oh, hi german. Yes its true. I can join him. Thanks and sorry for no paying attention.",
+      "user": "UECCVF1J7",
+      "ts": "1544129480.309800",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544129292.309200",
+      "parent_user_id": "UECCVF1J7"
+    },
+    {
+      "client_msg_id": "86cc831d-457f-4a97-8455-be27da92691c",
+      "type": "message",
+      "text": "hi Roberto. DId you notice that Kadir already opened a call?",
+      "user": "U2H8PGN05",
+      "ts": "1544129415.309600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544129292.309200",
+      "parent_user_id": "UECCVF1J7"
+    },
+    {
+      "client_msg_id": "8da637fc-14d5-4636-b559-3f216ee24b39",
+      "type": "message",
+      "text": "Hi guys, I'm woking on: Iterators - The .map() method | Javascript if anyone wants to join",
+      "user": "UECCVF1J7",
+      "ts": "1544129292.309200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544129292.309200",
+      "reply_count": 3,
+      "reply_users_count": 2,
+      "latest_reply": "1544129690.310300",
+      "reply_users": ["U2H8PGN05", "UECCVF1J7"],
+      "replies": [
+        {
+          "user": "U2H8PGN05",
+          "ts": "1544129415.309600"
+        },
+        {
+          "user": "UECCVF1J7",
+          "ts": "1544129480.309800"
+        },
+        {
+          "user": "U2H8PGN05",
+          "ts": "1544129690.310300"
+        }
+      ],
+      "subscribed": false,
+      "reactions": [
+        {
+          "name": "+1",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REMGW0YAW|call>.",
+      "user": "UEELMGWAF",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REMGW0YAW",
+        "name": "",
+        "created_by": "UEELMGWAF",
+        "date_start": "1544126689",
+        "date_end": "1544133912",
+        "participants": [],
+        "participant_history": [
+          "UEELMGWAF",
+          "UEH43L137",
+          "UEF5EPZHD",
+          "UEGN411FZ",
+          "UEDKSS813",
+          "UD63LJSCD",
+          "UD6VBP684",
+          "UECE3RWR3",
+          "UEG408198"
+        ],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ", "DEKSAP0QH"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": true,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REMGW0YAW",
+      "ts": "1544126689.307000",
+      "reactions": [
+        {
+          "name": "mariodance",
+          "users": ["U8D7901TM"],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "user": "UEE7N5QPP",
+      "type": "message",
+      "subtype": "channel_join",
+      "ts": "1544126623.306700",
+      "text": "<@UEE7N5QPP> has joined the channel",
+      "inviter": "U2H8PGN05"
+    },
+    {
+      "client_msg_id": "df496335-5b11-48e0-954b-dda0c00058dd",
+      "type": "message",
+      "text": "can goup 5 join me in the call i'M about to launch<@UEF5EPZHD> <@UEH43L137> <@UEDKSS813> <@UEGN411FZ>",
+      "user": "UEELMGWAF",
+      "ts": "1544126554.306200",
+      "team": "T2H71EFLK",
+      "thread_ts": "1543867463.067800",
+      "parent_user_id": "UEELMGWAF"
+    },
+    {
+      "type": "message",
+      "subtype": "sh_room_created",
+      "text": "Started a <https://codeyourfuture.slack.com/call/REMDTBD43|call>.",
+      "user": "U98J7PU7Q",
+      "channel": "CEDK6JPKQ",
+      "room": {
+        "id": "REMDTBD43",
+        "name": "JavaScript (arrays , objects, and the relations between these elements) ",
+        "created_by": "U98J7PU7Q",
+        "date_start": "1544126553",
+        "date_end": "1544132652",
+        "participants": [],
+        "participant_history": ["U98J7PU7Q", "UECCVF1J7", "UEG408198"],
+        "participants_camera_on": [],
+        "participants_camera_off": [],
+        "participants_screenshare_on": [],
+        "participants_screenshare_off": [],
+        "channels": ["CEDK6JPKQ", "DEKMD5VEZ", "DELG43R71"],
+        "is_dm_call": false,
+        "was_rejected": false,
+        "was_missed": false,
+        "was_accepted": false,
+        "has_ended": true,
+        "app_id": "A00"
+      },
+      "no_notifications": false,
+      "permalink": "https://codeyourfuture.slack.com/call/REMDTBD43",
+      "ts": "1544126553.306000"
+    },
+    {
+      "client_msg_id": "504bc35a-e67b-498f-ab8f-67c2ed985869",
+      "type": "message",
+      "text": "People.. please don't forget to use threads!!!",
+      "user": "U2H8PGN05",
+      "ts": "1544126518.305600",
+      "team": "T2H71EFLK",
+      "thread_ts": "1544114917.287600",
+      "parent_user_id": "UEELMGWAF"
+    },
+    {
+      "type": "message",
+      "text": "",
+      "files": [
+        {
+          "id": "FENHACLA3",
+          "created": 1544124509,
+          "timestamp": 1544124509,
+          "name": "Screenshot_20181206-193049_Docs.jpg",
+          "title": "Screenshot_20181206-193049_Docs.jpg",
+          "mimetype": "image/jpeg",
+          "filetype": "jpg",
+          "pretty_type": "JPEG",
+          "user": "UEFUB1H6J",
+          "editable": false,
+          "size": 642239,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://files.slack.com/files-pri/T2H71EFLK-FENHACLA3/screenshot_20181206-193049_docs.jpg",
+          "url_private_download": "https://files.slack.com/files-pri/T2H71EFLK-FENHACLA3/download/screenshot_20181206-193049_docs.jpg",
+          "thumb_64": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_64.jpg",
+          "thumb_80": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_80.jpg",
+          "thumb_360": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_360.jpg",
+          "thumb_360_w": 175,
+          "thumb_360_h": 360,
+          "thumb_480": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_480.jpg",
+          "thumb_480_w": 234,
+          "thumb_480_h": 480,
+          "thumb_160": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_160.jpg",
+          "thumb_720": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_720.jpg",
+          "thumb_720_w": 350,
+          "thumb_720_h": 720,
+          "thumb_800": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_800.jpg",
+          "thumb_800_w": 800,
+          "thumb_800_h": 1644,
+          "thumb_960": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_960.jpg",
+          "thumb_960_w": 467,
+          "thumb_960_h": 960,
+          "thumb_1024": "https://files.slack.com/files-tmb/T2H71EFLK-FENHACLA3-80a1259eb4/screenshot_20181206-193049_docs_1024.jpg",
+          "thumb_1024_w": 498,
+          "thumb_1024_h": 1024,
+          "image_exif_rotation": 1,
+          "original_w": 1440,
+          "original_h": 2960,
+          "permalink": "https://codeyourfuture.slack.com/files/UEFUB1H6J/FENHACLA3/screenshot_20181206-193049_docs.jpg",
+          "permalink_public": "https://slack-files.com/T2H71EFLK-FENHACLA3-e8dbec6dba",
+          "is_starred": false,
+          "has_rich_preview": false
+        }
+      ],
+      "upload": true,
+      "user": "UEFUB1H6J",
+      "display_as_bot": false,
+      "ts": "1544124515.305000",
+      "client_msg_id": "4662e995-8218-4cde-ae70-13370f605c92",
+      "thread_ts": "1543771871.051300",
+      "parent_user_id": "UEH41Q6UE"
+    },
+    {
+      "client_msg_id": "8b614d6e-40e1-4840-b45a-ee385ac3b364",
+      "type": "message",
+      "text": "<https://docs.google.com/document/d/13q1fKUWjgNPeMrfWb1VkBLGYYv0c0SoXVyKkynVCZ4k/edit>",
+      "user": "UEFUB1H6J",
+      "ts": "1544124196.304800",
+      "team": "T2H71EFLK"
+    }
+  ],
+  "has_more": true,
+  "scopes": [
+    "identify",
+    "bot",
+    "channels:history",
+    "channels:read",
+    "users:read",
+    "users:read.email",
+    "chat:write:bot"
+  ],
+  "acceptedScopes": ["channels:history"]
+}
