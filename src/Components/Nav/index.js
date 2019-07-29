@@ -1,16 +1,18 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 // import ProfileDropDown from "./profileDropDown";
-// import { logout, loggedIn } from "../../Auth";
+import { logout, loggedIn, getProfile } from "../../Auth";
 import logo_CYF_square from "./logo-CYF-square.png";
 import "./index.css";
 
 export default class Navbar extends React.Component {
   onLogOut = () => {
-    // logout();
+    logout();
     window.location.reload(true);
   };
   render() {
+    const avatar = getProfile().avatar;
+    console.log("from inside Nav", getProfile().avatar);
     return (
       <div className="navbar-div">
         <nav className="navbar navbar-expand-lg navbar-light container">
@@ -34,40 +36,37 @@ export default class Navbar extends React.Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
-              {
+              {!loggedIn() && (
                 <li className="nav-item">
                   <Link className="nav-link nav-btn" to="/register">
                     Sign up
                   </Link>
                 </li>
-              }
-              {
+              )}
+              {!loggedIn() && (
                 <li className="nav-item">
                   <Link className="nav-link nav-btn" to="/">
                     Login
                   </Link>
                 </li>
-              }
-              <li className="nav-item desktop-display-none" />
-              {
-                <Fragment>
-                  <hr className="m-1 w-25" />
-                  <li className="nav-item desktop-display-none">
-                    <span
-                      className="nav-link logout-btn"
-                      onClick={this.onLogOut}
-                      onKeyDown={this.onLogOut}
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Log Out
-                    </span>
-                  </li>
-                </Fragment>
-              }
+              )}
+              {loggedIn() && (
+                <li className="nav-item ">
+                  <span
+                    className="nav-link logout-btn"
+                    onClick={this.onLogOut}
+                    onKeyDown={this.onLogOut}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    Log Out
+                  </span>
+                </li>
+              )}
             </ul>
           </div>
           {/* {<ProfileDropDown />} */}
+          <img src={avatar} alt="Avatar" class="avatar" />
         </nav>
       </div>
     );

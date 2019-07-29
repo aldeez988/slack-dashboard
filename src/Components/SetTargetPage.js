@@ -17,20 +17,14 @@ class SetTargetPage extends Component {
     targetThreads: "",
     publicChannels: [],
     selectedChannel: "",
-    selectedChannelId: ""
+    selectedChannelId: "",
+    selectedClassId: ""
   };
   componentWillMount() {
     getPublicChannels().then(res => {
       this.setState({ publicChannels: res.data });
     });
   }
-  getStudents = className => {
-    this.setState({
-      students: ClassData.find(classdata => classdata.className === className)
-        .students
-    });
-    console.log("students", this.state.students);
-  };
 
   getNumberOfStudentsInAClass = async className => {
     try {

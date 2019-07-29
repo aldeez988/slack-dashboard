@@ -108,6 +108,11 @@ class SudentsCommunication extends Component {
                 className="form-control form-control-lg"
                 name="targetName"
                 id="targetName"
+                
+                
+                
+                
+                
                 value={targetName}
                 onChange={this.onChange}
                 required

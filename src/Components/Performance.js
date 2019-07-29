@@ -9,6 +9,8 @@ import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
 import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
 import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
 import { getAveragePerformancePercentage } from "../Components/helpers/averagePerformancePercentage";
+import { getProfile } from "../Auth/index";
+
 class PerformancePage extends Component {
   state = {
     className: "",
@@ -16,7 +18,6 @@ class PerformancePage extends Component {
     studentsProfiles: [],
     studentsSlackId: [],
     cyfClasses: this.props.cyfClasses,
-    // cyfClasses: this.props.location.state ? this.props.location.state : [],
     targets: [],
     targetName: "",
     tableData: [],
@@ -44,9 +45,6 @@ class PerformancePage extends Component {
         };
       },
       async () => {
-        // const id = this.state.cyfClasses.find(
-        //   classData => classData.className === value
-        // ).id;
         if (name === "className") {
           try {
             console.log("hi from performance page 2");
@@ -64,7 +62,6 @@ class PerformancePage extends Component {
 
             //Getting id only for students in the selected class to only get their messages
 
-            // needs refactoring
             const slackIds = getStudentsResponse.data
               .filter(
                 student =>
@@ -96,7 +93,7 @@ class PerformancePage extends Component {
           allCallsAndMessages({
             startingDate,
             finishingDate,
-            studentsSlackId
+            channelId: selectedTarget.channelId
           })
             .then(response => {
               console.log("n******* and Calls", response);

@@ -48,8 +48,7 @@ class Table extends Component {
               columns: [
                 {
                   Header: "Number Of Calls",
-                  accessor: "callsCounter",
-                  className: "center"
+                  accessor: "callsCounter"
                 },
                 {
                   Header: "Hit Calls Target",
