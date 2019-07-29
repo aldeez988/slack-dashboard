@@ -212,7 +212,7 @@ class SetTargetPage extends Component {
             </select>
           </div>
         </div>
-        <div className="d-flex flex-column align-items-center justify-content-center">
+        <div className="label set-target-inputs">
           <br />
           <br />
           <br />

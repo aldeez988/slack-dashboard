@@ -14,7 +14,8 @@ class Table extends Component {
   render() {
     return (
       <div
-        style={{ backgroundColor: "white", marginTop: "20px", width: "95%" }}
+        className="label"
+        style={{ backgroundColor: "white", marginTop: "20px", width: "100%" }}
       >
         <ReactTable
           data={this.props.data}

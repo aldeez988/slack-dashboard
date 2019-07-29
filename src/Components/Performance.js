@@ -138,7 +138,7 @@ class PerformancePage extends Component {
     } = this.state;
     console.log("this is the target data", this.state.targets);
     return (
-      <div className="performance-container">
+      <div className="performance-container container">
         <br />
         <h1 calssNames="" style={{}}>
           Check Performance{" "}
@@ -191,30 +191,28 @@ class PerformancePage extends Component {
           </div>
         </div>
 
-        <div className="label barchart-sudentlable-container mb-5">
-          <div className="performance-container-numberOf mt-5 col-md-6 result-container">
+        <div className="label progress-target-container">
+          <div className="performance-container-numberOf  ">
             <h2 className=" mt-5"> Target Threads</h2>
             <h3>{selectedTargetData.targetThreads}</h3>
             <h2 className="mt-5 ">Target Calls</h2>
             <h3>{selectedTargetData.targetCalls}</h3>
           </div>
           <hr className="hr" />
-            <ProgressBar
-              performancePercentage={
-                averagePerformancePercentage
-                  ? averagePerformancePercentage
-                  : averagePerformancePercentage
-              }
-            />
-          
+          <ProgressBar
+            performancePercentage={
+              averagePerformancePercentage
+                ? averagePerformancePercentage
+                : averagePerformancePercentage
+            }
+          />
         </div>
-    
+
         <Table
-          className="lable"
+          className=""
           data={tableData}
           target={selectedTargetData ? selectedTargetData : {}}
         />
-        
       </div>
     );
   }
