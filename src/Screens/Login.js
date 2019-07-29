@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getStudentMessages } from "../Components/actions/getStudentMessages";
 import { login } from "../Components/actions/login";
 import swal from "sweetalert";
+import { setToken, getUserType, getProfile, loggedIn } from "../Auth/index";
 import "./login.css";
 
 class Login extends Component {
@@ -9,20 +10,27 @@ class Login extends Component {
   confirmUser = async user => {
     try {
       const response = await login(user);
-      console.log("login response ", response.data.admin);
-      this.setState(prevState => {
-        return {
-          isLoading: !prevState.isLoading,
-          userData: response.data
-        };
-      });
-
-      if (response.data.admin) {
-        this.props.history.push("/admin", { ...this.state.userData });
-      } else if (response.data.userType === "Mentor") {
-        this.props.history.push("/mentor", { ...this.state.userData });
-      } else {
-        this.props.history.push("/sudentpage", { ...this.state.userData });
+      console.log("login response ", response);
+      const profile = getProfile();
+      if (response) {
+        await setToken(response.data.token);
+        this.setState(prevState => {
+          return {
+            isLoading: !prevState.isLoading,
+            userData: profile
+          };
+        });
+        if (getUserType() === "Mentor") {
+          return this.props.history.push("/mentor", { ...profile });
+        }
+        if (getUserType() === "admin") {
+          return this.props.history.push("/admin", { ...profile });
+        }
+        if (getUserType() === "Student") {
+          return this.props.history.push("/sudentpage", {
+            ...profile
+          });
+        }
       }
     } catch (error) {
       swal("Oops!", "Please check your username and password!", "error");
@@ -48,6 +56,15 @@ class Login extends Component {
     // getStudentMessages({ name: email.split("@")[0] });
   };
   render() {
+    // if (loggedIn()) {
+    //   return (
+    //     <div class="center ">
+    //       <div className="card">
+    //         <h1>Welcome To CYF Slack Dashboard</h1>
+    //       </div>
+    //     </div>
+    //   );
+    // }
     return (
       <div class="center ">
         <div className="card">

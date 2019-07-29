@@ -36,12 +36,11 @@ body {
   justify-content: space-around;
 }
 .barchart-performance-container {
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: row;
-  border: 2px solid black;
+  justify-content: space-between;
 }
-
 
 .barchart-container {
   display: flex;
@@ -80,19 +79,17 @@ body {
   /* border: 1px solid; */
   padding: 30px;
   box-shadow: 1px 0px 20px #acad67;
-  width:100%;
+  width: 100%;
   margin-bottom: 40px;
-  
 }
 
-.icon{
-  font-Size: 30px;
+.icon {
+  font-size: 30px;
   margin-left: 10px;
 }
 /* student page */
 .studen-page {
   box-shadow: 1px 1px 50px #ededed inset;
-
 }
 
 .student-page-container {
@@ -148,7 +145,7 @@ body {
   padding: 20px;
 }
 
-.hr{
+.hr {
   display: none;
 }
 
@@ -156,15 +153,14 @@ body {
   .dropdown-container {
     flex-direction: column;
   }
-  .barchart-sudentlable-container{
+  .barchart-sudentlable-container {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .hr{
+  .hr {
     display: inline-block;
-    background-color:#D1CFB2;
+    background-color: #d1cfb2;
     width: 80%;
     height: 2px;
   }
 }
-

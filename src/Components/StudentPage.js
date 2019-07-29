@@ -9,6 +9,8 @@ import { ResponsiveContainer } from "recharts";
 import { getTargets } from "./actions/targets";
 import { getUserMessageNumber } from "./actions/slack";
 import { performancePercentage } from "./helpers/performancePercentage";
+import { getProfile } from "../Auth/index";
+
 import {
   studentsRank,
   getAllNumberOfMessagesAndCalls,
@@ -31,10 +33,10 @@ class StudentPage extends Component {
   };
 
   componentWillMount() {
-    getTargets({ className: this.props.location.state.className })
+    getTargets({ className: getProfile().className })
       .then(res => {
         this.setState({ targetNames: res.data });
-        console.log("after converting a time stamp to date", res);
+        console.log("after converting a time stamp to date", getProfile());
       })
       .catch(err => {
         swal("Oops!", "Something went wrong!", "error");
@@ -54,7 +56,7 @@ class StudentPage extends Component {
       },
       //callback inside setState
       async () => {
-        const slackId = this.props.location.state.slackId;
+        const slackId = getProfile().slackId;
 
         let startingDate =
           new Date(this.state.selectedTargetData.startingDate).getTime() / 1000;
@@ -65,7 +67,7 @@ class StudentPage extends Component {
         try {
           const targetCalls = this.state.selectedTargetData.targetCalls;
           const targetThreads = this.state.selectedTargetData.targetThreads;
-          const classId = this.props.location.state.classId;
+          const classId = getProfile().classId;
 
           const allStudentProfiles = await getAllStudents({ id: classId });
           const messagesAndCalls = await allCallsAndMessages({
@@ -101,7 +103,7 @@ class StudentPage extends Component {
             }
           );
           const currentUserNumberOFMessagesAndCalls = getCurrentUserNumberOfCallsAndMessages(
-            this.props.location.state.slackId,
+            getProfile().slackId,
             allNumberOfMessagesAndCalls
           );
           const {
@@ -119,6 +121,7 @@ class StudentPage extends Component {
             )
           });
         } catch (err) {
+          console.log(err);
           swal("Oops!", "Something went wrong!", "error");
         }
       }
@@ -165,7 +168,7 @@ class StudentPage extends Component {
             </select>
           </div>
         </div>
-        
+
         <div className="label barchart-sudentlable-container mb-5">
           <StudentLabel
             targetCalls={this.state.selectedTargetData.targetCalls}
@@ -174,12 +177,11 @@ class StudentPage extends Component {
             targetName={this.state.targetName}
             numberOfCalls={numberOfCalls}
           />
-          <hr className="hr"/>
+          <hr className="hr" />
           <ProgressBar
             className="d-flex col-4  justify-content-center mb-5"
             performancePercentage={this.state.performancePercentage}
           />
-          
         </div>
         <TopStudents rankedProfiles={rankedProfiles} />
       </div>

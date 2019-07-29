@@ -16,8 +16,7 @@ class App extends Component {
           {/* <Nav />
         {this.state.userExist && <ProgressPage />}
         {!this.state.userExist && <Login confirmUser={this.confirmUser} />} */}
-          <Nav />
-          <div className="container" />
+          {/* <Nav /> */}
           <Routes />
         </div>
       </Router>

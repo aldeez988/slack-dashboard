@@ -15,7 +15,10 @@ class Mentor extends Component {
     // usersProfiles: {}
     cyfClasses: []
   };
-  async componentWillMount() {
+  componentWillMount() {
+    // window.location.reload(true);
+  }
+  async componentDidMount() {
     getAllClasses()
       .then(res => {
         this.setState({ cyfClasses: res.data });
@@ -77,7 +80,7 @@ class Mentor extends Component {
               Set Target{" "}
             </a>
           </li>
-          <li class="nav-item" onClick={this.handleShowStudentsCommunication}>
+          {/* <li class="nav-item" onClick={this.handleShowStudentsCommunication}>
             <a
               class={`nav-link ${
                 showStudentsCommunication ? this.state.active : ""
@@ -86,7 +89,7 @@ class Mentor extends Component {
             >
               Students Communication{" "}
             </a>
-          </li>
+          </li> */}
         </ul>
         <br />
         <br />
