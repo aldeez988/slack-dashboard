@@ -58,13 +58,17 @@ class AdminPage extends Component {
         <br />
         {console.log("the deatial from the admin page", this.props.location)}
         {this.state.showAddClass && (
-          <AddClass adminData={this.state.adminData} />
+          <div className="add-class-container">
+            <AddClass adminData={this.state.adminData} />
+          </div>
         )}
         {this.state.showAddWeek && (
-          <UsersJoinRequest
-            adminData={this.state.adminData}
-            usersProfiles={this.state.usersProfiles}
-          />
+          <div className="joining-requests-container">
+            <UsersJoinRequest
+              adminData={this.state.adminData}
+              usersProfiles={this.state.usersProfiles}
+            />
+          </div>
         )}
       </div>
     );

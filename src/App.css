@@ -16,22 +16,19 @@ body {
 
 /* for performance component */
 .performance-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: 1px 1px 50px #ededed inset;
-  margin:0 20px 0 20px;
 }
 .performance-container-numberOf {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
-  align-items: center;
- 
 }
 .dropdown-container {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -77,8 +74,13 @@ body {
 
 /* StudentLabel */
 .label {
-  /* border: 1px solid; */
   padding: 30px;
+  box-shadow: 1px 0px 20px #acad67;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.performance-label {
   box-shadow: 1px 0px 20px #acad67;
   width: 100%;
   margin-bottom: 40px;
@@ -107,12 +109,19 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-around;
+
   margin-bottom: 20px;
   padding-top: 50px;
 }
 
+.progress-target-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
 .header-container {
-  margin: 1em 0 0.5em 0;
   font-weight: 600;
   position: relative;
   font-size: 36px;
@@ -140,6 +149,23 @@ body {
   width: 70%;
 }
 
+.set-target-inputs {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-font {
+  font-family: "Abril Fatface", cursive !important;
+  color: #d13830;
+}
+.performance-font {
+  font-family: "Righteous", cursive;
+  color: darkgreen !important;
+  font-weight: bold;
+  font-size: 40px;
+}
 /* General */
 .result-container {
   border-radius: 50px;
@@ -149,7 +175,6 @@ body {
 .hr {
   display: none;
 }
-
 
 @media screen and (max-width: 811px) {
   .dropdown-container {
@@ -164,5 +189,9 @@ body {
     background-color: #d1cfb2;
     width: 80%;
     height: 2px;
+  }
+  .progress-target-container {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

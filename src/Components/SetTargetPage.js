@@ -110,7 +110,10 @@ class SetTargetPage extends Component {
       selectedChannel
     } = this.state;
     return (
-      <div className="d-flex flex-column align-items-center justify-content-center mt-5">
+      <div className="d-flex flex-column align-items-center justify-content-center ">
+        <div className="header-container d-flex justify-content-center">
+          <h1 className="header-font">Set A Target</h1>
+        </div>
         <div className="set-target-dropdown-container">
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
@@ -189,7 +192,7 @@ class SetTargetPage extends Component {
             </div>
           </div>
         </div>
-        <div className="col-sm-10 col-lg-4 mb-2">
+        <div className="col-sm-10 col-lg-4 mb-5">
           <div className="form-group ">
             <label htmlFor="selectedChannel" className="lead">
               Select Channel*{" "}
@@ -212,7 +215,7 @@ class SetTargetPage extends Component {
             </select>
           </div>
         </div>
-        <div className="d-flex flex-column align-items-center justify-content-center">
+        <div className="label set-target-inputs">
           <br />
           <br />
           <br />

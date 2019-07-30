@@ -33,9 +33,9 @@ class StudentRankingTable extends Component {
                 {
                   Header: "First Name",
                   accessor: "firstName",
-                  filterMethod: (filter, row) =>
-                    row[filter.id].startsWith(filter.value) &&
-                    row[filter.id].endsWith(filter.value)
+                  filterMethod: (filter, rows) =>
+                    matchSorter(rows, filter.value, { keys: ["firstName"] }),
+                  filterAll: true
                 },
                 {
                   Header: "Last Name",
@@ -52,7 +52,10 @@ class StudentRankingTable extends Component {
               columns: [
                 {
                   Header: "Total Points",
-                  accessor: "totalPoints"
+                  accessor: "totalPoints",
+                  Cell: row => (
+                    <div style={{ textAlign: "center" }}>{row.value}</div>
+                  )
                 }
               ]
             }

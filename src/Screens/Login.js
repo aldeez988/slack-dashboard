@@ -4,6 +4,7 @@ import { login } from "../Components/actions/login";
 import swal from "sweetalert";
 import { setToken, getUserType, getProfile, loggedIn } from "../Auth/index";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   state = { email: "", password: "", isLoading: false, userData: {} };
@@ -23,7 +24,7 @@ class Login extends Component {
         if (getUserType() === "Mentor") {
           return this.props.history.push("/mentor", { ...profile });
         }
-        if (getUserType() === "admin") {
+        if (getUserType() === "Admin") {
           return this.props.history.push("/admin", { ...profile });
         }
         if (getUserType() === "Student") {
@@ -68,7 +69,9 @@ class Login extends Component {
     return (
       <div class="center ">
         <div className="card">
-          <h1>Welcome To CYF Slack Dashboard</h1>
+          <div style={{ fontSize: 30, textAlign: "center" }}>
+            Welcome To CYF Slack Dashboard
+          </div>
           <form onSubmit={this.handleSubmit}>
             <input
               onChange={e => this.setState({ email: e.target.value })}
@@ -87,6 +90,16 @@ class Login extends Component {
             <button type="submit" className="form-submit">
               Login
             </button>
+            {!this.state.isLoading && (
+              <div>
+                Don't have an account?{" "}
+                <Link to="/register">
+                  <a className="text-danger" style={{ fontWeight: "bold" }}>
+                    Register
+                  </a>
+                </Link>
+              </div>
+            )}
             {this.state.isLoading && (
               <div class="spinner-border text-danger mt-5" role="status">
                 <span class="sr-only">Loading...</span>
