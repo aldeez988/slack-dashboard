@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.add-class-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 40%;
+  padding: 10px;
+}
+
+.joining-requests-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
   padding: 10px;
 }

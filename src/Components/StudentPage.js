@@ -68,9 +68,10 @@ class StudentPage extends Component {
           const targetCalls = this.state.selectedTargetData.targetCalls;
           const targetThreads = this.state.selectedTargetData.targetThreads;
           const classId = getProfile().classId;
-
+          const channelId = this.state.selectedTargetData.channelId;
           const allStudentProfiles = await getAllStudents({ id: classId });
           const messagesAndCalls = await allCallsAndMessages({
+            channelId,
             startingDate,
             finishingDate
           });
@@ -142,10 +143,10 @@ class StudentPage extends Component {
 
     return (
       <div className="student-page-container ">
-        <div className="header-container d-flex justify-content-center">
-          <h1 className="">Your Performance</h1>
+        <div className="header-container d-flex justify-content-center mt-5">
+          <h1 className="header-font">Your Performance</h1>
         </div>
-        <div className="col-sm-10 col-lg-4 mb-4">
+        <div className="col-sm-10 col-lg-4 mb-4 mt-4">
           <div className="form-group ">
             <label htmlFor="className" className="lead">
               Select Target to See Result{" "}
@@ -179,6 +180,7 @@ class StudentPage extends Component {
           />
           <hr className="hr" />
           <ProgressBar
+            title="Your Performance"
             className="d-flex col-4  justify-content-center mb-5"
             performancePercentage={this.state.performancePercentage}
           />

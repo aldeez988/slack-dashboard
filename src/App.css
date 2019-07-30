@@ -74,7 +74,6 @@ body {
 
 /* StudentLabel */
 .label {
-  /* border: 1px solid; */
   padding: 30px;
   box-shadow: 1px 0px 20px #acad67;
   width: 100%;
@@ -82,7 +81,6 @@ body {
 }
 
 .performance-label {
-  /* border: 1px solid; */
   box-shadow: 1px 0px 20px #acad67;
   width: 100%;
   margin-bottom: 40px;
@@ -110,7 +108,8 @@ body {
 .barchart-sudentlable-container {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
+
   margin-bottom: 20px;
   padding-top: 50px;
 }
@@ -123,7 +122,6 @@ body {
 }
 
 .header-container {
-  margin: 1em 0 0.5em 0;
   font-weight: 600;
   position: relative;
   font-size: 36px;
@@ -158,6 +156,16 @@ body {
   align-items: center;
 }
 
+.header-font {
+  font-family: "Abril Fatface", cursive !important;
+  color: #d13830;
+}
+.performance-font {
+  font-family: "Righteous", cursive;
+  color: darkgreen !important;
+  font-weight: bold;
+  font-size: 40px;
+}
 /* General */
 .result-container {
   border-radius: 50px;

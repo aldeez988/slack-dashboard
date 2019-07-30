@@ -30,7 +30,7 @@ class PerformancePage extends Component {
 
   onChange = e => {
     const { name, value } = e.target;
-    console.log();
+    console.log("the selected target data", this.state.selectedTargetData);
     this.setState(
       () => {
         return {
@@ -47,8 +47,6 @@ class PerformancePage extends Component {
       async () => {
         if (name === "className") {
           try {
-            console.log("hi from performance page 2");
-
             const targetResponse = await getTargetsForClass({
               id: this.state.selectedClass._id
             });
@@ -96,7 +94,6 @@ class PerformancePage extends Component {
             channelId: selectedTarget.channelId
           })
             .then(response => {
-              console.log("n******* and Calls", response);
               const finalNumberOFMessagesAndCalls = getAllNumberOfMessagesAndCalls(
                 studentsSlackId,
                 response.data.messages
@@ -112,7 +109,6 @@ class PerformancePage extends Component {
                   this.state.studentsProfiles.length
                 )
               });
-              console.log("students Names", this.state.studentsName);
               this.setState({
                 tableData: mergingStudentsDataForTable(
                   finalNumberOFMessagesAndCalls,
@@ -121,7 +117,6 @@ class PerformancePage extends Component {
               });
             })
             .catch(err => {
-              console.log(err);
               swal("Oops!", "Something went wrong!", "error");
             });
         }
@@ -136,13 +131,12 @@ class PerformancePage extends Component {
       tableData,
       averagePerformancePercentage
     } = this.state;
-    console.log("this is the target data", this.state.targets);
     return (
       <div className="performance-container container">
+        <div className="header-container d-flex justify-content-center">
+          <h1 className="header-font">Class Performance</h1>
+        </div>
         <br />
-        <h1 calssNames="" style={{}}>
-          Check Performance{" "}
-        </h1>
         <div className="dropdown-container">
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
@@ -192,14 +186,18 @@ class PerformancePage extends Component {
         </div>
 
         <div className="label progress-target-container">
-          <div className="performance-container-numberOf  ">
-            <h2 className=" mt-5"> Target Threads</h2>
-            <h3>{selectedTargetData.targetThreads}</h3>
-            <h2 className="mt-5 ">Target Calls</h2>
-            <h3>{selectedTargetData.targetCalls}</h3>
+          <div
+            className="performance-container-numberOf"
+            style={{ textAlign: "center" }}
+          >
+            <h2 className="performance-font mt-5"> Target Threads</h2>
+            <h1>{selectedTargetData.targetThreads}</h1>
+            <h2 className="performance-font mt-5">Target Calls</h2>
+            <h1> {selectedTargetData.targetCalls}</h1>
           </div>
           <hr className="hr" />
           <ProgressBar
+            title="Class Average Performance"
             performancePercentage={
               averagePerformancePercentage
                 ? averagePerformancePercentage
@@ -209,6 +207,8 @@ class PerformancePage extends Component {
         </div>
 
         <Table
+          callsTarget={selectedTargetData.targetCalls}
+          messagesTarget={selectedTargetData.targetThreads}
           className=""
           data={tableData}
           target={selectedTargetData ? selectedTargetData : {}}

@@ -56,3 +56,10 @@
 .form-submit:hover {
   opacity: 0.6;
 }
+
+@media screen and (max-width: 811px) {
+  .form-submit,
+  .form-item {
+    width: 100%;
+  }
+}

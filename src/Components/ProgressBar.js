@@ -8,21 +8,22 @@ class ProgressBar extends Component {
       : 0;
 
     return (
-      <div
-        style={{ maxWidth: 300, marginBottom: 20 }}
-        className=" mb-5"
-      >
+      <div style={{ maxWidth: 300, marginBottom: 20 }} className=" mb-5">
         <CircularProgressbar
           value={percentage}
           text={`${percentage}%`}
           styles={buildStyles({
             textColor: "black",
             pathColor: "gold",
-            trailColor: "black",
-            
+            trailColor: "black"
           })}
         />
-        <h2 style={{textAlign:"center",marginTop:"50px"}}>Your Performance</h2>
+        <h2
+          style={{ textAlign: "center", marginTop: "50px" }}
+          className="performance-font"
+        >
+          {this.props.title}
+        </h2>
       </div>
     );
   }
