@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import SetTargetPage from "../SetTargetPage";
 import PerformancePage from "../Performance";
-import SudentsCommunication from "./SudentsCommunication";
+import StudentsCommunication from "./StudentsCommunication";
 import { getAllClasses } from "../actions/addClass";
+import "./Mentor.css";
 import swal from "sweetalert";
 
 class Mentor extends Component {
@@ -99,7 +100,7 @@ class Mentor extends Component {
         )}
         {showSetTarget && <SetTargetPage cyfClasses={cyfClasses} />}
         {showStudentsCommunication && (
-          <SudentsCommunication cyfClasses={cyfClasses ? cyfClasses : []} />
+          <StudentsCommunication cyfClasses={cyfClasses ? cyfClasses : []} />
         )}
       </div>
     );

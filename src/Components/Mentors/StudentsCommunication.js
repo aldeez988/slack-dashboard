@@ -1,9 +1,25 @@
 import React, { Component } from "react";
-import { Graph } from "react-d3-graph";
 import { getTargetsForClass } from "../actions/targets";
 import { getStudentsCommunication } from "../actions/getStudentsCommunication";
-import { getAllStudents } from "../actions/getAllStudents";
-class SudentsCommunication extends Component {
+import { Graph } from "react-d3-graph";
+
+const myConfig = {
+  nodeHighlightBehavior: true,
+  d3: {
+    gravity: -200
+  },
+  node: {
+    color: "lightgreen",
+    size: 800,
+    highlightStrokeColor: "blue",
+    fontSize: 15
+  },
+  link: {
+    highlightColor: "lightblue"
+  }
+};
+
+class StudentsCommunication extends Component {
   state = {
     targetName: "",
     cyfClasses: [],
@@ -11,7 +27,8 @@ class SudentsCommunication extends Component {
     targets: [],
     selectTarget: {},
     selectedClassId: "",
-    studentsProfile: []
+    studentsProfile: [],
+    data: null
   };
   componentWillMount() {
     this.setState({ cyfClasses: this.props.cyfClasses });
@@ -65,7 +82,8 @@ class SudentsCommunication extends Component {
               selectedClassId,
               channelId
             }).then(response => {
-              console.log("n******* and Calls", response);
+              console.log("n******* and Calls", response.data);
+              this.setState({ data: response.data });
             });
           } catch (err) {
             console.log(err);
@@ -75,9 +93,9 @@ class SudentsCommunication extends Component {
     );
   };
   render() {
-    const { className, targetName, cyfClasses } = this.state;
+    const { className, targetName, cyfClasses, data } = this.state;
     return (
-      <div>
+      <div className="student-communication-container">
         <div className="dropdown-container">
           <div className="col-sm-10 col-lg-4 mb-2">
             <div className="form-group ">
@@ -125,9 +143,18 @@ class SudentsCommunication extends Component {
             </div>
           </div>
         </div>
+        <div className="directed-graph-container">
+          {data && (
+            <Graph
+              id="graph-id" // id is mandatory, if no id is defined rd3g will throw an error
+              data={data}
+              config={myConfig}
+            />
+          )}
+        </div>
       </div>
     );
   }
 }
 
-export default SudentsCommunication;
+export default StudentsCommunication;
