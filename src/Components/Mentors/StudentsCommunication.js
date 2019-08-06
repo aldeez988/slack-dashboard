@@ -143,15 +143,15 @@ class StudentsCommunication extends Component {
             </div>
           </div>
         </div>
-        <div className="directed-graph-container">
-          {data && (
+        {data && (
+          <div className="directed-graph-container">
             <Graph
               id="graph-id" // id is mandatory, if no id is defined rd3g will throw an error
               data={data}
               config={myConfig}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   }
