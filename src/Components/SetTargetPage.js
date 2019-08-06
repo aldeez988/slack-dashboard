@@ -215,7 +215,7 @@ class SetTargetPage extends Component {
             </select>
           </div>
         </div>
-        <div className="label set-target-inputs">
+        <div className="set-target-inputs-container">
           <br />
           <br />
           <br />

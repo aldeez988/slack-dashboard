@@ -4,6 +4,7 @@ import { addUser } from "../Components/actions/addUser";
 // import { setToken, loggedIn } from "../Auth/index";
 import swal from "sweetalert";
 import { getAllClasses } from "../Components/actions/addClass";
+import NavForScreens from "./NavForScreens";
 
 class Register extends Component {
   constructor(props) {
@@ -128,196 +129,200 @@ class Register extends Component {
     } = this.state;
     const { err, msg } = this.props;
     return (
-      <div className="register-container">
-        <div className="register">
-          {msg && <p className="success">{msg}</p>}
-          {err && (
-            <p className="error">
-              Somethings went wrong please try again later.
-            </p>
-          )}
-          <h3>Welcome To Code You Future Slack Dashboard</h3>
-          <h5 className="text-danger">
-            You should join Code Your Future slack Workspace to be able to
-            register
-          </h5>
-          <form className="mb-4" onSubmit={this.handleSubmit} method="post">
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                First Name*
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                className="form-control form-control-lg"
-                placeholder="First name"
-                value={firstName}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                Last Name*
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                className="form-control form-control-lg"
-                placeholder="Last name"
-                value={lastName}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                Email*
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="form-control form-control-lg"
-                placeholder="example@example.com"
-                value={email}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                City*
-              </label>
+      <div>
+        <NavForScreens />
 
-              <select
-                className="form-control form-control-lg"
-                name="city"
-                id="city"
-                value={city}
-                onChange={this.onChange}
-                required
-              >
-                <option value="" disabled>
-                  Select here
-                </option>
-                <option>London</option>
-                <option>Manchester</option>
-                <option>Glasgow</option>
-                <option>Rome</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="phoneNumber" className="lead">
-                Phone Number*
-              </label>
-              <input
-                type="tel"
-                name="tel"
-                className="form-control form-control-lg"
-                id="tel"
-                placeholder=" E.g., 07712345678 or 02079460637"
-                value={tel}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <div className="form-group ">
-              <label htmlFor="firstName" className="lead">
-                Gender*
-              </label>
-              <select
-                className="form-control form-control-lg"
-                name="gender"
-                id="gender"
-                value={gender}
-                onChange={this.onChange}
-                required
-              >
-                <option value="" disabled>
-                  Select here
-                </option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-                <option>Prefer not to say</option>
-              </select>
-            </div>
-            <div className="form-group ">
-              <label htmlFor="firstName" className="lead">
-                Join as*
-              </label>
-              <select
-                className="form-control form-control-lg"
-                name="userType"
-                id="userType"
-                value={userType}
-                onChange={this.onChange}
-                required
-              >
-                <option value="" disabled>
-                  Select here
-                </option>
-                <option>Student</option>
-                <option>Mentor</option>
-              </select>
-            </div>
-            {isStudent && (
-              <div className="form-group ">
+        <div className="register-container">
+          <div className="register">
+            {msg && <p className="success">{msg}</p>}
+            {err && (
+              <p className="error">
+                Somethings went wrong please try again later.
+              </p>
+            )}
+            <h3>Welcome To Code You Future Slack Dashboard</h3>
+            <h5 className="text-danger">
+              You should join Code Your Future slack Workspace to be able to
+              register
+            </h5>
+            <form className="mb-4" onSubmit={this.handleSubmit} method="post">
+              <div className="form-group">
                 <label htmlFor="firstName" className="lead">
-                  What is your cyf class*
+                  First Name*
                 </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  className="form-control form-control-lg"
+                  placeholder="First name"
+                  value={firstName}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstName" className="lead">
+                  Last Name*
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  className="form-control form-control-lg"
+                  placeholder="Last name"
+                  value={lastName}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstName" className="lead">
+                  Email*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="form-control form-control-lg"
+                  placeholder="example@example.com"
+                  value={email}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstName" className="lead">
+                  City*
+                </label>
+
                 <select
                   className="form-control form-control-lg"
-                  name="cyfClass"
-                  id="cyfClass"
-                  value={cyfClass}
+                  name="city"
+                  id="city"
+                  value={city}
                   onChange={this.onChange}
                   required
                 >
-                  <option disabled>Select here</option>
-                  {classes.map(classdata => (
-                    <option>{classdata.className}</option>
-                  ))}
+                  <option value="" disabled>
+                    Select here
+                  </option>
+                  <option>London</option>
+                  <option>Manchester</option>
+                  <option>Glasgow</option>
+                  <option>Rome</option>
                 </select>
               </div>
-            )}
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                Password*
-              </label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                className="form-control form-control-lg"
-                placeholder="Password"
-                value={password}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="firstName" className="lead">
-                Confirm Password*
-              </label>
-              <input
-                type="password"
-                name="passwordConfirmation"
-                id="passwordConfirmation"
-                className="form-control form-control-lg"
-                placeholder="Password"
-                value={passwordConfirmation}
-                onChange={this.onChange}
-                required
-              />
-            </div>
-            <button type="submit" className="nav-link nav-btn-help">
-              Submit
-            </button>
-          </form>
+              <div className="form-group">
+                <label htmlFor="phoneNumber" className="lead">
+                  Phone Number*
+                </label>
+                <input
+                  type="tel"
+                  name="tel"
+                  className="form-control form-control-lg"
+                  id="tel"
+                  placeholder=" E.g., 07712345678 or 02079460637"
+                  value={tel}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <div className="form-group ">
+                <label htmlFor="firstName" className="lead">
+                  Gender*
+                </label>
+                <select
+                  className="form-control form-control-lg"
+                  name="gender"
+                  id="gender"
+                  value={gender}
+                  onChange={this.onChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Select here
+                  </option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+              <div className="form-group ">
+                <label htmlFor="firstName" className="lead">
+                  Join as*
+                </label>
+                <select
+                  className="form-control form-control-lg"
+                  name="userType"
+                  id="userType"
+                  value={userType}
+                  onChange={this.onChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Select here
+                  </option>
+                  <option>Student</option>
+                  <option>Mentor</option>
+                </select>
+              </div>
+              {isStudent && (
+                <div className="form-group ">
+                  <label htmlFor="firstName" className="lead">
+                    What is your cyf class*
+                  </label>
+                  <select
+                    className="form-control form-control-lg"
+                    name="cyfClass"
+                    id="cyfClass"
+                    value={cyfClass}
+                    onChange={this.onChange}
+                    required
+                  >
+                    <option disabled>Select here</option>
+                    {classes.map(classdata => (
+                      <option>{classdata.className}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+              <div className="form-group">
+                <label htmlFor="firstName" className="lead">
+                  Password*
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  className="form-control form-control-lg"
+                  placeholder="Password"
+                  value={password}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="firstName" className="lead">
+                  Confirm Password*
+                </label>
+                <input
+                  type="password"
+                  name="passwordConfirmation"
+                  id="passwordConfirmation"
+                  className="form-control form-control-lg"
+                  placeholder="Password"
+                  value={passwordConfirmation}
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
+              <button type="submit" className="nav-link nav-btn-help">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );

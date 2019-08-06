@@ -37,11 +37,11 @@ class SudentsCommunication extends Component {
             const targetResponse = await getTargetsForClass({
               id: selectedClassId
             });
-            this.setState({ targets: targetResponse.data });
-            const getStudentsResponse = await getAllStudents({
-              id: selectedClassId
-            });
-            this.setState({ studentsProfile: getStudentsResponse.data });
+            this.setState({ targets: targetResponse.data, selectedClassId });
+            // const getStudentsResponse = await getAllStudents({
+            //   id: selectedClassId
+            // });
+            //this.setState({ studentsProfile: getStudentsResponse.data });
           } catch (err) {
             console.log(err);
           }
@@ -51,16 +51,19 @@ class SudentsCommunication extends Component {
             const selectedTarget = this.state.targets.find(
               target => target.targetName === value
             );
-            let startingDate =
+            const startingDate =
               new Date(selectedTarget.startingDate).getTime() / 1000;
-            let finishingDate =
+            const finishingDate =
               new Date(selectedTarget.finishingDate).getTime() / 1000;
-            const studentsProfile = this.state.studentsProfile;
+            const { channelId } = selectedTarget;
+            const { selectedClassId } = this.state;
+            // const studentsProfile = this.state.studentsProfile;
             this.setState({ selectedTargetData: selectedTarget });
             getStudentsCommunication({
               startingDate,
               finishingDate,
-              studentsProfile
+              selectedClassId,
+              channelId
             }).then(response => {
               console.log("n******* and Calls", response);
             });
@@ -108,11 +111,6 @@ class SudentsCommunication extends Component {
                 className="form-control form-control-lg"
                 name="targetName"
                 id="targetName"
-                
-                
-                
-                
-                
                 value={targetName}
                 onChange={this.onChange}
                 required
