@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import { setToken, getUserType, getProfile, loggedIn } from "../Auth/index";
 import "./login.css";
 import { Link } from "react-router-dom";
-
+import NavForScreens from "./NavForScreens";
 class Login extends Component {
   state = { email: "", password: "", isLoading: false, userData: {} };
   confirmUser = async user => {
@@ -67,45 +67,48 @@ class Login extends Component {
     //   );
     // }
     return (
-      <div class="center ">
-        <div className="card">
-          <div style={{ fontSize: 30, textAlign: "center" }}>
-            Welcome To CYF Slack Dashboard
-          </div>
-          <form onSubmit={this.handleSubmit}>
-            <input
-              onChange={e => this.setState({ email: e.target.value })}
-              type="email"
-              className="form-item "
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
+      <div>
+        <NavForScreens />
+        <div class="center ">
+          <div className="card">
+            <div style={{ fontSize: 30, textAlign: "center" }}>
+              Welcome To CYF Slack Dashboard
+            </div>
+            <form onSubmit={this.handleSubmit}>
+              <input
+                onChange={e => this.setState({ email: e.target.value })}
+                type="email"
+                className="form-item "
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
 
-            <input
-              onChange={e => this.setState({ password: e.target.value })}
-              type="password"
-              className="form-item "
-              placeholder="Password"
-            />
-            <button type="submit" className="form-submit">
-              Login
-            </button>
-            {!this.state.isLoading && (
-              <div>
-                Don't have an account?{" "}
-                <Link to="/register">
-                  <a className="text-danger" style={{ fontWeight: "bold" }}>
-                    Register
-                  </a>
-                </Link>
-              </div>
-            )}
-            {this.state.isLoading && (
-              <div class="spinner-border text-danger mt-5" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-            )}
-          </form>
+              <input
+                onChange={e => this.setState({ password: e.target.value })}
+                type="password"
+                className="form-item "
+                placeholder="Password"
+              />
+              <button type="submit" className="form-submit">
+                Login
+              </button>
+              {!this.state.isLoading && (
+                <div>
+                  Don't have an account?{" "}
+                  <Link to="/register">
+                    <a className="text-danger" style={{ fontWeight: "bold" }}>
+                      Register
+                    </a>
+                  </Link>
+                </div>
+              )}
+              {this.state.isLoading && (
+                <div class="spinner-border text-danger mt-5" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              )}
+            </form>
+          </div>
         </div>
       </div>
     );

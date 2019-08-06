@@ -1,23 +1,22 @@
 import React, { Component } from "react";
-import "./App.css";
 import Users from "./Data/Users.json";
 import ProgressPage from "./Components/ProgressPage";
 import { BrowserRouter as Router } from "react-router-dom";
 import Nav from "./Components/Nav/index";
 import Routes from "./Routes";
-
+import Footer from "../src/Footer/index";
+import "./App.css";
 class App extends Component {
   state = { userExist: false, userData: {} };
 
   render() {
     return (
       <Router>
-        <div>
-          {/* <Nav />
-        {this.state.userExist && <ProgressPage />}
-        {!this.state.userExist && <Login confirmUser={this.confirmUser} />} */}
-          {/* <Nav /> */}
-          <Routes />
+        <div style={{ height: "100%" }}>
+          <div className="main">
+            <Routes />
+          </div>
+          <Footer />
         </div>
       </Router>
     );

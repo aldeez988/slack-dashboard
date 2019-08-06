@@ -14,6 +14,11 @@ body {
   margin-top: 10% !important;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
 /* for performance component */
 .performance-container {
   display: flex;
@@ -149,11 +154,14 @@ body {
   width: 70%;
 }
 
-.set-target-inputs {
+.set-target-inputs-container {
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
+  box-shadow: 1px 0px 20px #acad67;
+  margin-bottom: 40px;
 }
 
 .header-font {
@@ -177,7 +185,8 @@ body {
 }
 
 @media screen and (max-width: 811px) {
-  .dropdown-container {
+  .dropdown-container,
+  .set-target-dropdown-container {
     flex-direction: column;
   }
   .barchart-sudentlable-container {
@@ -193,5 +202,8 @@ body {
   .progress-target-container {
     flex-direction: column-reverse;
     align-items: center;
+  }
+  .set-target-inputs-container {
+    text-align: center;
   }
 }

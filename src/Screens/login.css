@@ -2,20 +2,20 @@
 
 .center {
   font-family: "Raleway", sans-serif;
-  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 .card {
+  margin-top: 10%;
   background-color: #edeec9;
   width: 50%;
   border-radius: 15px;
   padding: 0.8rem;
-  margin-bottom: 20%;
 }
 
 .card > form {
@@ -61,5 +61,11 @@
   .form-submit,
   .form-item {
     width: 100%;
+  }
+  .card {
+    width: 90%;
+  }
+  .card button {
+    width: 50%;
   }
 }

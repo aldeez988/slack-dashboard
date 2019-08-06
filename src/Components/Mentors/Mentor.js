@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import SetTargetPage from "../SetTargetPage";
 import PerformancePage from "../Performance";
-import SudentsCommunication from "./SudentsCommunication";
+import StudentsCommunication from "./StudentsCommunication";
 import { getAllClasses } from "../actions/addClass";
+import "./Mentor.css";
 import swal from "sweetalert";
 
 class Mentor extends Component {
@@ -80,7 +81,7 @@ class Mentor extends Component {
               Set Target{" "}
             </a>
           </li>
-          {/* <li class="nav-item" onClick={this.handleShowStudentsCommunication}>
+          <li class="nav-item" onClick={this.handleShowStudentsCommunication}>
             <a
               class={`nav-link ${
                 showStudentsCommunication ? this.state.active : ""
@@ -89,7 +90,7 @@ class Mentor extends Component {
             >
               Students Communication{" "}
             </a>
-          </li> */}
+          </li>
         </ul>
         <br />
         <br />
@@ -98,9 +99,9 @@ class Mentor extends Component {
           <PerformancePage cyfClasses={this.state.cyfClasses} />
         )}
         {showSetTarget && <SetTargetPage cyfClasses={cyfClasses} />}
-        {/* {showStudentsCommunication && (
-          <SudentsCommunication cyfClasses={cyfClasses ? cyfClasses : []} />
-        )} */}
+        {showStudentsCommunication && (
+          <StudentsCommunication cyfClasses={cyfClasses ? cyfClasses : []} />
+        )}
       </div>
     );
   }
