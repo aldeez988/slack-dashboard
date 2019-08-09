@@ -9,7 +9,6 @@ import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
 import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
 import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
 import { getAveragePerformancePercentage } from "../Components/helpers/averagePerformancePercentage";
-import { getProfile } from "../Auth/index";
 
 class PerformancePage extends Component {
   state = {
@@ -30,7 +29,6 @@ class PerformancePage extends Component {
 
   onChange = e => {
     const { name, value } = e.target;
-    console.log("the selected target data", this.state.selectedTargetData);
     this.setState(
       () => {
         return {

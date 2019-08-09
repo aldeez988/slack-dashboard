@@ -55,13 +55,20 @@ class SetTargetPage extends Component {
       async () => {
         console.log(this.state.userType);
         if (name === "className") {
+          this.setState({
+            selectedClassId: this.props.cyfClasses.find(
+              classData => classData.className === value
+            )._id
+          });
           await this.getNumberOfStudentsInAClass(value);
         }
         if (name === "selectedChannel") {
           const channelId = this.state.publicChannels.find(
             channel => (channel.name = value)
           ).id;
-          this.setState({ selectedChannelId: channelId });
+          this.setState({
+            selectedChannelId: channelId
+          });
         }
       }
     );
@@ -75,7 +82,8 @@ class SetTargetPage extends Component {
       finishingDate,
       targetCalls,
       targetThreads,
-      selectedChannelId
+      selectedChannelId,
+      selectedClassId
     } = this.state;
     const body = {
       className,
@@ -84,7 +92,8 @@ class SetTargetPage extends Component {
       finishingDate,
       targetCalls,
       targetThreads,
-      selectedChannelId
+      selectedChannelId,
+      classId: selectedClassId
     };
     try {
       const response = await addTarget(body);
@@ -99,7 +108,6 @@ class SetTargetPage extends Component {
   };
 
   render() {
-    console.log("From set target page", this.props.location);
     const {
       className,
       targetName,
@@ -234,6 +242,7 @@ class SetTargetPage extends Component {
                   id="targetThreads"
                   value={targetThreads}
                   onChange={this.onChange}
+                  required
                 />
               </div>
             </div>
@@ -250,6 +259,7 @@ class SetTargetPage extends Component {
                   id="targetCalls"
                   onChange={this.onChange}
                   value={targetCalls}
+                  required
                 />
               </div>
             </div>
