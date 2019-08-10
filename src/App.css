@@ -152,6 +152,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 70%;
+  margin-top: 20px;
 }
 
 .set-target-inputs-container {

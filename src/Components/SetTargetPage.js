@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ClassData from "../Data/ClassData.json";
 import { addTarget } from "../Components/actions/targets";
 import swal from "sweetalert";
 import { getStudentsNumber } from "../Components/actions/userProfiles";
@@ -74,7 +73,8 @@ class SetTargetPage extends Component {
     );
   };
 
-  targetSubmission = async () => {
+  targetSubmission = async event => {
+    event.preventDefault();
     const {
       className,
       targetName,
@@ -118,7 +118,11 @@ class SetTargetPage extends Component {
       selectedChannel
     } = this.state;
     return (
-      <div className="d-flex flex-column align-items-center justify-content-center ">
+      <form
+        className="d-flex flex-column align-items-center justify-content-center"
+        onSubmit={this.targetSubmission}
+        method="post"
+      >
         <div className="header-container d-flex justify-content-center">
           <h1 className="header-font">Set A Target</h1>
         </div>
@@ -268,16 +272,12 @@ class SetTargetPage extends Component {
             </div>
           </div>
           <div class="form-group ">
-            <button
-              onClick={this.targetSubmission}
-              type="submit"
-              class="btn btn-success"
-            >
+            <button type="submit" class="btn btn-success">
               Set Target{" "}
             </button>
           </div>
         </div>
-      </div>
+      </form>
     );
   }
 }
