@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { getStudentMessages } from "../Components/actions/getStudentMessages";
 import { login } from "../Components/actions/login";
 import swal from "sweetalert";
-import { setToken, getUserType, getProfile, loggedIn } from "../Auth/index";
+import { setToken, getUserType, getProfile } from "../Auth/index";
 import "./login.css";
 import { Link } from "react-router-dom";
 import NavForScreens from "./NavForScreens";

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { addUser } from "../Components/actions/addUser";
 // import { setToken, loggedIn } from "../Auth/index";
 import swal from "sweetalert";
@@ -124,8 +123,7 @@ class Register extends Component {
       isStudent,
       password,
       passwordConfirmation,
-      classes,
-      classId
+      classes
     } = this.state;
     const { err, msg } = this.props;
     return (

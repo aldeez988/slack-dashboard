@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import ProgressBar from "./ProgressBar";
-import Nav from "./Nav/index";
 import StudentLabel from "./StudentLabel";
-import Barchart from "./Barchart";
 import TopStudents from "./TopStudents";
 import swal from "sweetalert";
-import { ResponsiveContainer } from "recharts";
 import { getTargets } from "./actions/targets";
-import { getUserMessageNumber } from "./actions/slack";
 import { performancePercentage } from "./helpers/performancePercentage";
 import { getProfile } from "../Auth/index";
 
@@ -56,8 +52,6 @@ class StudentPage extends Component {
       },
       //callback inside setState
       async () => {
-        const slackId = getProfile().slackId;
-
         let startingDate =
           new Date(this.state.selectedTargetData.startingDate).getTime() / 1000;
         let finishingDate =
@@ -129,12 +123,7 @@ class StudentPage extends Component {
     );
   };
   render() {
-    const {
-      targetName,
-      numberOfMessages,
-      numberOfCalls,
-      rankedStudentsCallsAndMessages
-    } = this.state;
+    const { targetName, numberOfMessages, numberOfCalls } = this.state;
     const rankedProfiles = this.state.mergedStudentsResultForTable
       ? this.state.mergedStudentsResultForTable
       : [];

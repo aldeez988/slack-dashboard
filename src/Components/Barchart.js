@@ -9,7 +9,6 @@ import {
   Legend,
   ResponsiveContainer
 } from "recharts";
-import data from "../Data/BarchartData.json";
 class Barchart extends Component {
   yAxisValue = () => {
     return this.props.barchartData

@@ -12,7 +12,6 @@ class Table extends Component {
     messagesTarget: this.props.messagesTarget
   };
   render() {
-    const { callsTarget, messagesTarget } = this.state;
     console.log("Hi from inside the table", this.props.selectedTargetData);
     return (
       <div

@@ -58,15 +58,6 @@ class PerformancePage extends Component {
 
             //Getting id only for students in the selected class to only get their messages
 
-            const slackIds = getStudentsResponse.data
-              .filter(
-                student =>
-                  student.classId ===
-                  this.state.cyfClasses.find(
-                    classData => classData.className === value
-                  )._id
-              )
-              .map(student => student.slackId);
             this.setState({
               targets: targetResponse.data,
               studentsProfiles: getStudentsResponse.data,
