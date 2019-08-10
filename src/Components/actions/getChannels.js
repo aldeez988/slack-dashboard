@@ -1,6 +1,7 @@
 import axios from "axios";
 import swal from "sweetalert";
 
+//This function is used to get all cyf slack workspace  public channels to display in the Set Target component
 export const getPublicChannels = async options => {
   try {
     return await axios.get(

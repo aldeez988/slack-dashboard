@@ -1,6 +1,7 @@
 import axios from "axios";
 import swal from "sweetalert";
 
+//This function is used to make a get request to get all the students data
 export const getAllStudents = options => {
   try {
     return axios.get(
