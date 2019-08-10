@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../ProgressBar";
 import StudentLabel from "./StudentLabel";
 import TopStudents from "./TopStudents";
 import swal from "sweetalert";
-import { getTargets } from "./actions/targets";
-import { performancePercentage } from "./helpers/performancePercentage";
-import { getProfile } from "../Auth/index";
+import { getTargets } from "../actions/targets";
+import { performancePercentage } from "../helpers/performancePercentage";
+import { getProfile } from "../../Auth";
 
 import {
   studentsRank,
   getAllNumberOfMessagesAndCalls,
   getCurrentUserNumberOfCallsAndMessages
-} from "./helpers/getNumberOfCallAndMessages";
-import { allCallsAndMessages } from "./actions/getStudentMessages";
-import { getAllStudents } from "../Components/actions/getAllStudents";
-import { mergingStudentsDataWithTotalPerformance } from "./helpers/mergingStudentDataForTable";
+} from "../helpers/getNumberOfCallAndMessages";
+import { allCallsAndMessages } from "../actions/getStudentMessages";
+import { getAllStudents } from "../actions/getAllStudents";
+import { mergingStudentsDataWithTotalPerformance } from "../helpers/mergingStudentDataForTable";
 class StudentPage extends Component {
   state = {
     targetName: "",
