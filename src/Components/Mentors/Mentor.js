@@ -12,20 +12,15 @@ class Mentor extends Component {
     showPerformance: true,
     showSetTarget: false,
     showStudentsCommunication: false,
-    // adminData: this.props.location.state,
-    // usersProfiles: {}
     cyfClasses: []
   };
-  componentWillMount() {
-    // window.location.reload(true);
-  }
+
   async componentDidMount() {
     getAllClasses()
       .then(res => {
         this.setState({ cyfClasses: res.data });
       })
       .catch(err => {
-        console.log(err);
         swal("Oops!", "Something went wrong!", "error");
       });
   }
@@ -94,7 +89,6 @@ class Mentor extends Component {
         </ul>
         <br />
         <br />
-        {console.log("the deatial from the admin page", this.props.location)}
         {showPerformance && (
           <PerformancePage cyfClasses={this.state.cyfClasses} />
         )}

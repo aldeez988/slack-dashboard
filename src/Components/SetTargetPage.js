@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ClassData from "../Data/ClassData.json";
 import { addTarget } from "../Components/actions/targets";
 import swal from "sweetalert";
 import { getStudentsNumber } from "../Components/actions/userProfiles";
@@ -55,19 +54,27 @@ class SetTargetPage extends Component {
       async () => {
         console.log(this.state.userType);
         if (name === "className") {
+          this.setState({
+            selectedClassId: this.props.cyfClasses.find(
+              classData => classData.className === value
+            )._id
+          });
           await this.getNumberOfStudentsInAClass(value);
         }
         if (name === "selectedChannel") {
           const channelId = this.state.publicChannels.find(
             channel => (channel.name = value)
           ).id;
-          this.setState({ selectedChannelId: channelId });
+          this.setState({
+            selectedChannelId: channelId
+          });
         }
       }
     );
   };
 
-  targetSubmission = async () => {
+  targetSubmission = async event => {
+    event.preventDefault();
     const {
       className,
       targetName,
@@ -75,7 +82,8 @@ class SetTargetPage extends Component {
       finishingDate,
       targetCalls,
       targetThreads,
-      selectedChannelId
+      selectedChannelId,
+      selectedClassId
     } = this.state;
     const body = {
       className,
@@ -84,7 +92,8 @@ class SetTargetPage extends Component {
       finishingDate,
       targetCalls,
       targetThreads,
-      selectedChannelId
+      selectedChannelId,
+      classId: selectedClassId
     };
     try {
       const response = await addTarget(body);
@@ -99,7 +108,6 @@ class SetTargetPage extends Component {
   };
 
   render() {
-    console.log("From set target page", this.props.location);
     const {
       className,
       targetName,
@@ -110,7 +118,11 @@ class SetTargetPage extends Component {
       selectedChannel
     } = this.state;
     return (
-      <div className="d-flex flex-column align-items-center justify-content-center ">
+      <form
+        className="d-flex flex-column align-items-center justify-content-center"
+        onSubmit={this.targetSubmission}
+        method="post"
+      >
         <div className="header-container d-flex justify-content-center">
           <h1 className="header-font">Set A Target</h1>
         </div>
@@ -209,9 +221,12 @@ class SetTargetPage extends Component {
               <option value="" disabled>
                 Select here
               </option>
-              {this.state.publicChannels.map(channel => (
-                <option>{channel.name}</option>
-              ))}
+              {this.state.publicChannels
+                .map(channel => channel.name)
+                .sort()
+                .map(channelName => (
+                  <option>{channelName}</option>
+                ))}
             </select>
           </div>
         </div>
@@ -234,6 +249,7 @@ class SetTargetPage extends Component {
                   id="targetThreads"
                   value={targetThreads}
                   onChange={this.onChange}
+                  required
                 />
               </div>
             </div>
@@ -250,21 +266,18 @@ class SetTargetPage extends Component {
                   id="targetCalls"
                   onChange={this.onChange}
                   value={targetCalls}
+                  required
                 />
               </div>
             </div>
           </div>
           <div class="form-group ">
-            <button
-              onClick={this.targetSubmission}
-              type="submit"
-              class="btn btn-success"
-            >
+            <button type="submit" class="btn btn-success">
               Set Target{" "}
             </button>
           </div>
         </div>
-      </div>
+      </form>
     );
   }
 }

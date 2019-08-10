@@ -15,7 +15,7 @@
   margin-bottom: 40px;
   font-size: 50px;
   height: 100%;
-  overflow-y: scrol;
+  overflow: auto;
 }
 #graph-id-graph-wrapper {
   width: 100%;

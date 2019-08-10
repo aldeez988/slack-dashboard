@@ -44,7 +44,6 @@ class StudentsCommunication extends Component {
         };
       },
       async () => {
-        console.log(this.state.userType);
         if (name === "className") {
           try {
             const selectedClassId = this.state.cyfClasses.find(
@@ -55,10 +54,6 @@ class StudentsCommunication extends Component {
               id: selectedClassId
             });
             this.setState({ targets: targetResponse.data, selectedClassId });
-            // const getStudentsResponse = await getAllStudents({
-            //   id: selectedClassId
-            // });
-            //this.setState({ studentsProfile: getStudentsResponse.data });
           } catch (err) {
             console.log(err);
           }
@@ -74,7 +69,6 @@ class StudentsCommunication extends Component {
               new Date(selectedTarget.finishingDate).getTime() / 1000;
             const { channelId } = selectedTarget;
             const { selectedClassId } = this.state;
-            // const studentsProfile = this.state.studentsProfile;
             this.setState({ selectedTargetData: selectedTarget });
             getStudentsCommunication({
               startingDate,
