@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { addTarget } from "../Components/actions/targets";
+import { addTarget } from "../actions/targets";
 import swal from "sweetalert";
-import { getStudentsNumber } from "../Components/actions/userProfiles";
-import { getPublicChannels } from "./actions/getChannels";
+import { getStudentsNumber } from "../actions/userProfiles";
+import { getPublicChannels } from "../actions/getChannels";
 class SetTargetPage extends Component {
   state = {
     students: [],
