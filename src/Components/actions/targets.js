@@ -1,6 +1,7 @@
 import axios from "axios";
 import swal from "sweetalert";
 
+//This function is used to set new target for a specific class in a specific period of time
 export const addTarget = async body => {
   try {
     return await axios.post(
@@ -25,6 +26,7 @@ export const getTargets = async options => {
   }
 };
 
+//This function is used to get all the target for a specific class
 export const getTargetsForClass = async options => {
   try {
     return await axios.get(

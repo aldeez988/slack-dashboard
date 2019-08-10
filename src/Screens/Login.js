@@ -10,7 +10,6 @@ class Login extends Component {
   confirmUser = async user => {
     try {
       const response = await login(user);
-      console.log("login response ", response);
       const profile = getProfile();
       if (response) {
         await setToken(response.data.token);
@@ -51,20 +50,9 @@ class Login extends Component {
       };
     });
     e.preventDefault();
-    console.log(this.state);
     this.confirmUser({ email, password });
-    // getStudentMessages({ name: email.split("@")[0] });
   };
   render() {
-    // if (loggedIn()) {
-    //   return (
-    //     <div class="center ">
-    //       <div className="card">
-    //         <h1>Welcome To CYF Slack Dashboard</h1>
-    //       </div>
-    //     </div>
-    //   );
-    // }
     return (
       <div>
         <NavForScreens />
