@@ -3,6 +3,8 @@ import { addTarget } from "../actions/targets";
 import swal from "sweetalert";
 import { getStudentsNumber } from "../actions/userProfiles";
 import { getPublicChannels } from "../actions/getChannels";
+import { getProfile } from "../../Auth/index";
+
 class SetTargetPage extends Component {
   state = {
     students: [],
@@ -28,7 +30,6 @@ class SetTargetPage extends Component {
   getNumberOfStudentsInAClass = async className => {
     try {
       const response = await getStudentsNumber({ className: className });
-
       this.setState({
         numberOfStudents: response.data.numberOfStudents
           ? response.data.numberOfStudents
@@ -75,6 +76,8 @@ class SetTargetPage extends Component {
 
   targetSubmission = async event => {
     event.preventDefault();
+    const mentorName = getProfile().firstName + " " + getProfile().lastName;
+    const mentorId = getProfile()._id;
     const {
       className,
       targetName,
@@ -93,7 +96,9 @@ class SetTargetPage extends Component {
       targetCalls,
       targetThreads,
       selectedChannelId,
-      classId: selectedClassId
+      classId: selectedClassId,
+      mentorName,
+      mentorId
     };
     try {
       const response = await addTarget(body);
@@ -108,6 +113,7 @@ class SetTargetPage extends Component {
   };
 
   render() {
+    console.log("Hi from setTarget", getProfile());
     const {
       className,
       targetName,
