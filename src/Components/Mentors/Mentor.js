@@ -25,7 +25,6 @@ class Mentor extends Component {
         this.setState({ cyfClasses: res.data });
       })
       .catch(err => {
-        console.log(err);
         swal("Oops!", "Something went wrong!", "error");
       });
   }
@@ -94,7 +93,6 @@ class Mentor extends Component {
         </ul>
         <br />
         <br />
-        {console.log("the deatial from the admin page", this.props.location)}
         {showPerformance && (
           <PerformancePage cyfClasses={this.state.cyfClasses} />
         )}
