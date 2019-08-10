@@ -12,13 +12,9 @@ class Mentor extends Component {
     showPerformance: true,
     showSetTarget: false,
     showStudentsCommunication: false,
-    // adminData: this.props.location.state,
-    // usersProfiles: {}
     cyfClasses: []
   };
-  componentWillMount() {
-    // window.location.reload(true);
-  }
+
   async componentDidMount() {
     getAllClasses()
       .then(res => {

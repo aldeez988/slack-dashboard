@@ -217,9 +217,12 @@ class SetTargetPage extends Component {
               <option value="" disabled>
                 Select here
               </option>
-              {this.state.publicChannels.map(channel => (
-                <option>{channel.name}</option>
-              ))}
+              {this.state.publicChannels
+                .map(channel => channel.name)
+                .sort()
+                .map(channelName => (
+                  <option>{channelName}</option>
+                ))}
             </select>
           </div>
         </div>
