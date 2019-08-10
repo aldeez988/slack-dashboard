@@ -35,7 +35,6 @@ class SetTargetPage extends Component {
           ? response.data.numberOfStudents
           : 0
       });
-      console.log("setTarget", response.data);
 
       this.setState({ showAddClass: false, showAddWeek: true });
     } catch (err) {
@@ -45,7 +44,6 @@ class SetTargetPage extends Component {
 
   onChange = e => {
     const { name, value } = e.target;
-    console.log();
     this.setState(
       () => {
         return {
@@ -53,7 +51,6 @@ class SetTargetPage extends Component {
         };
       },
       async () => {
-        console.log(this.state.userType);
         if (name === "className") {
           this.setState({
             selectedClassId: this.props.cyfClasses.find(
@@ -113,7 +110,6 @@ class SetTargetPage extends Component {
   };
 
   render() {
-    console.log("Hi from setTarget", getProfile());
     const {
       className,
       targetName,
