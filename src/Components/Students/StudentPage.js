@@ -1,24 +1,20 @@
 import React, { Component } from "react";
-import ProgressBar from "./ProgressBar";
-import Nav from "./Nav/index";
+import ProgressBar from "../ProgressBar";
 import StudentLabel from "./StudentLabel";
-import Barchart from "./Barchart";
 import TopStudents from "./TopStudents";
 import swal from "sweetalert";
-import { ResponsiveContainer } from "recharts";
-import { getTargets } from "./actions/targets";
-import { getUserMessageNumber } from "./actions/slack";
-import { performancePercentage } from "./helpers/performancePercentage";
-import { getProfile } from "../Auth/index";
+import { getTargets } from "../actions/targets";
+import { performancePercentage } from "../helpers/performancePercentage";
+import { getProfile } from "../../Auth";
 
 import {
   studentsRank,
   getAllNumberOfMessagesAndCalls,
   getCurrentUserNumberOfCallsAndMessages
-} from "./helpers/getNumberOfCallAndMessages";
-import { allCallsAndMessages } from "./actions/getStudentMessages";
-import { getAllStudents } from "../Components/actions/getAllStudents";
-import { mergingStudentsDataWithTotalPerformance } from "./helpers/mergingStudentDataForTable";
+} from "../helpers/getNumberOfCallAndMessages";
+import { allCallsAndMessages } from "../actions/getStudentMessages";
+import { getAllStudents } from "../actions/getAllStudents";
+import { mergingStudentsDataWithTotalPerformance } from "../helpers/mergingStudentDataForTable";
 class StudentPage extends Component {
   state = {
     targetName: "",
@@ -56,8 +52,6 @@ class StudentPage extends Component {
       },
       //callback inside setState
       async () => {
-        const slackId = getProfile().slackId;
-
         let startingDate =
           new Date(this.state.selectedTargetData.startingDate).getTime() / 1000;
         let finishingDate =
@@ -129,12 +123,7 @@ class StudentPage extends Component {
     );
   };
   render() {
-    const {
-      targetName,
-      numberOfMessages,
-      numberOfCalls,
-      rankedStudentsCallsAndMessages
-    } = this.state;
+    const { targetName, numberOfMessages, numberOfCalls } = this.state;
     const rankedProfiles = this.state.mergedStudentsResultForTable
       ? this.state.mergedStudentsResultForTable
       : [];

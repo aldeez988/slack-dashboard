@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import swal from "sweetalert";
-import Table from "./Mentors/Table";
-import ProgressBar from "../Components/ProgressBar";
-import { getTargetsForClass } from "../Components/actions/targets";
-import { getStudentsSlackIds } from "../Components/helpers/getSudentsSlackIds";
-import { getAllStudents } from "../Components/actions/getAllStudents";
-import { allCallsAndMessages } from "../Components/actions/getStudentMessages";
-import { getAllNumberOfMessagesAndCalls } from "../Components/helpers/getNumberOfCallAndMessages";
-import { mergingStudentsDataForTable } from "../Components/helpers/mergingStudentDataForTable";
-import { getAveragePerformancePercentage } from "../Components/helpers/averagePerformancePercentage";
+import Table from "./Table";
+import ProgressBar from "../ProgressBar";
+import { getTargetsForClass } from "../actions/targets";
+import { getStudentsSlackIds } from "../helpers/getSudentsSlackIds";
+import { getAllStudents } from "../actions/getAllStudents";
+import { allCallsAndMessages } from "../actions/getStudentMessages";
+import { getAllNumberOfMessagesAndCalls } from "../helpers/getNumberOfCallAndMessages";
+import { mergingStudentsDataForTable } from "../helpers/mergingStudentDataForTable";
+import { getAveragePerformancePercentage } from "../helpers/averagePerformancePercentage";
 
 class PerformancePage extends Component {
   state = {
@@ -58,15 +58,6 @@ class PerformancePage extends Component {
 
             //Getting id only for students in the selected class to only get their messages
 
-            const slackIds = getStudentsResponse.data
-              .filter(
-                student =>
-                  student.classId ===
-                  this.state.cyfClasses.find(
-                    classData => classData.className === value
-                  )._id
-              )
-              .map(student => student.slackId);
             this.setState({
               targets: targetResponse.data,
               studentsProfiles: getStudentsResponse.data,

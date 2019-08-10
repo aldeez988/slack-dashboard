@@ -1,7 +1,7 @@
 import ReactTable from "react-table";
 import matchSorter from "match-sorter";
 import "react-table/react-table.css";
-import { Tips } from "./Mentors/Utils";
+import { Tips } from "../Mentors/Utils";
 import React, { Component } from "react";
 
 class StudentRankingTable extends Component {

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo_CYF_square from "../Components/Nav/logo-CYF-square.png";
 class StudentLabel extends Component {
   render() {
     return (

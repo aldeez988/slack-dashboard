@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { addTarget } from "../Components/actions/targets";
+import { addTarget } from "../actions/targets";
 import swal from "sweetalert";
-import { getStudentsNumber } from "../Components/actions/userProfiles";
-import { getPublicChannels } from "./actions/getChannels";
+import { getStudentsNumber } from "../actions/userProfiles";
+import { getPublicChannels } from "../actions/getChannels";
+import { getProfile } from "../../Auth/index";
+
 class SetTargetPage extends Component {
   state = {
     students: [],
@@ -28,13 +30,11 @@ class SetTargetPage extends Component {
   getNumberOfStudentsInAClass = async className => {
     try {
       const response = await getStudentsNumber({ className: className });
-
       this.setState({
         numberOfStudents: response.data.numberOfStudents
           ? response.data.numberOfStudents
           : 0
       });
-      console.log("setTarget", response.data);
 
       this.setState({ showAddClass: false, showAddWeek: true });
     } catch (err) {
@@ -44,7 +44,6 @@ class SetTargetPage extends Component {
 
   onChange = e => {
     const { name, value } = e.target;
-    console.log();
     this.setState(
       () => {
         return {
@@ -52,7 +51,6 @@ class SetTargetPage extends Component {
         };
       },
       async () => {
-        console.log(this.state.userType);
         if (name === "className") {
           this.setState({
             selectedClassId: this.props.cyfClasses.find(
@@ -75,6 +73,8 @@ class SetTargetPage extends Component {
 
   targetSubmission = async event => {
     event.preventDefault();
+    const mentorName = getProfile().firstName + " " + getProfile().lastName;
+    const mentorId = getProfile()._id;
     const {
       className,
       targetName,
@@ -93,7 +93,9 @@ class SetTargetPage extends Component {
       targetCalls,
       targetThreads,
       selectedChannelId,
-      classId: selectedClassId
+      classId: selectedClassId,
+      mentorName,
+      mentorId
     };
     try {
       const response = await addTarget(body);

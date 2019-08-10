@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SetTargetPage from "../SetTargetPage";
-import PerformancePage from "../Performance";
+import SetTargetPage from "./SetTargetPage";
+import PerformancePage from "./Performance";
 import StudentsCommunication from "./StudentsCommunication";
 import { getAllClasses } from "../actions/addClass";
 import "./Mentor.css";
