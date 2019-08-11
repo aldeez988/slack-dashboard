@@ -27,3 +27,9 @@
 #graph-id-graph-wrapper svg {
   width: 100% !important;
 }
+
+@media screen and (max-width: 811px) {
+  .directed-graph-container {
+    width: 95%;
+  }
+}

@@ -39,8 +39,6 @@ export const getAllNumberOfMessagesAndCalls = (studentsSlackId, messages) => {
   studentsSlackId.forEach(id => {
     const response = getCallsNumberAndMessages(messages, id);
     if (response) {
-      console.log("number of messages", response);
-
       userData.push(response);
       return;
     }

@@ -15,7 +15,7 @@ class Mentor extends Component {
     cyfClasses: []
   };
 
-  async componentDidMount() {
+  componentWillMount() {
     getAllClasses()
       .then(res => {
         this.setState({ cyfClasses: res.data });
@@ -38,7 +38,11 @@ class Mentor extends Component {
   };
 
   handleShowPerformance = async () => {
-    this.setState({ showSetTarget: false, showPerformance: true });
+    this.setState({
+      showSetTarget: false,
+      showPerformance: true,
+      showStudentsCommunication: false
+    });
   };
 
   handleShowStudentsCommunication = () => {
