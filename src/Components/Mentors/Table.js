@@ -56,32 +56,7 @@ class Table extends Component {
                     <div style={{ textAlign: "center" }}>{row.value}</div>
                   )
                 },
-                // {
-                //   Header: "Hit Calls Target",
-                //   accessor: "callsCounter",
-                //   id: "hitCallsTarget",
-                //   Cell: ({ value }) => (value >= callsTarget ? "Yes" : "No"),
-                //   filterMethod: (filter, row) => {
-                //     if (filter.value === "all") {
-                //       return true;
-                //     }
-                //     if (filter.value === "true") {
-                //       return row[filter.id] >= callsTarget;
-                //     }
-                //     return row[filter.id] < callsTarget;
-                //   },
-                //   Filter: ({ filter, onChange }) => (
-                //     <select
-                //       onChange={event => onChange(event.target.value)}
-                //       style={{ width: "100%" }}
-                //       value={filter ? filter.value : "all"}
-                //     >
-                //       <option value="all">Show All</option>
-                //       <option value="true">Hit Calls Target </option>
-                //       <option value="false">Under Calls Target</option>
-                //     </select>
-                //   )
-                // },
+
                 {
                   Header: "Number Of Messages",
                   accessor: "messageCounter",
@@ -89,32 +64,6 @@ class Table extends Component {
                     <div style={{ textAlign: "center" }}>{row.value}</div>
                   )
                 }
-                // {
-                //   Header: "Hit Messages Target",
-                //   accessor: "messagesCounter",
-                //   id: "hitMessagesTarget",
-                //   Cell: ({ value }) => (value >= messagesTarget ? "Yes" : "No"),
-                //   filterMethod: (filter, row) => {
-                //     if (filter.value === "all") {
-                //       return true;
-                //     }
-                //     if (filter.value === "true") {
-                //       return row[filter.id] >= messagesTarget;
-                //     }
-                //     return row[filter.id] < messagesTarget;
-                //   },
-                //   Filter: ({ filter, onChange }) => (
-                //     <select
-                //       onChange={event => onChange(event.target.value)}
-                //       style={{ width: "100%" }}
-                //       value={filter ? filter.value : "all"}
-                //     >
-                //       <option value="all">Show All</option>
-                //       <option value="true">Hit Messages Target </option>
-                //       <option value="false">Under Messages Target</option>
-                //     </select>
-                //   )
-                // }
               ]
             }
           ]}
